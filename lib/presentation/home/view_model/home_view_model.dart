@@ -1,7 +1,7 @@
 import 'package:confetti/confetti.dart';
 import 'package:ezlang/core/routes/routes.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'package:get/get.dart';
+import 'package:ezlang/core/services/audio_service.dart';
 import 'package:ezlang/core/services/logging_service.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
 import 'package:ezlang/domain/use_cases/get_curriculum_use_case.dart';
@@ -14,10 +14,10 @@ class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
   final GetProgressUseCase getProgressUseCase;
   final GetStreakUseCase getStreakUseCase;
   final UpdateStreakUseCase updateStreakUseCase;
+  final AudioService audioService;
   final LoggingService log;
 
   late ConfettiController confettiController;
-  late FlutterTts flutterTts;
 
   final RxList<String> completedLevels = <String>[].obs;
   final RxInt streak = 0.obs;
@@ -28,6 +28,7 @@ class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
     required this.log,
     required this.getStreakUseCase,
     required this.updateStreakUseCase,
+    required this.audioService,
   });
 
   @override
@@ -36,7 +37,6 @@ class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
     confettiController = ConfettiController(
       duration: const Duration(seconds: 3),
     );
-    flutterTts = FlutterTts();
     fetchCurriculum();
     fetchProgress();
     fetchStreak();
@@ -74,6 +74,7 @@ class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
   }
 
   Future<void> navigateToLesson(EnglishLevel level) async {
+    await speak(level.title);
     final result = await Get.toNamed(PageTo.lessonDetail, arguments: level);
     if (result == true) {
       await updateStreakUseCase();
@@ -84,12 +85,7 @@ class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
   }
 
   Future<void> speak(String text) async {
-    await flutterTts.awaitSpeakCompletion(true);
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.setPitch(1);
-    await flutterTts.setSpeechRate(0.4);
-    await flutterTts.setVolume(1);
-    await flutterTts.speak(text);
+    await audioService.speak(text);
   }
 
   void celebrate() {

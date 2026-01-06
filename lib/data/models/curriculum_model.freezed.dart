@@ -1293,12 +1293,12 @@ return audioMatch(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  String prompt,  List<String> options,  int correctIndex)?  multipleChoice,TResult Function( String id,  String prompt,  String sourceText,  String targetText)?  translateSentence,TResult Function( String id,  String prompt,  String audioUrl,  String correctWord)?  audioMatch,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  String prompt,  List<String> options,  int correctIndex)?  multipleChoice,TResult Function( String id,  String prompt,  String sourceText,  String targetText)?  translateSentence,TResult Function( String id,  String prompt,  String correctWord)?  audioMatch,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _MultipleChoiceModel() when multipleChoice != null:
 return multipleChoice(_that.id,_that.prompt,_that.options,_that.correctIndex);case _TranslateSentenceModel() when translateSentence != null:
 return translateSentence(_that.id,_that.prompt,_that.sourceText,_that.targetText);case _AudioMatchModel() when audioMatch != null:
-return audioMatch(_that.id,_that.prompt,_that.audioUrl,_that.correctWord);case _:
+return audioMatch(_that.id,_that.prompt,_that.correctWord);case _:
   return orElse();
 
 }
@@ -1316,12 +1316,12 @@ return audioMatch(_that.id,_that.prompt,_that.audioUrl,_that.correctWord);case _
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  String prompt,  List<String> options,  int correctIndex)  multipleChoice,required TResult Function( String id,  String prompt,  String sourceText,  String targetText)  translateSentence,required TResult Function( String id,  String prompt,  String audioUrl,  String correctWord)  audioMatch,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  String prompt,  List<String> options,  int correctIndex)  multipleChoice,required TResult Function( String id,  String prompt,  String sourceText,  String targetText)  translateSentence,required TResult Function( String id,  String prompt,  String correctWord)  audioMatch,}) {final _that = this;
 switch (_that) {
 case _MultipleChoiceModel():
 return multipleChoice(_that.id,_that.prompt,_that.options,_that.correctIndex);case _TranslateSentenceModel():
 return translateSentence(_that.id,_that.prompt,_that.sourceText,_that.targetText);case _AudioMatchModel():
-return audioMatch(_that.id,_that.prompt,_that.audioUrl,_that.correctWord);}
+return audioMatch(_that.id,_that.prompt,_that.correctWord);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -1335,12 +1335,12 @@ return audioMatch(_that.id,_that.prompt,_that.audioUrl,_that.correctWord);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  String prompt,  List<String> options,  int correctIndex)?  multipleChoice,TResult? Function( String id,  String prompt,  String sourceText,  String targetText)?  translateSentence,TResult? Function( String id,  String prompt,  String audioUrl,  String correctWord)?  audioMatch,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  String prompt,  List<String> options,  int correctIndex)?  multipleChoice,TResult? Function( String id,  String prompt,  String sourceText,  String targetText)?  translateSentence,TResult? Function( String id,  String prompt,  String correctWord)?  audioMatch,}) {final _that = this;
 switch (_that) {
 case _MultipleChoiceModel() when multipleChoice != null:
 return multipleChoice(_that.id,_that.prompt,_that.options,_that.correctIndex);case _TranslateSentenceModel() when translateSentence != null:
 return translateSentence(_that.id,_that.prompt,_that.sourceText,_that.targetText);case _AudioMatchModel() when audioMatch != null:
-return audioMatch(_that.id,_that.prompt,_that.audioUrl,_that.correctWord);case _:
+return audioMatch(_that.id,_that.prompt,_that.correctWord);case _:
   return null;
 
 }
@@ -1516,12 +1516,11 @@ as String,
 @JsonSerializable()
 
 class _AudioMatchModel extends ExerciseModel {
-  const _AudioMatchModel({required this.id, required this.prompt, required this.audioUrl, required this.correctWord, final  String? $type}): $type = $type ?? 'audio_match',super._();
+  const _AudioMatchModel({required this.id, required this.prompt, required this.correctWord, final  String? $type}): $type = $type ?? 'audio_match',super._();
   factory _AudioMatchModel.fromJson(Map<String, dynamic> json) => _$AudioMatchModelFromJson(json);
 
 @override final  String id;
 @override final  String prompt;
- final  String audioUrl;
  final  String correctWord;
 
 @JsonKey(name: 'type')
@@ -1541,16 +1540,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AudioMatchModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.correctWord, correctWord) || other.correctWord == correctWord));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AudioMatchModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.correctWord, correctWord) || other.correctWord == correctWord));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,prompt,audioUrl,correctWord);
+int get hashCode => Object.hash(runtimeType,id,prompt,correctWord);
 
 @override
 String toString() {
-  return 'ExerciseModel.audioMatch(id: $id, prompt: $prompt, audioUrl: $audioUrl, correctWord: $correctWord)';
+  return 'ExerciseModel.audioMatch(id: $id, prompt: $prompt, correctWord: $correctWord)';
 }
 
 
@@ -1561,7 +1560,7 @@ abstract mixin class _$AudioMatchModelCopyWith<$Res> implements $ExerciseModelCo
   factory _$AudioMatchModelCopyWith(_AudioMatchModel value, $Res Function(_AudioMatchModel) _then) = __$AudioMatchModelCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String prompt, String audioUrl, String correctWord
+ String id, String prompt, String correctWord
 });
 
 
@@ -1578,11 +1577,10 @@ class __$AudioMatchModelCopyWithImpl<$Res>
 
 /// Create a copy of ExerciseModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? audioUrl = null,Object? correctWord = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? correctWord = null,}) {
   return _then(_AudioMatchModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,prompt: null == prompt ? _self.prompt : prompt // ignore: cast_nullable_to_non_nullable
-as String,audioUrl: null == audioUrl ? _self.audioUrl : audioUrl // ignore: cast_nullable_to_non_nullable
 as String,correctWord: null == correctWord ? _self.correctWord : correctWord // ignore: cast_nullable_to_non_nullable
 as String,
   ));

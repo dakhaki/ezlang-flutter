@@ -110,7 +110,6 @@ sealed class ExerciseModel with _$ExerciseModel {
   const factory ExerciseModel.audioMatch({
     required String id,
     required String prompt,
-    required String audioUrl,
     required String correctWord,
   }) = _AudioMatchModel;
 
@@ -131,12 +130,8 @@ sealed class ExerciseModel with _$ExerciseModel {
         sourceText: e.sourceText,
         targetText: e.targetText,
       ),
-      audioMatch: (e) => AudioMatch(
-        id: e.id,
-        prompt: e.prompt,
-        audioUrl: e.audioUrl,
-        correctWord: e.correctWord,
-      ),
+      audioMatch: (e) =>
+          AudioMatch(id: e.id, prompt: e.prompt, correctWord: e.correctWord),
     );
   }
 }

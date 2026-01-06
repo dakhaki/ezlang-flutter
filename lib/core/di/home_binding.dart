@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:ezlang/core/services/audio_service.dart';
 import 'package:ezlang/presentation/home/view_model/home_view_model.dart';
 import 'package:ezlang/domain/use_cases/get_curriculum_use_case.dart';
 import 'package:ezlang/domain/use_cases/get_progress_use_case.dart';
@@ -17,6 +18,7 @@ class HomeBinding extends Bindings {
           log: Get.find<LoggingService>(),
           getStreakUseCase: Get.find<GetStreakUseCase>(),
           updateStreakUseCase: Get.find<UpdateStreakUseCase>(),
+          audioService: Get.find<AudioService>(),
         ),
         permanent: true,
       );

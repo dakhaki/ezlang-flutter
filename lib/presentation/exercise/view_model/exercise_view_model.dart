@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'package:get/get.dart';
+import 'package:ezlang/core/services/audio_service.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
 
 class ExerciseViewModel extends GetxController {
   late SubTopic subTopic;
-  final FlutterTts flutterTts = FlutterTts();
+  final AudioService audioService;
 
   final RxInt currentExerciseIndex = 0.obs;
   final RxBool isAnswerChecked = false.obs;
@@ -16,6 +16,8 @@ class ExerciseViewModel extends GetxController {
 
   // State for Text Input (Translate / Audio)
   final TextEditingController textController = TextEditingController();
+
+  ExerciseViewModel({required this.audioService});
 
   @override
   void onInit() {
@@ -40,8 +42,7 @@ class ExerciseViewModel extends GetxController {
   }
 
   Future<void> playAudio(String text) async {
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.speak(text);
+    await audioService.speak(text);
   }
 
   void checkAnswer() {

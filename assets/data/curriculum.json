@@ -42,7 +42,6 @@
                   "type": "audio_match",
                   "id": "ex_1_1_1_4",
                   "prompt": "Type the word you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/one-us.mp3",
                   "correctWord": "One"
                 },
                 {
@@ -83,7 +82,6 @@
                   "type": "audio_match",
                   "id": "ex_1_1_2_4",
                   "prompt": "Type the color you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/green-us.mp3",
                   "correctWord": "Green"
                 },
                 {
@@ -125,7 +123,6 @@
                   "type": "audio_match",
                   "id": "ex_1_2_1_3",
                   "prompt": "Type the family member you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sister-us.mp3",
                   "correctWord": "Sister"
                 },
                 {
@@ -223,7 +220,6 @@
                   "type": "audio_match",
                   "id": "ex_1_4_1_3",
                   "prompt": "Type the greeting you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hello-au.mp3",
                   "correctWord": "Hello"
                 },
                 {
@@ -288,7 +284,6 @@
                   "type": "audio_match",
                   "id": "ex_2_1_1_4",
                   "prompt": "Type the word you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/market-us.mp3",
                   "correctWord": "Market"
                 },
                 {
@@ -330,7 +325,6 @@
                   "type": "audio_match",
                   "id": "ex_2_2_1_3",
                   "prompt": "Type the job you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/doctor-us.mp3",
                   "correctWord": "Doctor"
                 },
                 {
@@ -486,7 +480,6 @@
                   "type": "audio_match",
                   "id": "ex_3_1_1_3",
                   "prompt": "Type the word you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/airport-us.mp3",
                   "correctWord": "Airport"
                 },
                 {
@@ -542,7 +535,6 @@
                   "type": "audio_match",
                   "id": "ex_3_2_1_4",
                   "prompt": "Type the word you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/medicine-us.mp3",
                   "correctWord": "Medicine"
                 },
                 {
@@ -691,7 +683,6 @@
                   "type": "audio_match",
                   "id": "ex_4_1_1_3",
                   "prompt": "Type the word you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/integrity-us.mp3",
                   "correctWord": "Integrity"
                 },
                 {
@@ -747,7 +738,6 @@
                   "type": "audio_match",
                   "id": "ex_4_2_1_4",
                   "prompt": "Type the word you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/algorithm-us.mp3",
                   "correctWord": "Algorithm"
                 },
                 {
@@ -838,7 +828,6 @@
                   "type": "audio_match",
                   "id": "ex_4_4_1_3",
                   "prompt": "Type the word you hear.",
-                  "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/metaphor-us.mp3",
                   "correctWord": "Metaphor"
                 },
                 {
