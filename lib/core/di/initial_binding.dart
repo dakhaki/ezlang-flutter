@@ -19,8 +19,8 @@
 // import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:eZlang/core/services/logging_service.dart';
-import 'package:eZlang/core/theme/theme_controller.dart';
+import 'package:ezlang/core/services/logging_service.dart';
+import 'package:ezlang/core/theme/theme_controller.dart';
 import 'package:logger/logger.dart';
 
 class InitialBinding extends Bindings {

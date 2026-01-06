@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:eZlang/presentation/home/view_model/home_view_model.dart';
+import 'package:ezlang/presentation/home/view_model/home_view_model.dart';
 
 class HomeBinding extends Bindings {
   @override

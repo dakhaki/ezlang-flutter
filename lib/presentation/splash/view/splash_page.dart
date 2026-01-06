@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:eZlang/core/theme/app_palette.dart';
-import 'package:eZlang/presentation/splash/view_model/splash_view_model.dart';
+import 'package:ezlang/core/theme/app_palette.dart';
+import 'package:ezlang/presentation/splash/view_model/splash_view_model.dart';
 
 class SplashPage extends GetView<SplashViewModel> {
   const SplashPage({super.key});

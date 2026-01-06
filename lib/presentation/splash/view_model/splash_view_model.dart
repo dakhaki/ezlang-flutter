@@ -1,5 +1,5 @@
-import 'package:eZlang/core/routes/routes.dart';
-import 'package:eZlang/core/services/logging_service.dart';
+import 'package:ezlang/core/routes/routes.dart';
+import 'package:ezlang/core/services/logging_service.dart';
 import 'package:get/get.dart';
 
 class SplashViewModel extends GetxController {

@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:eZlang/core/di/initial_binding.dart';
-import 'package:eZlang/core/routes/routes.dart';
-import 'package:eZlang/core/services/logging_service.dart';
-import 'package:eZlang/core/theme/app_theme.dart';
-import 'package:eZlang/core/theme/theme_controller.dart';
+import 'package:ezlang/core/di/initial_binding.dart';
+import 'package:ezlang/core/routes/routes.dart';
+import 'package:ezlang/core/services/logging_service.dart';
+import 'package:ezlang/core/theme/app_theme.dart';
+import 'package:ezlang/core/theme/theme_controller.dart';
 
 Future<void> main() async {
   await runZonedGuarded<Future<void>>(

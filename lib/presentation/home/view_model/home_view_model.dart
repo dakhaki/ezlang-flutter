@@ -1,4 +1,4 @@
-import 'package:eZlang/core/services/logging_service.dart';
+import 'package:ezlang/core/services/logging_service.dart';
 import 'package:get/get.dart';
 
 class HomeViewModel extends GetxController {

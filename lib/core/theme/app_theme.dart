@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:eZlang/core/theme/app_palette.dart';
+import 'package:ezlang/core/theme/app_palette.dart';
 
 class AppTheme {
   static final darkThemeMode = ThemeData.dark().copyWith(

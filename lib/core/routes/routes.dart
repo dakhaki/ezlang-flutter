@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:eZlang/core/di/home_binding.dart';
-import 'package:eZlang/core/di/splash_binding.dart';
-import 'package:eZlang/presentation/home/view/home_page.dart';
-import 'package:eZlang/presentation/splash/view/splash_page.dart';
+import 'package:ezlang/core/di/home_binding.dart';
+import 'package:ezlang/core/di/splash_binding.dart';
+import 'package:ezlang/presentation/home/view/home_page.dart';
+import 'package:ezlang/presentation/splash/view/splash_page.dart';
 
 class BaseRoute {
   static List<GetPage> pages() => [

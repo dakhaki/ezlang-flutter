@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:eZlang/core/theme/app_palette.dart';
-import 'package:eZlang/presentation/home/view_model/home_view_model.dart';
+import 'package:ezlang/core/theme/app_palette.dart';
+import 'package:ezlang/presentation/home/view_model/home_view_model.dart';
 
 class HomePage extends GetView<HomeViewModel> {
   const HomePage({super.key});
