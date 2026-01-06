@@ -18,6 +18,7 @@ class AppPalette {
   static const accent = Color(0xFFFF7675); // Coral Pink
   static const skyBlue = Color(0xFF74B9FF); // Sky Blue
   static const mint = Color(0xFF55EFC4); // Mint Green
+  static const orangeAccent = Color(0xFFFFC048); // Orange
 
   // Functional
   static const successGreen = Color(0xFF00B894);

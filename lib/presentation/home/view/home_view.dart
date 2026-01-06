@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:confetti/confetti.dart';
+import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/core/routes/routes.dart';
+import 'package:ezlang/presentation/widgets/bouncing_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/presentation/home/view_model/home_view_model.dart';
@@ -14,14 +16,36 @@ class HomePage extends GetView<HomeViewModel> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('eZlang Curriculum'),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(30),
+          child: Obx(
+            () => Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.local_fire_department,
+                    color: AppPalette.orangeAccent,
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    '${controller.streak.value} Day Streak',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.celebration),
             onPressed: controller.celebrate,
           ),
           IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () => Get.toNamed(PageTo.settings),
+            icon: const Icon(Icons.person),
+            onPressed: () => Get.toNamed(PageTo.profile),
           ),
         ],
       ),
@@ -65,7 +89,7 @@ class _LevelCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 16),
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: GestureDetector(
+      child: BouncingWidget(
         onTap: () => controller.navigateToLesson(level),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

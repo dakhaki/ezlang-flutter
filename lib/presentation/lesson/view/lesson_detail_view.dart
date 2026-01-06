@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/presentation/lesson/view_model/lesson_detail_view_model.dart';
 
-class LessonDetailView extends GetView<LessonDetailViewModel> {
-  const LessonDetailView({super.key});
+class LessonDetailPage extends GetView<LessonDetailViewModel> {
+  const LessonDetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {

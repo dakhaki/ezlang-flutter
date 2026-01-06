@@ -31,6 +31,12 @@ import 'package:ezlang/domain/use_cases/get_curriculum_use_case.dart';
 import 'package:ezlang/domain/use_cases/get_progress_use_case.dart';
 import 'package:ezlang/domain/use_cases/clear_progress_use_case.dart';
 import 'package:ezlang/domain/use_cases/save_progress_use_case.dart';
+import 'package:ezlang/domain/use_cases/get_streak_use_case.dart';
+import 'package:ezlang/domain/use_cases/update_streak_use_case.dart';
+import 'package:ezlang/domain/use_cases/get_learning_time_use_case.dart';
+import 'package:ezlang/domain/use_cases/update_learning_time_use_case.dart';
+import 'package:ezlang/domain/use_cases/get_stickers_use_case.dart';
+import 'package:ezlang/domain/use_cases/add_sticker_use_case.dart';
 import 'package:logger/logger.dart';
 
 class InitialBinding extends Bindings {
@@ -74,6 +80,30 @@ class InitialBinding extends Bindings {
     );
     Get.lazyPut<ClearProgressUseCase>(
       () => ClearProgressUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<GetStreakUseCase>(
+      () => GetStreakUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<UpdateStreakUseCase>(
+      () => UpdateStreakUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<GetLearningTimeUseCase>(
+      () => GetLearningTimeUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<UpdateLearningTimeUseCase>(
+      () => UpdateLearningTimeUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<GetStickersUseCase>(
+      () => GetStickersUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<AddStickerUseCase>(
+      () => AddStickerUseCase(Get.find()),
       fenix: true,
     );
 

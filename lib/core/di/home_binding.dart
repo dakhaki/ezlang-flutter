@@ -3,6 +3,8 @@ import 'package:ezlang/presentation/home/view_model/home_view_model.dart';
 import 'package:ezlang/domain/use_cases/get_curriculum_use_case.dart';
 import 'package:ezlang/domain/use_cases/get_progress_use_case.dart';
 import 'package:ezlang/core/services/logging_service.dart';
+import 'package:ezlang/domain/use_cases/get_streak_use_case.dart';
+import 'package:ezlang/domain/use_cases/update_streak_use_case.dart';
 
 class HomeBinding extends Bindings {
   @override
@@ -13,6 +15,8 @@ class HomeBinding extends Bindings {
           getProgressUseCase: Get.find<GetProgressUseCase>(),
           getCurriculumUseCase: Get.find<GetCurriculumUseCase>(),
           log: Get.find<LoggingService>(),
+          getStreakUseCase: Get.find<GetStreakUseCase>(),
+          updateStreakUseCase: Get.find<UpdateStreakUseCase>(),
         ),
         permanent: true,
       );
