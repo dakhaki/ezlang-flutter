@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:ezlang/core/di/initial_binding.dart';
 import 'package:ezlang/core/routes/routes.dart';
 import 'package:ezlang/core/services/logging_service.dart';
@@ -13,6 +14,7 @@ Future<void> main() async {
     () async {
       // 1. Ensure Flutter bindings are initialized. Must be the first call.
       WidgetsFlutterBinding.ensureInitialized();
+      await GetStorage.init();
 
       InitialBinding().dependencies();
       // await initServices();
@@ -33,18 +35,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetX<ThemeController>(
-      builder: (controller) {
-        return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'eZlang',
-          theme: AppTheme.lightThemeMode,
-          darkTheme: AppTheme.darkThemeMode,
-          themeMode: controller.theme,
-          initialRoute: PageTo.splash,
-          getPages: BaseRoute.pages(),
-        );
-      },
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'eZlang',
+      theme: AppTheme.theme,
+      initialRoute: PageTo.splash,
+      getPages: BaseRoute.pages(),
     );
   }
 }

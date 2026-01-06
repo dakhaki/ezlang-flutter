@@ -22,9 +22,15 @@ import 'package:get/get.dart';
 import 'package:ezlang/core/services/logging_service.dart';
 import 'package:ezlang/core/theme/theme_controller.dart';
 import 'package:ezlang/data/datasources/local_data_source.dart';
+import 'package:ezlang/data/datasources/progress_local_data_source.dart';
 import 'package:ezlang/data/repositories/curriculum_repository_impl.dart';
+import 'package:ezlang/data/repositories/progress_repository_impl.dart';
 import 'package:ezlang/domain/repositories/curriculum_repository.dart';
+import 'package:ezlang/domain/repositories/progress_repository.dart';
 import 'package:ezlang/domain/use_cases/get_curriculum_use_case.dart';
+import 'package:ezlang/domain/use_cases/get_progress_use_case.dart';
+import 'package:ezlang/domain/use_cases/clear_progress_use_case.dart';
+import 'package:ezlang/domain/use_cases/save_progress_use_case.dart';
 import 'package:logger/logger.dart';
 
 class InitialBinding extends Bindings {
@@ -38,16 +44,36 @@ class InitialBinding extends Bindings {
 
     // Data Sources
     Get.lazyPut<LocalDataSource>(() => LocalDataSourceImpl(), fenix: true);
+    Get.lazyPut<ProgressLocalDataSource>(
+      () => ProgressLocalDataSourceImpl(),
+      fenix: true,
+    );
 
     // Repositories
     Get.lazyPut<CurriculumRepository>(
       () => CurriculumRepositoryImpl(localDataSource: Get.find()),
       fenix: true,
     );
+    Get.lazyPut<ProgressRepository>(
+      () => ProgressRepositoryImpl(dataSource: Get.find()),
+      fenix: true,
+    );
 
     // Use Cases
     Get.lazyPut<GetCurriculumUseCase>(
       () => GetCurriculumUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<SaveProgressUseCase>(
+      () => SaveProgressUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<GetProgressUseCase>(
+      () => GetProgressUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<ClearProgressUseCase>(
+      () => ClearProgressUseCase(Get.find()),
       fenix: true,
     );
 

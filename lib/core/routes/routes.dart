@@ -1,3 +1,7 @@
+import 'package:ezlang/core/di/lesson_detail_binding.dart';
+import 'package:ezlang/core/di/settings_binding.dart';
+import 'package:ezlang/presentation/lesson/view/lesson_detail_view.dart';
+import 'package:ezlang/presentation/settings/view/settings_page.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/di/home_binding.dart';
@@ -12,11 +16,20 @@ class BaseRoute {
       page: () => const SplashPage(),
       binding: SplashBinding(),
     ),
-
     _getPage(
       name: PageTo.home,
       page: () => const HomePage(),
       binding: HomeBinding(),
+    ),
+    _getPage(
+      name: PageTo.lessonDetail,
+      page: () => const LessonDetailView(),
+      binding: LessonDetailBinding(),
+    ),
+    _getPage(
+      name: PageTo.settings,
+      page: () => const SettingsPage(),
+      binding: SettingsBinding(),
     ),
   ];
 
@@ -38,4 +51,6 @@ class BaseRoute {
 class PageTo {
   static const splash = "/";
   static const home = "/home";
+  static const lessonDetail = '/lesson_detail';
+  static const settings = '/settings';
 }

@@ -3,85 +3,93 @@ import 'package:flutter/services.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
 
 class AppTheme {
-  static final darkThemeMode = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: AppPalette.darkBackground,
-    cardColor: AppPalette.darkCardColor,
-    appBarTheme: const AppBarTheme(
-      systemOverlayStyle: SystemUiOverlayStyle.light,
-      backgroundColor: AppPalette.primaryAccent,
-      elevation: 0,
-      foregroundColor: AppPalette.softWhite,
+  static final theme = ThemeData(
+    useMaterial3: true,
+    fontFamily: 'BubblegumSans',
+    scaffoldBackgroundColor: AppPalette.background,
+    cardColor: AppPalette.cardColor,
+    primaryColor: AppPalette.primary, // Explicitly set for visibility
+
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: AppPalette.primary,
+      background: AppPalette.background,
+      surface: AppPalette.cardColor,
+      primary: AppPalette.primary,
+      secondary: AppPalette.secondary,
+      onPrimary: AppPalette.white,
+      onSurface: AppPalette.textPrimary,
     ),
-    colorScheme: const ColorScheme.dark(
-      primary: AppPalette.primaryAccent,
-      secondary: AppPalette.secondaryAccent,
-      surface: AppPalette.darkBackground,
-      onPrimary: AppPalette.softWhite,
-    ),
-    textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: AppPalette.softWhite,
-    ),
-    textTheme: ThemeData.dark().textTheme.apply(
-      fontFamily: 'BubblegumSans',
-      bodyColor: AppPalette.softWhite,
-    ),
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(foregroundColor: AppPalette.softWhite),
-    ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppPalette.pinkAccent,
-        foregroundColor: AppPalette.softWhite,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      ),
-    ),
-    inputDecorationTheme: InputDecorationTheme(
-      border: InputBorder.none,
-      hintStyle: TextStyle(color: AppPalette.softWhite.withAlpha(128)),
-    ),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: AppPalette.darkBackground,
-    ),
-  );
-  static final lightThemeMode = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: AppPalette.lightBackground,
-    cardColor: AppPalette.lightCardColor,
+
     appBarTheme: const AppBarTheme(
       systemOverlayStyle: SystemUiOverlayStyle.dark,
-      backgroundColor: AppPalette.primaryAccent,
+      backgroundColor: AppPalette.background,
       elevation: 0,
-      foregroundColor: AppPalette.softWhite,
-    ),
-    colorScheme: const ColorScheme.light(
-      primary: AppPalette.primaryAccent,
-      secondary: AppPalette.secondaryAccent,
-      surface: AppPalette.lightBackground,
-      onPrimary: AppPalette.softWhite,
-    ),
-    textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: AppPalette.softBlack,
-    ),
-    textTheme: ThemeData.light().textTheme.apply(
-      fontFamily: 'BubblegumSans',
-      bodyColor: AppPalette.softBlack,
-      displayColor: AppPalette.softBlack,
-    ),
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(foregroundColor: AppPalette.softBlack),
-    ),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppPalette.purpleAccent,
-        foregroundColor: AppPalette.softWhite,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      foregroundColor: AppPalette.textPrimary,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontFamily: 'BubblegumSans',
+        color: AppPalette.textPrimary,
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
       ),
     ),
-    inputDecorationTheme: InputDecorationTheme(
-      border: InputBorder.none,
-      hintStyle: TextStyle(color: AppPalette.softBlack.withAlpha(128)),
+
+    cardTheme: CardThemeData(
+      color: AppPalette.cardColor,
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      margin: const EdgeInsets.all(8),
     ),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: AppPalette.lightBackground,
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppPalette.primary,
+        foregroundColor: AppPalette.white,
+        textStyle: const TextStyle(
+          fontFamily: 'BubblegumSans',
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      ),
     ),
+
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: AppPalette.primary,
+        textStyle: const TextStyle(
+          fontFamily: 'BubblegumSans',
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+
+    chipTheme: ChipThemeData(
+      backgroundColor: AppPalette.skyBlue.withOpacity(0.2),
+      labelStyle: const TextStyle(
+        fontFamily: 'BubblegumSans',
+        color: AppPalette.textPrimary,
+      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+    ),
+
+    textTheme:
+        const TextTheme(
+          displayLarge: TextStyle(
+            color: AppPalette.textPrimary,
+            fontWeight: FontWeight.bold,
+          ),
+          titleLarge: TextStyle(
+            color: AppPalette.textPrimary,
+            fontWeight: FontWeight.bold,
+          ),
+          bodyLarge: TextStyle(color: AppPalette.textPrimary),
+          bodyMedium: TextStyle(color: AppPalette.textPrimary),
+        ).apply(
+          bodyColor: AppPalette.textPrimary,
+          displayColor: AppPalette.textPrimary,
+          fontFamily: 'BubblegumSans',
+        ),
   );
 }

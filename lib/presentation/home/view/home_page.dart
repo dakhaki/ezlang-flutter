@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:confetti/confetti.dart';
+import 'package:ezlang/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/presentation/home/view_model/home_view_model.dart';
@@ -17,6 +18,10 @@ class HomePage extends GetView<HomeViewModel> {
           IconButton(
             icon: const Icon(Icons.celebration),
             onPressed: controller.celebrate,
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () => Get.toNamed(PageTo.settings),
           ),
         ],
       ),
@@ -60,8 +65,8 @@ class _LevelCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 16),
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: InkWell(
-        onTap: () => controller.speak(level.title),
+      child: GestureDetector(
+        onTap: () => controller.navigateToLesson(level),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -101,7 +106,18 @@ class _LevelCard extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Icon(Icons.volume_up, size: 20),
+                      Obx(() {
+                        final isCompleted = controller.completedLevels.contains(
+                          level.id,
+                        );
+                        return Icon(
+                          isCompleted
+                              ? Icons.check_circle
+                              : Icons.arrow_forward_ios,
+                          color: isCompleted ? Colors.green : Colors.grey,
+                          size: 20,
+                        );
+                      }),
                     ],
                   ),
                   const SizedBox(height: 8),
