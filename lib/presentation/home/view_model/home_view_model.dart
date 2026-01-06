@@ -9,7 +9,7 @@ import 'package:ezlang/domain/use_cases/get_progress_use_case.dart';
 import 'package:ezlang/domain/use_cases/get_streak_use_case.dart';
 import 'package:ezlang/domain/use_cases/update_streak_use_case.dart';
 
-class HomeViewModel extends GetxController with StateMixin<List<LevelEntity>> {
+class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
   final GetCurriculumUseCase getCurriculumUseCase;
   final GetProgressUseCase getProgressUseCase;
   final GetStreakUseCase getStreakUseCase;
@@ -73,7 +73,7 @@ class HomeViewModel extends GetxController with StateMixin<List<LevelEntity>> {
     streak.value = s;
   }
 
-  Future<void> navigateToLesson(LevelEntity level) async {
+  Future<void> navigateToLesson(EnglishLevel level) async {
     final result = await Get.toNamed(PageTo.lessonDetail, arguments: level);
     if (result == true) {
       await updateStreakUseCase();

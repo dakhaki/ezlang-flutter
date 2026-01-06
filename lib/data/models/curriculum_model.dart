@@ -6,7 +6,7 @@ part 'curriculum_model.g.dart';
 
 @freezed
 abstract class CurriculumModel with _$CurriculumModel {
-  const factory CurriculumModel({required List<LevelModel> levels}) =
+  const factory CurriculumModel({required List<EnglishLevelModel> levels}) =
       _CurriculumModel;
 
   factory CurriculumModel.fromJson(Map<String, dynamic> json) =>
@@ -14,29 +14,129 @@ abstract class CurriculumModel with _$CurriculumModel {
 }
 
 @freezed
-abstract class LevelModel with _$LevelModel {
-  const LevelModel._();
+abstract class EnglishLevelModel with _$EnglishLevelModel {
+  const EnglishLevelModel._();
 
-  const factory LevelModel({
+  const factory EnglishLevelModel({
     required String id,
     required String title,
-    required String cefr,
+    required String cefrCode,
     required String description,
     required String imageUrl,
-    required List<String> topics,
-  }) = _LevelModel;
+    required List<TopicModel> topics,
+  }) = _EnglishLevelModel;
 
-  factory LevelModel.fromJson(Map<String, dynamic> json) =>
-      _$LevelModelFromJson(json);
+  factory EnglishLevelModel.fromJson(Map<String, dynamic> json) =>
+      _$EnglishLevelModelFromJson(json);
 
-  LevelEntity toEntity() {
-    return LevelEntity(
+  EnglishLevel toEntity() {
+    return EnglishLevel(
       id: id,
       title: title,
-      cefr: cefr,
+      cefrCode: cefrCode,
       description: description,
       imageUrl: imageUrl,
-      topics: topics,
+      topics: topics.map((e) => e.toEntity()).toList(),
+    );
+  }
+}
+
+@freezed
+abstract class TopicModel with _$TopicModel {
+  const TopicModel._();
+
+  const factory TopicModel({
+    required String id,
+    required String title,
+    required String iconAsset,
+    @Default(false) bool isPremium,
+    required List<SubTopicModel> subTopics,
+  }) = _TopicModel;
+
+  factory TopicModel.fromJson(Map<String, dynamic> json) =>
+      _$TopicModelFromJson(json);
+
+  Topic toEntity() {
+    return Topic(
+      id: id,
+      title: title,
+      iconAsset: iconAsset,
+      isPremium: isPremium,
+      subTopics: subTopics.map((e) => e.toEntity()).toList(),
+    );
+  }
+}
+
+@freezed
+abstract class SubTopicModel with _$SubTopicModel {
+  const SubTopicModel._();
+
+  const factory SubTopicModel({
+    required String id,
+    required String title,
+    required List<ExerciseModel> exercises,
+  }) = _SubTopicModel;
+
+  factory SubTopicModel.fromJson(Map<String, dynamic> json) =>
+      _$SubTopicModelFromJson(json);
+
+  SubTopic toEntity() {
+    return SubTopic(
+      id: id,
+      title: title,
+      exercises: exercises.map((e) => e.toEntity()).toList(),
+    );
+  }
+}
+
+@Freezed(unionKey: 'type', unionValueCase: FreezedUnionCase.snake)
+sealed class ExerciseModel with _$ExerciseModel {
+  const ExerciseModel._();
+
+  const factory ExerciseModel.multipleChoice({
+    required String id,
+    required String prompt,
+    required List<String> options,
+    required int correctIndex,
+  }) = _MultipleChoiceModel;
+
+  const factory ExerciseModel.translateSentence({
+    required String id,
+    required String prompt,
+    required String sourceText,
+    required String targetText,
+  }) = _TranslateSentenceModel;
+
+  const factory ExerciseModel.audioMatch({
+    required String id,
+    required String prompt,
+    required String audioUrl,
+    required String correctWord,
+  }) = _AudioMatchModel;
+
+  factory ExerciseModel.fromJson(Map<String, dynamic> json) =>
+      _$ExerciseModelFromJson(json);
+
+  Exercise toEntity() {
+    return map(
+      multipleChoice: (e) => MultipleChoice(
+        id: e.id,
+        prompt: e.prompt,
+        options: e.options,
+        correctIndex: e.correctIndex,
+      ),
+      translateSentence: (e) => TranslateSentence(
+        id: e.id,
+        prompt: e.prompt,
+        sourceText: e.sourceText,
+        targetText: e.targetText,
+      ),
+      audioMatch: (e) => AudioMatch(
+        id: e.id,
+        prompt: e.prompt,
+        audioUrl: e.audioUrl,
+        correctWord: e.correctWord,
+      ),
     );
   }
 }

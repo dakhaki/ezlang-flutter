@@ -10,7 +10,7 @@ class CurriculumRepositoryImpl implements CurriculumRepository {
   CurriculumRepositoryImpl({required this.localDataSource});
 
   @override
-  Future<Either<Failure, List<LevelEntity>>> getLevels() async {
+  Future<Either<Failure, List<EnglishLevel>>> getLevels() async {
     try {
       final model = await localDataSource.getCurriculum();
       final entities = model.levels.map((e) => e.toEntity()).toList();

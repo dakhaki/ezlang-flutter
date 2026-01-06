@@ -8,7 +8,7 @@ class GetCurriculumUseCase {
 
   GetCurriculumUseCase(this.repository);
 
-  Future<Either<Failure, List<LevelEntity>>> call() {
+  Future<Either<Failure, List<EnglishLevel>>> call() {
     return repository.getLevels();
   }
 }

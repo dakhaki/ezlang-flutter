@@ -78,7 +78,7 @@ class HomePage extends GetView<HomeViewModel> {
 }
 
 class _LevelCard extends StatelessWidget {
-  final LevelEntity level;
+  final EnglishLevel level;
   final HomeViewModel controller;
 
   const _LevelCard({required this.level, required this.controller});
@@ -124,7 +124,7 @@ class _LevelCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        level.cefr,
+                        level.cefrCode,
                         style: Theme.of(context).textTheme.labelLarge?.copyWith(
                           color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
@@ -160,8 +160,9 @@ class _LevelCard extends StatelessWidget {
                     children: level.topics
                         .map(
                           (t) => Chip(
+                            avatar: const Icon(Icons.topic, size: 16),
                             label: Text(
-                              t,
+                              t.title,
                               style: const TextStyle(fontSize: 10),
                             ),
                           ),

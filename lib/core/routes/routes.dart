@@ -1,10 +1,14 @@
+import 'package:ezlang/core/di/exercise_binding.dart';
+import 'package:ezlang/presentation/exercise/view/exercise_page.dart';
 import 'package:ezlang/core/di/lesson_detail_binding.dart';
 import 'package:ezlang/core/di/profile_binding.dart';
 import 'package:ezlang/core/di/settings_binding.dart';
+import 'package:ezlang/core/di/topic_detail_binding.dart';
 import 'package:ezlang/presentation/home/view/home_view.dart';
 import 'package:ezlang/presentation/lesson/view/lesson_detail_view.dart';
 import 'package:ezlang/presentation/profile/view/profile_page.dart';
 import 'package:ezlang/presentation/settings/view/settings_page.dart';
+import 'package:ezlang/presentation/topic/view/topic_detail_view.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/di/home_binding.dart';
@@ -38,6 +42,16 @@ class BaseRoute {
       page: () => const ProfilePage(),
       binding: ProfileBinding(),
     ),
+    _getPage(
+      name: PageTo.topicDetail,
+      page: () => const TopicDetailPage(),
+      binding: TopicDetailBinding(),
+    ),
+    _getPage(
+      name: PageTo.exercise,
+      page: () => const ExercisePage(),
+      binding: ExerciseBinding(),
+    ),
   ];
 
   static GetPage _getPage({
@@ -61,4 +75,6 @@ class PageTo {
   static const lessonDetail = '/lesson_detail';
   static const settings = '/settings';
   static const profile = '/profile';
+  static const topicDetail = '/topic_detail';
+  static const exercise = '/exercise';
 }

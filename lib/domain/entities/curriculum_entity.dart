@@ -1,17 +1,84 @@
-class LevelEntity {
+class EnglishLevel {
   final String id;
   final String title;
-  final String cefr;
+  final String cefrCode;
   final String description;
   final String imageUrl;
-  final List<String> topics;
+  final List<Topic> topics;
 
-  const LevelEntity({
+  EnglishLevel({
     required this.id,
     required this.title,
-    required this.cefr,
+    required this.cefrCode,
     required this.description,
     required this.imageUrl,
     required this.topics,
+  });
+}
+
+class Topic {
+  final String id;
+  final String title;
+  final String iconAsset;
+  final List<SubTopic> subTopics;
+  final bool isPremium;
+
+  Topic({
+    required this.id,
+    required this.title,
+    required this.iconAsset,
+    required this.subTopics,
+    this.isPremium = false,
+  });
+}
+
+class SubTopic {
+  final String id;
+  final String title;
+  final List<Exercise> exercises;
+
+  SubTopic({required this.id, required this.title, required this.exercises});
+}
+
+sealed class Exercise {
+  final String id;
+  final String prompt;
+
+  Exercise({required this.id, required this.prompt});
+}
+
+class MultipleChoice extends Exercise {
+  final List<String> options;
+  final int correctIndex;
+
+  MultipleChoice({
+    required super.id,
+    required super.prompt,
+    required this.options,
+    required this.correctIndex,
+  });
+}
+
+class TranslateSentence extends Exercise {
+  final String sourceText;
+  final String targetText;
+
+  TranslateSentence({
+    required super.id,
+    required super.prompt,
+    required this.sourceText,
+    required this.targetText,
+  });
+}
+
+class AudioMatch extends Exercise {
+  final String audioUrl;
+  final String correctWord;
+
+  AudioMatch({
+    required super.id,
+    required super.prompt,
+    required this.audioUrl,
+    required this.correctWord,
   });
 }

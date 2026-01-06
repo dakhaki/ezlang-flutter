@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ezlang/core/routes/routes.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
 import 'package:ezlang/domain/use_cases/save_progress_use_case.dart';
 import 'package:ezlang/domain/use_cases/update_learning_time_use_case.dart';
@@ -10,7 +11,7 @@ class LessonDetailViewModel extends GetxController {
   final SaveProgressUseCase saveProgressUseCase;
   final UpdateLearningTimeUseCase updateLearningTimeUseCase;
   final AddStickerUseCase addStickerUseCase;
-  late LevelEntity level;
+  late EnglishLevel level;
 
   LessonDetailViewModel({
     required this.saveProgressUseCase,
@@ -21,7 +22,7 @@ class LessonDetailViewModel extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    level = Get.arguments as LevelEntity;
+    level = Get.arguments as EnglishLevel;
   }
 
   Future<void> completeLevel() async {
@@ -40,5 +41,9 @@ class LessonDetailViewModel extends GetxController {
         ),
       ),
     );
+  }
+
+  void navigateToTopic(Topic topic) {
+    Get.toNamed(PageTo.topicDetail, arguments: topic);
   }
 }

@@ -1,0 +1,120 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ezlang/core/theme/app_palette.dart';
+import 'package:ezlang/domain/entities/curriculum_entity.dart';
+import 'package:ezlang/presentation/exercise/view/widgets/audio_match_widget.dart';
+import 'package:ezlang/presentation/exercise/view/widgets/multiple_choice_widget.dart';
+import 'package:ezlang/presentation/exercise/view/widgets/translate_sentence_widget.dart';
+import 'package:ezlang/presentation/exercise/view_model/exercise_view_model.dart';
+
+class ExercisePage extends GetView<ExerciseViewModel> {
+  const ExercisePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.close),
+          onPressed: () => Get.back(),
+        ),
+        title: Obx(
+          () => LinearProgressIndicator(
+            value: controller.progress,
+            backgroundColor: Colors.grey.shade200,
+            valueColor: const AlwaysStoppedAnimation<Color>(
+              AppPalette.successGreen,
+            ),
+            minHeight: 8,
+            borderRadius: BorderRadius.circular(4),
+          ),
+        ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(24),
+              child: Obx(() {
+                final exercise = controller.currentExercise;
+                if (exercise is MultipleChoice) {
+                  return MultipleChoiceWidget(exercise: exercise);
+                } else if (exercise is TranslateSentence) {
+                  return TranslateSentenceWidget(exercise: exercise);
+                } else if (exercise is AudioMatch) {
+                  return AudioMatchWidget(exercise: exercise);
+                }
+                return const SizedBox.shrink();
+              }),
+            ),
+          ),
+          _buildBottomBar(context),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBottomBar(BuildContext context) {
+    return Obx(() {
+      final isChecked = controller.isAnswerChecked.value;
+      final isCorrect = controller.isAnswerCorrect.value;
+
+      Color barColor = Colors.white;
+      String message = '';
+      IconData icon = Icons.check;
+      Color messageColor = Colors.transparent;
+
+      if (isChecked) {
+        barColor = isCorrect
+            ? AppPalette.successGreen.withOpacity(0.1)
+            : AppPalette.errorRed.withOpacity(0.1);
+        message = isCorrect ? 'Correct!' : 'Incorrect';
+        messageColor = isCorrect
+            ? AppPalette.successGreen
+            : AppPalette.errorRed;
+        icon = isCorrect ? Icons.check_circle : Icons.cancel;
+      }
+
+      return Container(
+        padding: const EdgeInsets.all(24),
+        decoration: BoxDecoration(
+          color: barColor,
+          border: Border(top: BorderSide(color: Colors.grey.shade200)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            if (isChecked) ...[
+              Row(
+                children: [
+                  Icon(icon, color: messageColor, size: 32),
+                  const SizedBox(width: 12),
+                  Text(
+                    message,
+                    style: TextStyle(
+                      color: messageColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+            ],
+            ElevatedButton(
+              onPressed: isChecked
+                  ? controller.nextExercise
+                  : controller.checkAnswer,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: isChecked
+                    ? (isCorrect ? AppPalette.successGreen : AppPalette.primary)
+                    : AppPalette.primary,
+              ),
+              child: Text(isChecked ? 'Continue' : 'Check'),
+            ),
+          ],
+        ),
+      );
+    });
+  }
+}

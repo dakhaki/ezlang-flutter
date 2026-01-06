@@ -32,7 +32,7 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                   Row(
                     children: [
                       Chip(
-                        label: Text(level.cefr),
+                        label: Text(level.cefrCode),
                         backgroundColor: Theme.of(
                           context,
                         ).primaryColor.withOpacity(0.1),
@@ -62,8 +62,14 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                     (topic) => Card(
                       margin: const EdgeInsets.only(bottom: 8),
                       child: ListTile(
-                        leading: const Icon(Icons.check_circle_outline),
-                        title: Text(topic),
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.grey[200],
+                          child: const Icon(Icons.book, color: Colors.black54),
+                        ),
+                        title: Text(topic.title),
+                        subtitle: Text('${topic.subTopics.length} Lessons'),
+                        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                        onTap: () => controller.navigateToTopic(topic),
                       ),
                     ),
                   ),
