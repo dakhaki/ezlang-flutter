@@ -1,0 +1,2369 @@
+{
+  "levels": [
+    {
+      "id": "level_1",
+      "title": "Level 1: Absolute Beginner",
+      "cefrCode": "A0–A1",
+      "description": "Foundations and basic survival English.",
+      "imageUrl": "https://dummyimage.com/600x400/92c952/ffffff",
+      "topics": [
+        {
+          "id": "topic_1_1",
+          "title": "Vocabulary",
+          "iconAsset": "assets/images/foundations.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_1_1_1",
+              "title": "The Alphabet",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1",
+                  "prompt": "Which letter comes after 'B'?",
+                  "options": ["A", "C", "D"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_1_1_2",
+                  "prompt": "Select the number 'Ten'.",
+                  "options": ["5", "10", "20"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_1_1_3",
+                  "prompt": "Write the number 5 as a word.",
+                  "sourceText": "5",
+                  "targetText": "Five"
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_1_1_4",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "One"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_1_1_5",
+                  "prompt": "Which is the first letter of the alphabet?",
+                  "options": ["Z", "A", "M"],
+                  "correctIndex": 1
+                }
+              ]
+            },
+            {
+              "id": "sub_1_1_2",
+              "title": "Colors & Dates",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_1_2_1",
+                  "prompt": "What color is a strawberry?",
+                  "options": ["Blue", "Red", "Green"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_1_2_2",
+                  "prompt": "Write the color of the sky.",
+                  "sourceText": "Sky Color",
+                  "targetText": "Blue"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_1_2_3",
+                  "prompt": "Which day comes after Monday?",
+                  "options": ["Sunday", "Tuesday", "Friday"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_1_2_4",
+                  "prompt": "Type the color you hear.",
+                  "correctWord": "Green"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_1_2_5",
+                  "prompt": "How many months are in a year?",
+                  "options": ["10", "12", "15"],
+                  "correctIndex": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_1_2",
+          "title": "Daily Life",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_1_2_1",
+              "title": "Family & Feelings",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_1",
+                  "prompt": "Who is your father's wife?",
+                  "options": ["Sister", "Mother", "Aunt"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_2_1_2",
+                  "prompt": "Write the opposite of 'Sad'.",
+                  "sourceText": "Sad (Opposite)",
+                  "targetText": "Happy"
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_2_1_3",
+                  "prompt": "Type the family member you hear.",
+                  "correctWord": "Sister"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_4",
+                  "prompt": "I feel _ when I smile.",
+                  "options": ["Angry", "Happy", "Tired"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_2_1_5",
+                  "prompt": "Write the word for a male sibling.",
+                  "sourceText": "Male Sibling",
+                  "targetText": "Brother"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_6",
+                  "prompt": "Who is your mother's mother?",
+                  "options": ["Grandmother", "Aunt", "Sister"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_2_1_7",
+                  "prompt": "Type the feeling you hear.",
+                  "correctWord": "Angry"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_8",
+                  "prompt": "I am _ because I need sleep.",
+                  "options": ["Tired", "Happy", "Excited"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_2_1_9",
+                  "prompt": "Write 'Father'.",
+                  "sourceText": "Dad",
+                  "targetText": "Father"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_10",
+                  "prompt": "Who is your uncle's child?",
+                  "options": ["Cousin", "Brother", "Sister"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_2_1_11",
+                  "prompt": "Type the family member you hear.",
+                  "correctWord": "Uncle"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_12",
+                  "prompt": "I cry when I am _.",
+                  "options": ["Sad", "Happy", "Hungry"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_2_1_13",
+                  "prompt": "Write 'Mother'.",
+                  "sourceText": "Mom",
+                  "targetText": "Mother"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_14",
+                  "prompt": "Who is your sister?",
+                  "options": ["Female sibling", "Male sibling", "Parent"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_2_1_15",
+                  "prompt": "Type the feeling you hear.",
+                  "correctWord": "Hungry"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_16",
+                  "prompt": "I eat when I am _.",
+                  "options": ["Hungry", "Thirsty", "Sad"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_2_1_17",
+                  "prompt": "Write 'Aunt'.",
+                  "sourceText": "Parent's sister",
+                  "targetText": "Aunt"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_18",
+                  "prompt": "Who is your son?",
+                  "options": ["Male child", "Female child", "Parent"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_2_1_19",
+                  "prompt": "Type the feeling you hear.",
+                  "correctWord": "Thirsty"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_2_1_20",
+                  "prompt": "I drink when I am _.",
+                  "options": ["Thirsty", "Hungry", "Tired"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_1_3",
+          "title": "Grammar",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_1_3_1",
+              "title": "Verb 'to be'",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_1",
+                  "prompt": "I _ a student.",
+                  "options": ["is", "am", "are"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_2",
+                  "prompt": "She _ happy.",
+                  "options": ["is", "am", "are"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_3_1_3",
+                  "prompt": "Complete: They _ friends.",
+                  "sourceText": "They ... friends",
+                  "targetText": "are"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_4",
+                  "prompt": "We _ at home.",
+                  "options": ["am", "is", "are"],
+                  "correctIndex": 2
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_3_1_5",
+                  "prompt": "Past tense of 'is'.",
+                  "sourceText": "is (Past)",
+                  "targetText": "was"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_6",
+                  "prompt": "He _ my brother.",
+                  "options": ["is", "are", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_3_1_7",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Are"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_8",
+                  "prompt": "You _ nice.",
+                  "options": ["are", "is", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_3_1_9",
+                  "prompt": "Complete: It ... a cat.",
+                  "sourceText": "It ... a cat",
+                  "targetText": "is"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_10",
+                  "prompt": "They _ here yesterday.",
+                  "options": ["were", "was", "is"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_3_1_11",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Was"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_12",
+                  "prompt": "I _ tired last night.",
+                  "options": ["was", "were", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_3_1_13",
+                  "prompt": "Complete: We ... happy.",
+                  "sourceText": "We ... happy",
+                  "targetText": "are"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_14",
+                  "prompt": "The dog _ big.",
+                  "options": ["is", "are", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_3_1_15",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Were"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_16",
+                  "prompt": "She _ not here.",
+                  "options": ["is", "are", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_3_1_17",
+                  "prompt": "Complete: You ... late.",
+                  "sourceText": "You ... late",
+                  "targetText": "are"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_18",
+                  "prompt": "It _ cold today.",
+                  "options": ["is", "are", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_3_1_19",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Is"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_3_1_20",
+                  "prompt": "We _ hungry.",
+                  "options": ["are", "is", "am"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_1_4",
+          "title": "Key Phrases",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_1_4_1",
+              "title": "Introductions",
+              "exercises": [
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_4_1_1",
+                  "prompt": "Complete the phrase: My ... is John.",
+                  "sourceText": "My ... is John",
+                  "targetText": "name"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_2",
+                  "prompt": "How do you say hello in the morning?",
+                  "options": ["Good night", "Good morning", "Goodbye"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_4_1_3",
+                  "prompt": "Type the greeting you hear.",
+                  "correctWord": "Hello"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_4",
+                  "prompt": "Nice to _ you.",
+                  "options": ["see", "meet", "hear"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_4_1_5",
+                  "prompt": "Complete: How ... you?",
+                  "sourceText": "How ... you?",
+                  "targetText": "are"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_6",
+                  "prompt": "I _ from Spain.",
+                  "options": ["am", "is", "are"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_4_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Name"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_8",
+                  "prompt": "What is _ name?",
+                  "options": ["your", "you", "me"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_4_1_9",
+                  "prompt": "Write 'Thanks'.",
+                  "sourceText": "Thank you",
+                  "targetText": "Thanks"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_10",
+                  "prompt": "Where _ you from?",
+                  "options": ["are", "is", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_4_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Meet"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_12",
+                  "prompt": "See you _.",
+                  "options": ["later", "now", "yesterday"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_4_1_13",
+                  "prompt": "Write 'Please'.",
+                  "sourceText": "Polite word",
+                  "targetText": "Please"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_14",
+                  "prompt": "How old _ you?",
+                  "options": ["are", "is", "have"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_4_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "From"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_16",
+                  "prompt": "I am _ years old.",
+                  "options": ["20", "twenty", "twenties"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_1_4_1_17",
+                  "prompt": "Write 'Excuse me'.",
+                  "sourceText": "Polite attention",
+                  "targetText": "Excuse me"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_18",
+                  "prompt": "This is _ friend.",
+                  "options": ["my", "me", "I"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_1_4_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Friend"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_1_4_1_20",
+                  "prompt": "Good _.",
+                  "options": ["bye", "hello", "hi"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "level_2",
+      "title": "Level 2: Elementary",
+      "cefrCode": "A2",
+      "description": "Simple sentences and frequently used expressions.",
+      "imageUrl": "https://dummyimage.com/600x400/771796/ffffff",
+      "topics": [
+        {
+          "id": "topic_2_1",
+          "title": "Shopping & Geography",
+          "iconAsset": "assets/images/shopping.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_2_1_1",
+              "title": "Shopping",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_1",
+                  "prompt": "How _ is this shirt?",
+                  "options": ["many", "much", "price"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_1_1_2",
+                  "prompt": "I want to ... this apple.",
+                  "sourceText": "Purchase action",
+                  "targetText": "buy"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_3",
+                  "prompt": "Can I pay by _ card?",
+                  "options": ["credit", "money", "paper"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_1_1_4",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Market"
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_1_1_5",
+                  "prompt": "The opposite of cheap.",
+                  "sourceText": "Not cheap",
+                  "targetText": "expensive"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_6",
+                  "prompt": "Where is the changing _?",
+                  "options": ["room", "house", "place"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_1_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Price"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_8",
+                  "prompt": "Do you have this in a smaller _?",
+                  "options": ["size", "shape", "color"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_1_1_9",
+                  "prompt": "Write 'Receipt'.",
+                  "sourceText": "Proof of purchase",
+                  "targetText": "Receipt"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_10",
+                  "prompt": "I am just _.",
+                  "options": ["looking", "watching", "seeing"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_1_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Sale"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_12",
+                  "prompt": "It fits _.",
+                  "options": ["perfectly", "good", "nice"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_1_1_13",
+                  "prompt": "Write 'Cash'.",
+                  "sourceText": "Paper money",
+                  "targetText": "Cash"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_14",
+                  "prompt": "Can I _ it on?",
+                  "options": ["try", "put", "wear"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_1_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Shop"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_16",
+                  "prompt": "The store is _.",
+                  "options": ["open", "start", "begin"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_1_1_17",
+                  "prompt": "Write 'Customer'.",
+                  "sourceText": "Buyer",
+                  "targetText": "Customer"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_18",
+                  "prompt": "I need a shopping _.",
+                  "options": ["bag", "box", "case"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_1_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Cost"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_1_1_20",
+                  "prompt": "Is there a _?",
+                  "options": ["discount", "less", "cheap"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_2_2",
+          "title": "Employment & Leisure",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_2_2_1",
+              "title": "Jobs",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_1",
+                  "prompt": "A person who teaches is a _.",
+                  "options": ["Doctor", "Teacher", "Driver"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_2_1_2",
+                  "prompt": "I work in an office.",
+                  "sourceText": "Workplace: Office",
+                  "targetText": "office"
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_2_1_3",
+                  "prompt": "Type the job you hear.",
+                  "correctWord": "Doctor"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_4",
+                  "prompt": "She works _ a hospital.",
+                  "options": ["on", "at", "under"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_2_1_5",
+                  "prompt": "A person who cooks food.",
+                  "sourceText": "Job title",
+                  "targetText": "chef"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_6",
+                  "prompt": "He drives a bus. He is a _.",
+                  "options": ["Driver", "Pilot", "Cook"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_2_1_7",
+                  "prompt": "Type the job you hear.",
+                  "correctWord": "Nurse"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_8",
+                  "prompt": "I am looking for a _.",
+                  "options": ["job", "work", "employ"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_2_1_9",
+                  "prompt": "Write 'Engineer'.",
+                  "sourceText": "Builder/Designer",
+                  "targetText": "Engineer"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_10",
+                  "prompt": "She is a _.",
+                  "options": ["student", "study", "learn"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_2_1_11",
+                  "prompt": "Type the job you hear.",
+                  "correctWord": "Artist"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_12",
+                  "prompt": "He works _ a bank.",
+                  "options": ["in", "on", "to"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_2_1_13",
+                  "prompt": "Write 'Police'.",
+                  "sourceText": "Officer",
+                  "targetText": "Police"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_14",
+                  "prompt": "A person who acts.",
+                  "options": ["Actor", "Act", "Action"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_2_1_15",
+                  "prompt": "Type the job you hear.",
+                  "correctWord": "Farmer"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_16",
+                  "prompt": "My boss is _.",
+                  "options": ["nice", "job", "work"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_2_1_17",
+                  "prompt": "Write 'Waiter'.",
+                  "sourceText": "Server",
+                  "targetText": "Waiter"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_18",
+                  "prompt": "I want to be a _.",
+                  "options": ["singer", "sing", "song"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_2_1_19",
+                  "prompt": "Type the job you hear.",
+                  "correctWord": "Pilot"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_2_1_20",
+                  "prompt": "She has a full-time _.",
+                  "options": ["job", "work", "task"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_2_3",
+          "title": "Grammar",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_2_3_1",
+              "title": "Past Simple",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_1",
+                  "prompt": "Yesterday, I _ to the park.",
+                  "options": ["go", "went", "gone"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_3_1_2",
+                  "prompt": "Past tense of 'see'.",
+                  "sourceText": "see (Past)",
+                  "targetText": "saw"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_3",
+                  "prompt": "Did you _ the movie?",
+                  "options": ["watch", "watched", "watching"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_3_1_4",
+                  "prompt": "Past tense of 'play'.",
+                  "sourceText": "play (Past)",
+                  "targetText": "played"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_5",
+                  "prompt": "He _ not happy yesterday.",
+                  "options": ["is", "was", "were"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_6",
+                  "prompt": "We _ pizza last night.",
+                  "options": ["eat", "ate", "eaten"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_3_1_7",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Went"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_8",
+                  "prompt": "She _ a book.",
+                  "options": ["read", "reads", "reading"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_3_1_9",
+                  "prompt": "Past tense of 'buy'.",
+                  "sourceText": "buy (Past)",
+                  "targetText": "bought"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_10",
+                  "prompt": "They _ football.",
+                  "options": ["played", "play", "playing"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_3_1_11",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Did"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_12",
+                  "prompt": "I _ him yesterday.",
+                  "options": ["met", "meet", "meeting"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_3_1_13",
+                  "prompt": "Past tense of 'go'.",
+                  "sourceText": "go (Past)",
+                  "targetText": "went"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_14",
+                  "prompt": "Did she _ you?",
+                  "options": ["call", "called", "calling"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_3_1_15",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Had"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_16",
+                  "prompt": "We _ a great time.",
+                  "options": ["had", "have", "has"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_3_1_17",
+                  "prompt": "Past tense of 'make'.",
+                  "sourceText": "make (Past)",
+                  "targetText": "made"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_18",
+                  "prompt": "He _ to school.",
+                  "options": ["walked", "walk", "walking"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_3_1_19",
+                  "prompt": "Type the verb you hear.",
+                  "correctWord": "Came"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_3_1_20",
+                  "prompt": "I _ it.",
+                  "options": ["liked", "like", "liking"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_2_4",
+          "title": "Time & Comparisons",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": false,
+          "subTopics": [
+            {
+              "id": "sub_2_4_1",
+              "title": "Comparisons",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_1",
+                  "prompt": "An elephant is _ than a mouse.",
+                  "options": ["big", "bigger", "biggest"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_4_1_2",
+                  "prompt": "Superlative of 'good'.",
+                  "sourceText": "Good (Superlative)",
+                  "targetText": "best"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_3",
+                  "prompt": "This is the _ movie ever.",
+                  "options": ["bad", "worse", "worst"],
+                  "correctIndex": 2
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_4_1_4",
+                  "prompt": "Comparative of 'fast'.",
+                  "sourceText": "Fast (Comparative)",
+                  "targetText": "faster"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_5",
+                  "prompt": "She is as tall _ her brother.",
+                  "options": ["as", "than", "like"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_6",
+                  "prompt": "He is _ than me.",
+                  "options": ["older", "old", "oldest"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_4_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Better"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_8",
+                  "prompt": "This car is _ expensive than that one.",
+                  "options": ["more", "most", "much"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_4_1_9",
+                  "prompt": "Superlative of 'bad'.",
+                  "sourceText": "Bad (Superlative)",
+                  "targetText": "worst"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_10",
+                  "prompt": "Mount Everest is the _ mountain.",
+                  "options": ["high", "higher", "highest"],
+                  "correctIndex": 2
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_4_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Faster"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_12",
+                  "prompt": "Summer is _ than winter.",
+                  "options": ["hotter", "hot", "hottest"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_4_1_13",
+                  "prompt": "Comparative of 'small'.",
+                  "sourceText": "Small (Comparative)",
+                  "targetText": "smaller"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_14",
+                  "prompt": "She is the _ student.",
+                  "options": ["smart", "smarter", "smartest"],
+                  "correctIndex": 2
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_4_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Taller"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_16",
+                  "prompt": "My dog is _ than yours.",
+                  "options": ["friendlier", "friendly", "friendliest"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_2_4_1_17",
+                  "prompt": "Comparative of 'happy'.",
+                  "sourceText": "Happy (Comparative)",
+                  "targetText": "happier"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_18",
+                  "prompt": "This test was _ than the last one.",
+                  "options": ["easier", "easy", "easiest"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_2_4_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Stronger"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_2_4_1_20",
+                  "prompt": "Who is the _ person you know?",
+                  "options": ["funny", "funnier", "funniest"],
+                  "correctIndex": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "level_3",
+      "title": "Level 3: Intermediate",
+      "cefrCode": "B1–B2",
+      "description": "Independent communication and expressing opinions.",
+      "imageUrl": "https://dummyimage.com/600x400/24f355/ffffff",
+      "topics": [
+        {
+          "id": "topic_3_1",
+          "title": "Travel & Entertainment",
+          "iconAsset": "assets/images/travel.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_3_1_1",
+              "title": "Travel Experiences",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_1",
+                  "prompt": "I have never _ to Paris.",
+                  "options": ["be", "been", "was"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_1_1_2",
+                  "prompt": "A document for international travel.",
+                  "sourceText": "Travel Document",
+                  "targetText": "passport"
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_1_1_3",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Airport"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_4",
+                  "prompt": "We stayed _ a hotel.",
+                  "options": ["in", "on", "to"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_1_1_5",
+                  "prompt": "A journey by plane.",
+                  "sourceText": "Air journey",
+                  "targetText": "flight"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_6",
+                  "prompt": "Have you ever _ sushi?",
+                  "options": ["eat", "ate", "eaten"],
+                  "correctIndex": 2
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_1_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Luggage"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_8",
+                  "prompt": "I booked a _.",
+                  "options": ["ticket", "paper", "card"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_1_1_9",
+                  "prompt": "Write 'Suitcase'.",
+                  "sourceText": "Travel bag",
+                  "targetText": "Suitcase"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_10",
+                  "prompt": "The plane takes _.",
+                  "options": ["off", "up", "out"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_1_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Tourist"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_12",
+                  "prompt": "We went _.",
+                  "options": ["sightseeing", "looking", "watching"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_1_1_13",
+                  "prompt": "Write 'Visa'.",
+                  "sourceText": "Entry permit",
+                  "targetText": "Visa"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_14",
+                  "prompt": "I packed my _.",
+                  "options": ["bags", "boxes", "cases"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_1_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Journey"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_16",
+                  "prompt": "The flight was _.",
+                  "options": ["delayed", "late", "slow"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_1_1_17",
+                  "prompt": "Write 'Destination'.",
+                  "sourceText": "End place",
+                  "targetText": "Destination"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_18",
+                  "prompt": "We bought _.",
+                  "options": ["souvenirs", "gifts", "presents"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_1_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Vacation"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_1_1_20",
+                  "prompt": "I love _.",
+                  "options": ["traveling", "travel", "trip"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_3_2",
+          "title": "Health & Environment",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_3_2_1",
+              "title": "Health",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_1",
+                  "prompt": "You should _ a doctor.",
+                  "options": ["see", "look", "watch"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_2_1_2",
+                  "prompt": "Pain in the head.",
+                  "sourceText": "Head pain",
+                  "targetText": "headache"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_3",
+                  "prompt": "I have a _ throat.",
+                  "options": ["pain", "sore", "hurt"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_2_1_4",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Medicine"
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_2_1_5",
+                  "prompt": "Physical activity for health.",
+                  "sourceText": "Activity",
+                  "targetText": "exercise"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_6",
+                  "prompt": "I feel _.",
+                  "options": ["sick", "bad", "wrong"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_2_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Healthy"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_8",
+                  "prompt": "Eat more _.",
+                  "options": ["vegetables", "candy", "sugar"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_2_1_9",
+                  "prompt": "Write 'Fever'.",
+                  "sourceText": "High temperature",
+                  "targetText": "Fever"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_10",
+                  "prompt": "Take this _.",
+                  "options": ["pill", "candy", "food"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_2_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Doctor"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_12",
+                  "prompt": "I broke my _.",
+                  "options": ["leg", "hair", "shirt"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_2_1_13",
+                  "prompt": "Write 'Hospital'.",
+                  "sourceText": "Medical place",
+                  "targetText": "Hospital"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_14",
+                  "prompt": "Drink plenty of _.",
+                  "options": ["water", "soda", "coffee"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_2_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Nurse"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_16",
+                  "prompt": "I have a _.",
+                  "options": ["cold", "cool", "freeze"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_2_1_17",
+                  "prompt": "Write 'Dentist'.",
+                  "sourceText": "Tooth doctor",
+                  "targetText": "Dentist"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_18",
+                  "prompt": "My stomach _.",
+                  "options": ["hurts", "pains", "sore"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_2_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Pharmacy"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_2_1_20",
+                  "prompt": "Stay in _.",
+                  "options": ["bed", "chair", "floor"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_3_3",
+          "title": "Grammar",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_3_3_1",
+              "title": "Future Tenses",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_1",
+                  "prompt": "I _ call you later.",
+                  "options": ["will", "going to", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_3_1_2",
+                  "prompt": "Plan: I ... visit my grandma.",
+                  "sourceText": "Plan to visit",
+                  "targetText": "am going to"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_3",
+                  "prompt": "Look at those clouds! It _ rain.",
+                  "options": ["will", "is going to", "shall"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_3_1_4",
+                  "prompt": "Promise: I ... help you.",
+                  "sourceText": "Promise to help",
+                  "targetText": "will"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_5",
+                  "prompt": "The train _ at 9 PM.",
+                  "options": ["leaves", "leaving", "leave"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_6",
+                  "prompt": "I think he _ win.",
+                  "options": ["will", "is going to", "shall"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_3_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Tomorrow"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_8",
+                  "prompt": "We _ fly to London.",
+                  "options": ["are going to", "will", "shall"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_3_1_9",
+                  "prompt": "Write 'Next week'.",
+                  "sourceText": "Future time",
+                  "targetText": "Next week"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_10",
+                  "prompt": "What _ you do?",
+                  "options": ["will", "are", "do"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_3_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Future"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_12",
+                  "prompt": "I _ be there.",
+                  "options": ["will", "am", "do"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_3_1_13",
+                  "prompt": "Write 'Soon'.",
+                  "sourceText": "Short time",
+                  "targetText": "Soon"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_14",
+                  "prompt": "It _ be fun.",
+                  "options": ["will", "is", "has"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_3_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Plan"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_16",
+                  "prompt": "Are you _ to eat?",
+                  "options": ["going", "will", "go"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_3_1_17",
+                  "prompt": "Write 'Later'.",
+                  "sourceText": "After now",
+                  "targetText": "Later"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_18",
+                  "prompt": "I _ see you.",
+                  "options": ["will", "am", "do"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_3_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Goal"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_3_1_20",
+                  "prompt": "She _ arrive soon.",
+                  "options": ["will", "is", "has"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_3_4",
+          "title": "Logic & Vocabulary",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_3_4_1",
+              "title": "Conditionals",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_1",
+                  "prompt": "If it rains, I _ stay home.",
+                  "options": ["will", "would", "had"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_4_1_2",
+                  "prompt": "If I were you, I ... study.",
+                  "sourceText": "Advice",
+                  "targetText": "would"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_3",
+                  "prompt": "If she _ time, she would come.",
+                  "options": ["has", "had", "have"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_4_1_4",
+                  "prompt": "Unless you hurry, you ... be late.",
+                  "sourceText": "Consequence",
+                  "targetText": "will"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_5",
+                  "prompt": "Water boils if you _ it to 100C.",
+                  "options": ["heat", "heated", "will heat"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_6",
+                  "prompt": "If I _ rich, I would travel.",
+                  "options": ["was", "were", "am"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_4_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Unless"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_8",
+                  "prompt": "If you _ hard, you pass.",
+                  "options": ["study", "studied", "will study"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_4_1_9",
+                  "prompt": "Write 'If'.",
+                  "sourceText": "Condition",
+                  "targetText": "If"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_10",
+                  "prompt": "I would go if I _ you.",
+                  "options": ["knew", "know", "known"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_4_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Would"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_12",
+                  "prompt": "If it _ tomorrow, we cancel.",
+                  "options": ["rains", "rained", "rain"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_4_1_13",
+                  "prompt": "Write 'Condition'.",
+                  "sourceText": "Requirement",
+                  "targetText": "Condition"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_14",
+                  "prompt": "If I see him, I _ tell him.",
+                  "options": ["will", "would", "did"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_4_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Could"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_16",
+                  "prompt": "If I had money, I _ buy it.",
+                  "options": ["would", "will", "can"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_3_4_1_17",
+                  "prompt": "Write 'Result'.",
+                  "sourceText": "Outcome",
+                  "targetText": "Result"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_18",
+                  "prompt": "If you mix red and blue, you _ purple.",
+                  "options": ["get", "got", "getting"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_3_4_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Might"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_3_4_1_20",
+                  "prompt": "If he comes, I _ be happy.",
+                  "options": ["will", "would", "am"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "level_4",
+      "title": "Level 4: Advanced",
+      "cefrCode": "C1–C2",
+      "description": "Fluency, nuance, and professional/academic use.",
+      "imageUrl": "https://dummyimage.com/600x400/d32776/ffffff",
+      "topics": [
+        {
+          "id": "topic_4_1",
+          "title": "Professional & Ethics",
+          "iconAsset": "assets/images/business.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_4_1_1",
+              "title": "Business Ethics",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_1",
+                  "prompt": "Companies must comply _ regulations.",
+                  "options": ["to", "with", "for"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_1_1_2",
+                  "prompt": "Moral principles.",
+                  "sourceText": "Concept",
+                  "targetText": "ethics"
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_1_1_3",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Integrity"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_4",
+                  "prompt": "A conflict of _.",
+                  "options": ["interest", "money", "time"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_1_1_5",
+                  "prompt": "Responsible for actions.",
+                  "sourceText": "Accountable",
+                  "targetText": "accountability"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_6",
+                  "prompt": "Corporate Social _.",
+                  "options": ["Responsibility", "Response", "Respect"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_1_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Compliance"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_8",
+                  "prompt": "Unethical behavior is _.",
+                  "options": ["wrong", "right", "good"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_1_1_9",
+                  "prompt": "Write 'Transparency'.",
+                  "sourceText": "Openness",
+                  "targetText": "Transparency"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_10",
+                  "prompt": "A code of _.",
+                  "options": ["conduct", "law", "rule"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_1_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Values"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_12",
+                  "prompt": "Fair _.",
+                  "options": ["trade", "buy", "sell"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_1_1_13",
+                  "prompt": "Write 'Bribery'.",
+                  "sourceText": "Illegal payment",
+                  "targetText": "Bribery"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_14",
+                  "prompt": "Whistle_.",
+                  "options": ["blower", "player", "maker"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_1_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Honesty"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_16",
+                  "prompt": "Sustainable _.",
+                  "options": ["development", "growth", "rise"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_1_1_17",
+                  "prompt": "Write 'Fraud'.",
+                  "sourceText": "Deception",
+                  "targetText": "Fraud"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_18",
+                  "prompt": "Workplace _.",
+                  "options": ["culture", "style", "mode"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_1_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Trust"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_1_1_20",
+                  "prompt": "Human _.",
+                  "options": ["rights", "lefts", "wrongs"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_4_2",
+          "title": "Technology & Society",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_4_2_1",
+              "title": "Tech Impact",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_1",
+                  "prompt": "AI stands for _ Intelligence.",
+                  "options": ["Automated", "Artificial", "Advanced"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_2_1_2",
+                  "prompt": "Protecting data.",
+                  "sourceText": "Security field",
+                  "targetText": "cybersecurity"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_3",
+                  "prompt": "The _ of social media.",
+                  "options": ["impact", "hit", "crash"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_2_1_4",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Algorithm"
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_2_1_5",
+                  "prompt": "New and creative idea.",
+                  "sourceText": "Novelty/Creation",
+                  "targetText": "innovation"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_6",
+                  "prompt": "Virtual _.",
+                  "options": ["Reality", "Real", "Life"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_2_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Data"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_8",
+                  "prompt": "Machine _.",
+                  "options": ["Learning", "Teaching", "Knowing"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_2_1_9",
+                  "prompt": "Write 'Automation'.",
+                  "sourceText": "Automatic process",
+                  "targetText": "Automation"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_10",
+                  "prompt": "Cloud _.",
+                  "options": ["Computing", "Computer", "Compute"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_2_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Network"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_12",
+                  "prompt": "Digital _.",
+                  "options": ["Transformation", "Change", "Shift"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_2_1_13",
+                  "prompt": "Write 'Privacy'.",
+                  "sourceText": "Confidentiality",
+                  "targetText": "Privacy"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_14",
+                  "prompt": "Big _.",
+                  "options": ["Data", "Info", "Fact"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_2_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Robot"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_16",
+                  "prompt": "Smart _.",
+                  "options": ["Phone", "Call", "Talk"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_2_1_17",
+                  "prompt": "Write 'Internet'.",
+                  "sourceText": "Web",
+                  "targetText": "Internet"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_18",
+                  "prompt": "Social _.",
+                  "options": ["Network", "Work", "Net"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_2_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Software"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_2_1_20",
+                  "prompt": "User _.",
+                  "options": ["Interface", "Face", "Look"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_4_3",
+          "title": "Grammar",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_4_3_1",
+              "title": "Advanced Structures",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_1",
+                  "prompt": "Never _ I seen such a thing.",
+                  "options": ["have", "had", "did"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_3_1_2",
+                  "prompt": "Had I known, I ... have come.",
+                  "sourceText": "Conditional completion",
+                  "targetText": "would"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_3",
+                  "prompt": "Little _ he know about the surprise.",
+                  "options": ["does", "did", "do"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_3_1_4",
+                  "prompt": "Not only ... he smart, but also kind.",
+                  "sourceText": "Inversion",
+                  "targetText": "is"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_5",
+                  "prompt": "Should you _ assistance, call us.",
+                  "options": ["need", "needed", "needs"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_6",
+                  "prompt": "Hardly _ I arrived when it rained.",
+                  "options": ["had", "have", "did"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_3_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Seldom"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_8",
+                  "prompt": "Under no circumstances _ you open it.",
+                  "options": ["should", "shall", "will"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_3_1_9",
+                  "prompt": "Write 'Rarely'.",
+                  "sourceText": "Not often",
+                  "targetText": "Rarely"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_10",
+                  "prompt": "Were I _ you, I would go.",
+                  "options": ["to", "for", "at"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_3_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Scarcely"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_12",
+                  "prompt": "No sooner _ we left than it snowed.",
+                  "options": ["had", "have", "did"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_3_1_13",
+                  "prompt": "Write 'Barely'.",
+                  "sourceText": "Hardly",
+                  "targetText": "Barely"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_14",
+                  "prompt": "Only then _ I understand.",
+                  "options": ["did", "do", "does"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_3_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Never"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_16",
+                  "prompt": "In no way _ I agree.",
+                  "options": ["do", "did", "does"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_3_1_17",
+                  "prompt": "Write 'Neither'.",
+                  "sourceText": "Nor",
+                  "targetText": "Neither"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_18",
+                  "prompt": "So happy _ I.",
+                  "options": ["was", "were", "am"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_3_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Nor"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_3_1_20",
+                  "prompt": "Such _ the force of the storm.",
+                  "options": ["was", "were", "is"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topic_4_4",
+          "title": "Abstract Concepts",
+          "iconAsset": "assets/images/daily_life.png",
+          "isPremium": true,
+          "subTopics": [
+            {
+              "id": "sub_4_4_1",
+              "title": "Philosophy & Art",
+              "exercises": [
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_1",
+                  "prompt": "The study of existence.",
+                  "options": ["Biology", "Philosophy", "Physics"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_4_1_2",
+                  "prompt": "Appreciation of beauty.",
+                  "sourceText": "Concept",
+                  "targetText": "aesthetics"
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_4_1_3",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Metaphor"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_4",
+                  "prompt": "Abstract art does not represent _ reality.",
+                  "options": ["external", "internal", "dream"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_4_1_5",
+                  "prompt": "A deep thinker.",
+                  "sourceText": "Person",
+                  "targetText": "philosopher"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_6",
+                  "prompt": "Existential_.",
+                  "options": ["ism", "ist", "ity"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_4_1_7",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Logic"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_8",
+                  "prompt": "Surreal_.",
+                  "options": ["ism", "ist", "ity"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_4_1_9",
+                  "prompt": "Write 'Ethics'.",
+                  "sourceText": "Moral philosophy",
+                  "targetText": "Ethics"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_10",
+                  "prompt": "Renaissance _.",
+                  "options": ["Art", "Science", "Math"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_4_1_11",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Reason"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_12",
+                  "prompt": "Modern_.",
+                  "options": ["ism", "ist", "ity"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_4_1_13",
+                  "prompt": "Write 'Canvas'.",
+                  "sourceText": "Painting surface",
+                  "targetText": "Canvas"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_14",
+                  "prompt": "Impression_.",
+                  "options": ["ism", "ist", "ity"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_4_1_15",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Truth"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_16",
+                  "prompt": "Epistem_.",
+                  "options": ["ology", "ologist", "ological"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "translate_sentence",
+                  "id": "ex_4_4_1_17",
+                  "prompt": "Write 'Sculpture'.",
+                  "sourceText": "3D Art",
+                  "targetText": "Sculpture"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_18",
+                  "prompt": "Minimal_.",
+                  "options": ["ism", "ist", "ity"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "audio_match",
+                  "id": "ex_4_4_1_19",
+                  "prompt": "Type the word you hear.",
+                  "correctWord": "Mind"
+                },
+                {
+                  "type": "multiple_choice",
+                  "id": "ex_4_4_1_20",
+                  "prompt": "Cub_.",
+                  "options": ["ism", "ist", "ity"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -11,7 +11,11 @@ class TopicDetailViewModel extends GetxController {
     topic = Get.arguments as Topic;
   }
 
-  void startLesson(SubTopic subTopic) {
+  void openExercise(SubTopic subTopic) {
     Get.toNamed(PageTo.exercise, arguments: subTopic);
+  }
+
+  void openMaterials(SubTopic subTopic) {
+    Get.toNamed(PageTo.materials, arguments: subTopic);
   }
 }

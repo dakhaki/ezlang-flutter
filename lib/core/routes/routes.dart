@@ -1,4 +1,6 @@
 import 'package:ezlang/core/di/exercise_binding.dart';
+import 'package:ezlang/core/di/materials_binding.dart';
+import 'package:ezlang/presentation/materials/view/materials_page.dart';
 import 'package:ezlang/presentation/exercise/view/exercise_page.dart';
 import 'package:ezlang/core/di/lesson_detail_binding.dart';
 import 'package:ezlang/core/di/profile_binding.dart';
@@ -52,6 +54,11 @@ class BaseRoute {
       page: () => const ExercisePage(),
       binding: ExerciseBinding(),
     ),
+    _getPage(
+      name: PageTo.materials,
+      page: () => const MaterialsPage(),
+      binding: MaterialsBinding(),
+    ),
   ];
 
   static GetPage _getPage({
@@ -77,4 +84,5 @@ class PageTo {
   static const profile = '/profile';
   static const topicDetail = '/topic_detail';
   static const exercise = '/exercise';
+  static const materials = '/materials';
 }

@@ -17,26 +17,52 @@ class TopicDetailPage extends GetView<TopicDetailViewModel> {
           final subTopic = topic.subTopics[index];
           return Card(
             margin: const EdgeInsets.only(bottom: 12),
-            child: ListTile(
-              contentPadding: const EdgeInsets.all(16),
-              leading: Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor.withOpacity(0.1),
-                  shape: BoxShape.circle,
+            child: Column(
+              children: [
+                ListTile(
+                  contentPadding: const EdgeInsets.all(16),
+                  leading: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor.withOpacity(0.1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.school,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                  title: Text(
+                    subTopic.title,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text(
+                    '${subTopic.exercises.length} Exercises • ${subTopic.materials.length} Materials',
+                  ),
                 ),
-                child: Icon(
-                  Icons.play_arrow_rounded,
-                  color: Theme.of(context).primaryColor,
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16.0,
+                    vertical: 8.0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton.icon(
+                        onPressed: () => controller.openMaterials(subTopic),
+                        icon: const Icon(Icons.library_books),
+                        label: const Text('Materials'),
+                      ),
+                      const SizedBox(width: 8),
+                      ElevatedButton.icon(
+                        onPressed: () => controller.openExercise(subTopic),
+                        icon: const Icon(Icons.play_arrow),
+                        label: const Text('Exercises'),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              title: Text(
-                subTopic.title,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text('${subTopic.exercises.length} Exercises'),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () => controller.startLesson(subTopic),
+              ],
             ),
           );
         },

@@ -74,7 +74,7 @@ class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
   }
 
   Future<void> navigateToLesson(EnglishLevel level) async {
-    await speak(level.title);
+    // await speak(level.title);
     final result = await Get.toNamed(PageTo.lessonDetail, arguments: level);
     if (result == true) {
       await updateStreakUseCase();

@@ -35,9 +35,50 @@ class Topic {
 class SubTopic {
   final String id;
   final String title;
+  final List<LearningMaterial> materials;
   final List<Exercise> exercises;
 
-  SubTopic({required this.id, required this.title, required this.exercises});
+  SubTopic({
+    required this.id,
+    required this.title,
+    required this.materials,
+    required this.exercises,
+  });
+}
+
+sealed class LearningMaterial {
+  final String id;
+  final String title;
+
+  LearningMaterial({required this.id, required this.title});
+}
+
+class VideoMaterial extends LearningMaterial {
+  final String url;
+  VideoMaterial({required super.id, required super.title, required this.url});
+}
+
+class ArticleMaterial extends LearningMaterial {
+  final String content;
+  ArticleMaterial({
+    required super.id,
+    required super.title,
+    required this.content,
+  });
+}
+
+class PdfMaterial extends LearningMaterial {
+  final String url;
+  PdfMaterial({required super.id, required super.title, required this.url});
+}
+
+class HtmlMaterial extends LearningMaterial {
+  final String content;
+  HtmlMaterial({
+    required super.id,
+    required super.title,
+    required this.content,
+  });
 }
 
 sealed class Exercise {
