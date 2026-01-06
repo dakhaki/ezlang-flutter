@@ -21,6 +21,10 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/services/logging_service.dart';
 import 'package:ezlang/core/theme/theme_controller.dart';
+import 'package:ezlang/data/datasources/local_data_source.dart';
+import 'package:ezlang/data/repositories/curriculum_repository_impl.dart';
+import 'package:ezlang/domain/repositories/curriculum_repository.dart';
+import 'package:ezlang/domain/use_cases/get_curriculum_use_case.dart';
 import 'package:logger/logger.dart';
 
 class InitialBinding extends Bindings {
@@ -30,6 +34,21 @@ class InitialBinding extends Bindings {
     Get.put<LoggingService>(LoggingService(), permanent: true);
     Get.find<LoggingService>().init(
       level: kReleaseMode ? Level.off : Level.trace,
+    );
+
+    // Data Sources
+    Get.lazyPut<LocalDataSource>(() => LocalDataSourceImpl(), fenix: true);
+
+    // Repositories
+    Get.lazyPut<CurriculumRepository>(
+      () => CurriculumRepositoryImpl(localDataSource: Get.find()),
+      fenix: true,
+    );
+
+    // Use Cases
+    Get.lazyPut<GetCurriculumUseCase>(
+      () => GetCurriculumUseCase(Get.find()),
+      fenix: true,
     );
 
     // Register RemoteConfigService early so AudioService can find it.

@@ -1,0 +1,41 @@
+{
+  "levels": [
+    {
+      "id": "level_1",
+      "title": "Level 1: Absolute Beginner",
+      "cefr": "A0–A1",
+      "description": "Foundations and basic survival English.",
+      "imageUrl": "https://dummyimage.com/600x400/92c952/ffffff",
+      "topics": ["Foundations", "Daily Life", "Grammar", "Key Phrases"]
+    },
+    {
+      "id": "level_2",
+      "title": "Level 2: Elementary",
+      "cefr": "A2",
+      "description": "Simple sentences and frequently used expressions.",
+      "imageUrl": "https://dummyimage.com/600x400/771796/ffffff",
+      "topics": ["Shopping", "Local Geography", "Employment", "Leisure"]
+    },
+    {
+      "id": "level_3",
+      "title": "Level 3: Intermediate",
+      "cefr": "B1–B2",
+      "description": "Independent communication and expressing opinions.",
+      "imageUrl": "https://dummyimage.com/600x400/24f355/ffffff",
+      "topics": ["Travel", "Entertainment", "Health", "Environment"]
+    },
+    {
+      "id": "level_4",
+      "title": "Level 4: Advanced",
+      "cefr": "C1–C2",
+      "description": "Fluency, nuance, and professional/academic use.",
+      "imageUrl": "https://dummyimage.com/600x400/d32776/ffffff",
+      "topics": [
+        "Business Ethics",
+        "Technology",
+        "Complex News",
+        "Abstract Concepts"
+      ]
+    }
+  ]
+}
