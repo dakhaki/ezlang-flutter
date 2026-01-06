@@ -16,6 +16,7 @@ class HomePage extends GetView<HomeViewModel> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('eZlang Curriculum'),
+        centerTitle: false,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(30),
           child: Obx(

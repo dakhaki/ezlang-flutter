@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
-import 'package:ezlang/domain/entities/curriculum_entity.dart';
+import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/presentation/exercise/view_model/exercise_view_model.dart';
 
 class TranslateSentenceWidget extends GetView<ExerciseViewModel> {

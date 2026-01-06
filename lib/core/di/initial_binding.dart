@@ -10,6 +10,7 @@ import 'package:ezlang/data/repositories/progress_repository_impl.dart';
 import 'package:ezlang/domain/repositories/curriculum_repository.dart';
 import 'package:ezlang/domain/repositories/progress_repository.dart';
 import 'package:ezlang/domain/use_cases/get_curriculum_use_case.dart';
+import 'package:ezlang/domain/use_cases/get_lesson_content_use_case.dart';
 import 'package:ezlang/domain/use_cases/get_progress_use_case.dart';
 import 'package:ezlang/domain/use_cases/clear_progress_use_case.dart';
 import 'package:ezlang/domain/use_cases/save_progress_use_case.dart';
@@ -51,6 +52,10 @@ class InitialBinding extends Bindings {
     // Use Cases
     Get.lazyPut<GetCurriculumUseCase>(
       () => GetCurriculumUseCase(Get.find()),
+      fenix: true,
+    );
+    Get.lazyPut<GetLessonContentUseCase>(
+      () => GetLessonContentUseCase(Get.find()),
       fenix: true,
     );
     Get.lazyPut<SaveProgressUseCase>(

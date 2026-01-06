@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/services/audio_service.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
+import 'package:ezlang/domain/entities/lesson_content_entity.dart';
+import 'package:ezlang/domain/use_cases/get_lesson_content_use_case.dart';
 
-class ExerciseViewModel extends GetxController {
+class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
   late SubTopic subTopic;
   final AudioService audioService;
+  final GetLessonContentUseCase getLessonContentUseCase;
+  late LessonContent content;
 
   final RxInt currentExerciseIndex = 0.obs;
   final RxBool isAnswerChecked = false.obs;
@@ -17,24 +21,39 @@ class ExerciseViewModel extends GetxController {
   // State for Text Input (Translate / Audio)
   final TextEditingController textController = TextEditingController();
 
-  ExerciseViewModel({required this.audioService});
+  ExerciseViewModel({
+    required this.audioService,
+    required this.getLessonContentUseCase,
+  });
 
   @override
   void onInit() {
     super.onInit();
     if (Get.arguments is SubTopic) {
       subTopic = Get.arguments as SubTopic;
+      fetchContent();
     } else {
       Get.back();
       Get.snackbar('Error', 'Invalid lesson data');
     }
   }
 
-  Exercise get currentExercise =>
-      subTopic.exercises[currentExerciseIndex.value];
+  Future<void> fetchContent() async {
+    change(null, status: RxStatus.loading());
+    final result = await getLessonContentUseCase(subTopic.id);
+    result.fold(
+      (failure) => change(null, status: RxStatus.error(failure.message)),
+      (data) {
+        content = data;
+        change(data, status: RxStatus.success());
+      },
+    );
+  }
+
+  Exercise get currentExercise => content.exercises[currentExerciseIndex.value];
 
   double get progress =>
-      (currentExerciseIndex.value + 1) / subTopic.exercises.length;
+      (currentExerciseIndex.value + 1) / content.exercises.length;
 
   void selectOption(int index) {
     if (isAnswerChecked.value) return;
@@ -73,7 +92,7 @@ class ExerciseViewModel extends GetxController {
   }
 
   void nextExercise() {
-    if (currentExerciseIndex.value < subTopic.exercises.length - 1) {
+    if (currentExerciseIndex.value < content.exercises.length - 1) {
       currentExerciseIndex.value++;
       _resetState();
     } else {

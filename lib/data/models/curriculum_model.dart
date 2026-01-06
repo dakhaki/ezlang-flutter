@@ -74,8 +74,8 @@ abstract class SubTopicModel with _$SubTopicModel {
   const factory SubTopicModel({
     required String id,
     required String title,
-    @Default([]) List<LearningMaterialModel> materials,
-    required List<ExerciseModel> exercises,
+    @Default(0) int materialCount,
+    @Default(0) int exerciseCount,
   }) = _SubTopicModel;
 
   factory SubTopicModel.fromJson(Map<String, dynamic> json) =>
@@ -85,97 +85,8 @@ abstract class SubTopicModel with _$SubTopicModel {
     return SubTopic(
       id: id,
       title: title,
-      materials: materials.map((e) => e.toEntity()).toList(),
-      exercises: exercises.map((e) => e.toEntity()).toList(),
-    );
-  }
-}
-
-@Freezed(unionKey: 'type', unionValueCase: FreezedUnionCase.snake)
-sealed class LearningMaterialModel with _$LearningMaterialModel {
-  const LearningMaterialModel._();
-
-  const factory LearningMaterialModel.video({
-    required String id,
-    required String title,
-    required String url,
-  }) = _VideoMaterialModel;
-
-  const factory LearningMaterialModel.article({
-    required String id,
-    required String title,
-    required String content,
-  }) = _ArticleMaterialModel;
-
-  const factory LearningMaterialModel.pdf({
-    required String id,
-    required String title,
-    required String url,
-  }) = _PdfMaterialModel;
-
-  const factory LearningMaterialModel.html({
-    required String id,
-    required String title,
-    required String content,
-  }) = _HtmlMaterialModel;
-
-  factory LearningMaterialModel.fromJson(Map<String, dynamic> json) =>
-      _$LearningMaterialModelFromJson(json);
-
-  LearningMaterial toEntity() {
-    return map(
-      video: (e) => VideoMaterial(id: e.id, title: e.title, url: e.url),
-      article: (e) =>
-          ArticleMaterial(id: e.id, title: e.title, content: e.content),
-      pdf: (e) => PdfMaterial(id: e.id, title: e.title, url: e.url),
-      html: (e) => HtmlMaterial(id: e.id, title: e.title, content: e.content),
-    );
-  }
-}
-
-@Freezed(unionKey: 'type', unionValueCase: FreezedUnionCase.snake)
-sealed class ExerciseModel with _$ExerciseModel {
-  const ExerciseModel._();
-
-  const factory ExerciseModel.multipleChoice({
-    required String id,
-    required String prompt,
-    required List<String> options,
-    required int correctIndex,
-  }) = _MultipleChoiceModel;
-
-  const factory ExerciseModel.translateSentence({
-    required String id,
-    required String prompt,
-    required String sourceText,
-    required String targetText,
-  }) = _TranslateSentenceModel;
-
-  const factory ExerciseModel.audioMatch({
-    required String id,
-    required String prompt,
-    required String correctWord,
-  }) = _AudioMatchModel;
-
-  factory ExerciseModel.fromJson(Map<String, dynamic> json) =>
-      _$ExerciseModelFromJson(json);
-
-  Exercise toEntity() {
-    return map(
-      multipleChoice: (e) => MultipleChoice(
-        id: e.id,
-        prompt: e.prompt,
-        options: e.options,
-        correctIndex: e.correctIndex,
-      ),
-      translateSentence: (e) => TranslateSentence(
-        id: e.id,
-        prompt: e.prompt,
-        sourceText: e.sourceText,
-        targetText: e.targetText,
-      ),
-      audioMatch: (e) =>
-          AudioMatch(id: e.id, prompt: e.prompt, correctWord: e.correctWord),
+      materialCount: materialCount,
+      exerciseCount: exerciseCount,
     );
   }
 }

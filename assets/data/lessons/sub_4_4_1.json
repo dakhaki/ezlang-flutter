@@ -1,0 +1,141 @@
+{
+  "id": "sub_4_4_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_1",
+      "prompt": "The study of existence.",
+      "options": ["Biology", "Philosophy", "Physics"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_4_1_2",
+      "prompt": "Appreciation of beauty.",
+      "sourceText": "Concept",
+      "targetText": "aesthetics"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_4_1_3",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Metaphor"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_4",
+      "prompt": "Abstract art does not represent _ reality.",
+      "options": ["external", "internal", "dream"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_4_1_5",
+      "prompt": "A deep thinker.",
+      "sourceText": "Person",
+      "targetText": "philosopher"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_6",
+      "prompt": "Existential_.",
+      "options": ["ism", "ist", "ity"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_4_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Logic"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_8",
+      "prompt": "Surreal_.",
+      "options": ["ism", "ist", "ity"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_4_1_9",
+      "prompt": "Write 'Ethics'.",
+      "sourceText": "Moral philosophy",
+      "targetText": "Ethics"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_10",
+      "prompt": "Renaissance _.",
+      "options": ["Art", "Science", "Math"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_4_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Reason"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_12",
+      "prompt": "Modern_.",
+      "options": ["ism", "ist", "ity"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_4_1_13",
+      "prompt": "Write 'Canvas'.",
+      "sourceText": "Painting surface",
+      "targetText": "Canvas"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_14",
+      "prompt": "Impression_.",
+      "options": ["ism", "ist", "ity"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_4_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Truth"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_16",
+      "prompt": "Epistem_.",
+      "options": ["ology", "ologist", "ological"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_4_1_17",
+      "prompt": "Write 'Sculpture'.",
+      "sourceText": "3D Art",
+      "targetText": "Sculpture"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_18",
+      "prompt": "Minimal_.",
+      "options": ["ism", "ist", "ity"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_4_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Mind"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_4_1_20",
+      "prompt": "Cub_.",
+      "options": ["ism", "ist", "ity"],
+      "correctIndex": 0
+    }
+  ]
+}

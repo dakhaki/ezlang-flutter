@@ -1,0 +1,53 @@
+{
+  "id": "sub_1_1_1",
+  "materials": [
+    {
+      "type": "video",
+      "id": "mat_1_1_1_1",
+      "title": "Learn the English Alphabet",
+      "url": "https://www.example.com/videos/english_alphabet.mp4"
+    },
+    {
+      "type": "article",
+      "id": "mat_1_1_1_2",
+      "title": "English Alphabet Basics",
+      "content": "The English alphabet consists of 26 letters: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_1",
+      "prompt": "Which letter comes after 'B'?",
+      "options": ["A", "C", "D"],
+      "correctIndex": 1
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_2",
+      "prompt": "Select the number 'Ten'.",
+      "options": ["5", "10", "20"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_1_3",
+      "prompt": "Write the number 5 as a word.",
+      "sourceText": "5",
+      "targetText": "Five"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_1_4",
+      "prompt": "Type the word you hear.",
+      "correctWord": "One"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_5",
+      "prompt": "Which is the first letter of the alphabet?",
+      "options": ["Z", "A", "M"],
+      "correctIndex": 1
+    }
+  ]
+}

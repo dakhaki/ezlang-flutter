@@ -1,0 +1,141 @@
+{
+  "id": "sub_1_2_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_1",
+      "prompt": "Who is your father's wife?",
+      "options": ["Sister", "Mother", "Aunt"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_2_1_2",
+      "prompt": "Write the opposite of 'Sad'.",
+      "sourceText": "Sad (Opposite)",
+      "targetText": "Happy"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_2_1_3",
+      "prompt": "Type the family member you hear.",
+      "correctWord": "Sister"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_4",
+      "prompt": "I feel _ when I smile.",
+      "options": ["Angry", "Happy", "Tired"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_2_1_5",
+      "prompt": "Write the word for a male sibling.",
+      "sourceText": "Male Sibling",
+      "targetText": "Brother"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_6",
+      "prompt": "Who is your mother's mother?",
+      "options": ["Grandmother", "Aunt", "Sister"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_2_1_7",
+      "prompt": "Type the feeling you hear.",
+      "correctWord": "Angry"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_8",
+      "prompt": "I am _ because I need sleep.",
+      "options": ["Tired", "Happy", "Excited"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_2_1_9",
+      "prompt": "Write 'Father'.",
+      "sourceText": "Dad",
+      "targetText": "Father"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_10",
+      "prompt": "Who is your uncle's child?",
+      "options": ["Cousin", "Brother", "Sister"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_2_1_11",
+      "prompt": "Type the family member you hear.",
+      "correctWord": "Uncle"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_12",
+      "prompt": "I cry when I am _.",
+      "options": ["Sad", "Happy", "Hungry"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_2_1_13",
+      "prompt": "Write 'Mother'.",
+      "sourceText": "Mom",
+      "targetText": "Mother"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_14",
+      "prompt": "Who is your sister?",
+      "options": ["Female sibling", "Male sibling", "Parent"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_2_1_15",
+      "prompt": "Type the feeling you hear.",
+      "correctWord": "Hungry"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_16",
+      "prompt": "I eat when I am _.",
+      "options": ["Hungry", "Thirsty", "Sad"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_2_1_17",
+      "prompt": "Write 'Aunt'.",
+      "sourceText": "Parent's sister",
+      "targetText": "Aunt"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_18",
+      "prompt": "Who is your son?",
+      "options": ["Male child", "Female child", "Parent"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_2_1_19",
+      "prompt": "Type the feeling you hear.",
+      "correctWord": "Thirsty"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_2_1_20",
+      "prompt": "I drink when I am _.",
+      "options": ["Thirsty", "Hungry", "Tired"],
+      "correctIndex": 0
+    }
+  ]
+}

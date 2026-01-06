@@ -1,0 +1,141 @@
+{
+  "id": "sub_3_1_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_1",
+      "prompt": "I have never _ to Paris.",
+      "options": ["be", "been", "was"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_1_1_2",
+      "prompt": "A document for international travel.",
+      "sourceText": "Travel Document",
+      "targetText": "passport"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_1_1_3",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Airport"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_4",
+      "prompt": "We stayed _ a hotel.",
+      "options": ["in", "on", "to"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_1_1_5",
+      "prompt": "A journey by plane.",
+      "sourceText": "Air journey",
+      "targetText": "flight"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_6",
+      "prompt": "Have you ever _ sushi?",
+      "options": ["eat", "ate", "eaten"],
+      "correctIndex": 2
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_1_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Luggage"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_8",
+      "prompt": "I booked a _.",
+      "options": ["ticket", "paper", "card"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_1_1_9",
+      "prompt": "Write 'Suitcase'.",
+      "sourceText": "Travel bag",
+      "targetText": "Suitcase"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_10",
+      "prompt": "The plane takes _.",
+      "options": ["off", "up", "out"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_1_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Tourist"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_12",
+      "prompt": "We went _.",
+      "options": ["sightseeing", "looking", "watching"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_1_1_13",
+      "prompt": "Write 'Visa'.",
+      "sourceText": "Entry permit",
+      "targetText": "Visa"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_14",
+      "prompt": "I packed my _.",
+      "options": ["bags", "boxes", "cases"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_1_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Journey"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_16",
+      "prompt": "The flight was _.",
+      "options": ["delayed", "late", "slow"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_1_1_17",
+      "prompt": "Write 'Destination'.",
+      "sourceText": "End place",
+      "targetText": "Destination"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_18",
+      "prompt": "We bought _.",
+      "options": ["souvenirs", "gifts", "presents"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_1_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Vacation"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_1_1_20",
+      "prompt": "I love _.",
+      "options": ["traveling", "travel", "trip"],
+      "correctIndex": 0
+    }
+  ]
+}

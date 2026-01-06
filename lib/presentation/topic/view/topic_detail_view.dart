@@ -9,7 +9,7 @@ class TopicDetailPage extends GetView<TopicDetailViewModel> {
   Widget build(BuildContext context) {
     final topic = controller.topic;
     return Scaffold(
-      appBar: AppBar(title: Text(topic.title)),
+      appBar: AppBar(title: Text(topic.title), centerTitle: false),
       body: ListView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: topic.subTopics.length,
@@ -37,7 +37,7 @@ class TopicDetailPage extends GetView<TopicDetailViewModel> {
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   subtitle: Text(
-                    '${subTopic.exercises.length} Exercises • ${subTopic.materials.length} Materials',
+                    '${subTopic.exerciseCount} Exercises • ${subTopic.materialCount} Materials',
                   ),
                 ),
                 Padding(

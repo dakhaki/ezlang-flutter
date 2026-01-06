@@ -1,0 +1,142 @@
+{
+  "id": "sub_2_4_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_1",
+      "prompt": "An elephant is _ than a mouse.",
+      "options": ["big", "bigger", "biggest"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_4_1_2",
+      "prompt": "Superlative of 'good'.",
+      "sourceText": "Good (Superlative)",
+      "targetText": "best"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_3",
+      "prompt": "This is the _ movie ever.",
+      "options": ["bad", "worse", "worst"],
+      "correctIndex": 2
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_4_1_4",
+      "prompt": "Comparative of 'fast'.",
+      "sourceText": "Fast (Comparative)",
+      "targetText": "faster"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_5",
+      "prompt": "She is as tall _ her brother.",
+      "options": ["as", "than", "like"],
+      "correctIndex": 0
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_6",
+      "prompt": "He is _ than me.",
+      "options": ["older", "old", "oldest"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_4_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Better"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_8",
+      "prompt": "This car is _ expensive than that one.",
+      "options": ["more", "most", "much"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_4_1_9",
+      "prompt": "Superlative of 'bad'.",
+      "sourceText": "Bad (Superlative)",
+      "targetText": "worst"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_10",
+      "prompt": "Mount Everest is the _ mountain.",
+      "options": ["high", "higher", "highest"],
+      "correctIndex": 2
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_4_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Faster"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_12",
+      "prompt": "Summer is _ than winter.",
+      "options": ["hotter", "hot", "hottest"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_4_1_13",
+      "prompt": "Comparative of 'small'.",
+      "sourceText": "Small (Comparative)",
+      "targetText": "smaller"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_14",
+      "prompt": "She is the _ student.",
+      "options": ["smart", "smarter", "smartest"],
+      "correctIndex": 2
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_4_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Taller"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_16",
+      "prompt": "My dog is _ than yours.",
+      "options": ["friendlier", "friendly", "friendliest"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_4_1_17",
+      "prompt": "Comparative of 'happy'.",
+      "sourceText": "Happy (Comparative)",
+      "targetText": "happier"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_18",
+      "prompt": "This test was _ than the last one.",
+      "options": ["easier", "easy", "easiest"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_4_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Stronger"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_4_1_20",
+      "prompt": "Who is the _ person you know?",
+      "options": ["funny", "funnier", "funniest"],
+      "correctIndex": 2
+    }
+  ]
+}

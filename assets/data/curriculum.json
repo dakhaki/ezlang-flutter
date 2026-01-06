@@ -9,103 +9,21 @@
       "topics": [
         {
           "id": "topic_1_1",
-          "title": "Foundations",
+          "title": "Vocabulary",
           "iconAsset": "assets/images/foundations.png",
           "isPremium": false,
           "subTopics": [
             {
               "id": "sub_1_1_1",
               "title": "The Alphabet",
-              "materials": [
-                {
-                  "type": "video",
-                  "id": "mat_1_1_1_1",
-                  "title": "Learn the English Alphabet",
-                  "url": "https://www.example.com/videos/english_alphabet.mp4"
-                },
-                {
-                  "type": "article",
-                  "id": "mat_1_1_1_2",
-                  "title": "English Alphabet Basics",
-                  "content": "The English alphabet consists of 26 letters: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z."
-                }
-              ],
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1",
-                  "prompt": "Which letter comes after 'B'?",
-                  "options": ["A", "C", "D"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_1_1_2",
-                  "prompt": "Select the number 'Ten'.",
-                  "options": ["5", "10", "20"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_1_1_3",
-                  "prompt": "Write the number 5 as a word.",
-                  "sourceText": "5",
-                  "targetText": "Five"
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_1_1_1_4",
-                  "prompt": "Type the word you hear.",
-                  "correctWord": "One"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_1_1_5",
-                  "prompt": "Which is the first letter of the alphabet?",
-                  "options": ["Z", "A", "M"],
-                  "correctIndex": 1
-                }
-              ]
+              "materialCount": 2,
+              "exerciseCount": 5
             },
             {
               "id": "sub_1_1_2",
               "title": "Colors & Dates",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_1_2_1",
-                  "prompt": "What color is a strawberry?",
-                  "options": ["Blue", "Red", "Green"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_1_2_2",
-                  "prompt": "Write the color of the sky.",
-                  "sourceText": "Sky Color",
-                  "targetText": "Blue"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_1_2_3",
-                  "prompt": "Which day comes after Monday?",
-                  "options": ["Sunday", "Tuesday", "Friday"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_1_1_2_4",
-                  "prompt": "Type the color you hear.",
-                  "correctWord": "Green"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_1_2_5",
-                  "prompt": "How many months are in a year?",
-                  "options": ["10", "12", "15"],
-                  "correctIndex": 1
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 5
             }
           ]
         },
@@ -118,42 +36,8 @@
             {
               "id": "sub_1_2_1",
               "title": "Family & Feelings",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_2_1_1",
-                  "prompt": "Who is your father's wife?",
-                  "options": ["Sister", "Mother", "Aunt"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_2_1_2",
-                  "prompt": "Write the opposite of 'Sad'.",
-                  "sourceText": "Sad (Opposite)",
-                  "targetText": "Happy"
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_1_2_1_3",
-                  "prompt": "Type the family member you hear.",
-                  "correctWord": "Sister"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_2_1_4",
-                  "prompt": "I feel _ when I smile.",
-                  "options": ["Angry", "Happy", "Tired"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_2_1_5",
-                  "prompt": "Write the word for a male sibling.",
-                  "sourceText": "Male Sibling",
-                  "targetText": "Brother"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -166,43 +50,8 @@
             {
               "id": "sub_1_3_1",
               "title": "Verb 'to be'",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_3_1_1",
-                  "prompt": "I _ a student.",
-                  "options": ["is", "am", "are"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_3_1_2",
-                  "prompt": "She _ happy.",
-                  "options": ["is", "am", "are"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_3_1_3",
-                  "prompt": "Complete: They _ friends.",
-                  "sourceText": "They ... friends",
-                  "targetText": "are"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_3_1_4",
-                  "prompt": "We _ at home.",
-                  "options": ["am", "is", "are"],
-                  "correctIndex": 2
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_3_1_5",
-                  "prompt": "Past tense of 'is'.",
-                  "sourceText": "is (Past)",
-                  "targetText": "was"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -215,42 +64,8 @@
             {
               "id": "sub_1_4_1",
               "title": "Introductions",
-              "exercises": [
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_4_1_1",
-                  "prompt": "Complete the phrase: My ... is John.",
-                  "sourceText": "My ... is John",
-                  "targetText": "name"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_4_1_2",
-                  "prompt": "How do you say hello in the morning?",
-                  "options": ["Good night", "Good morning", "Goodbye"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_1_4_1_3",
-                  "prompt": "Type the greeting you hear.",
-                  "correctWord": "Hello"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_1_4_1_4",
-                  "prompt": "Nice to _ you.",
-                  "options": ["see", "meet", "hear"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_1_4_1_5",
-                  "prompt": "Complete: How ... you?",
-                  "sourceText": "How ... you?",
-                  "targetText": "are"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         }
@@ -272,42 +87,8 @@
             {
               "id": "sub_2_1_1",
               "title": "Shopping",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_1_1_1",
-                  "prompt": "How _ is this shirt?",
-                  "options": ["many", "much", "price"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_1_1_2",
-                  "prompt": "I want to ... this apple.",
-                  "sourceText": "Purchase action",
-                  "targetText": "buy"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_1_1_3",
-                  "prompt": "Can I pay by _ card?",
-                  "options": ["credit", "money", "paper"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_2_1_1_4",
-                  "prompt": "Type the word you hear.",
-                  "correctWord": "Market"
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_1_1_5",
-                  "prompt": "The opposite of cheap.",
-                  "sourceText": "Not cheap",
-                  "targetText": "expensive"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -320,42 +101,8 @@
             {
               "id": "sub_2_2_1",
               "title": "Jobs",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_2_1_1",
-                  "prompt": "A person who teaches is a _.",
-                  "options": ["Doctor", "Teacher", "Driver"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_2_1_2",
-                  "prompt": "I work in an office.",
-                  "sourceText": "Workplace: Office",
-                  "targetText": "office"
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_2_2_1_3",
-                  "prompt": "Type the job you hear.",
-                  "correctWord": "Doctor"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_2_1_4",
-                  "prompt": "She works _ a hospital.",
-                  "options": ["on", "at", "under"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_2_1_5",
-                  "prompt": "A person who cooks food.",
-                  "sourceText": "Job title",
-                  "targetText": "chef"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -368,43 +115,8 @@
             {
               "id": "sub_2_3_1",
               "title": "Past Simple",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_3_1_1",
-                  "prompt": "Yesterday, I _ to the park.",
-                  "options": ["go", "went", "gone"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_3_1_2",
-                  "prompt": "Past tense of 'see'.",
-                  "sourceText": "see (Past)",
-                  "targetText": "saw"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_3_1_3",
-                  "prompt": "Did you _ the movie?",
-                  "options": ["watch", "watched", "watching"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_3_1_4",
-                  "prompt": "Past tense of 'play'.",
-                  "sourceText": "play (Past)",
-                  "targetText": "played"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_3_1_5",
-                  "prompt": "He _ not happy yesterday.",
-                  "options": ["is", "was", "were"],
-                  "correctIndex": 1
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -417,43 +129,8 @@
             {
               "id": "sub_2_4_1",
               "title": "Comparisons",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_4_1_1",
-                  "prompt": "An elephant is _ than a mouse.",
-                  "options": ["big", "bigger", "biggest"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_4_1_2",
-                  "prompt": "Superlative of 'good'.",
-                  "sourceText": "Good (Superlative)",
-                  "targetText": "best"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_4_1_3",
-                  "prompt": "This is the _ movie ever.",
-                  "options": ["bad", "worse", "worst"],
-                  "correctIndex": 2
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_2_4_1_4",
-                  "prompt": "Comparative of 'fast'.",
-                  "sourceText": "Fast (Comparative)",
-                  "targetText": "faster"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_2_4_1_5",
-                  "prompt": "She is as tall _ her brother.",
-                  "options": ["as", "than", "like"],
-                  "correctIndex": 0
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         }
@@ -475,42 +152,8 @@
             {
               "id": "sub_3_1_1",
               "title": "Travel Experiences",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_1_1_1",
-                  "prompt": "I have never _ to Paris.",
-                  "options": ["be", "been", "was"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_1_1_2",
-                  "prompt": "A document for international travel.",
-                  "sourceText": "Travel Document",
-                  "targetText": "passport"
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_3_1_1_3",
-                  "prompt": "Type the word you hear.",
-                  "correctWord": "Airport"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_1_1_4",
-                  "prompt": "We stayed _ a hotel.",
-                  "options": ["in", "on", "to"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_1_1_5",
-                  "prompt": "A journey by plane.",
-                  "sourceText": "Air journey",
-                  "targetText": "flight"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -523,42 +166,8 @@
             {
               "id": "sub_3_2_1",
               "title": "Health",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_2_1_1",
-                  "prompt": "You should _ a doctor.",
-                  "options": ["see", "look", "watch"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_2_1_2",
-                  "prompt": "Pain in the head.",
-                  "sourceText": "Head pain",
-                  "targetText": "headache"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_2_1_3",
-                  "prompt": "I have a _ throat.",
-                  "options": ["pain", "sore", "hurt"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_3_2_1_4",
-                  "prompt": "Type the word you hear.",
-                  "correctWord": "Medicine"
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_2_1_5",
-                  "prompt": "Physical activity for health.",
-                  "sourceText": "Activity",
-                  "targetText": "exercise"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -571,43 +180,8 @@
             {
               "id": "sub_3_3_1",
               "title": "Future Tenses",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_3_1_1",
-                  "prompt": "I _ call you later.",
-                  "options": ["will", "going to", "am"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_3_1_2",
-                  "prompt": "Plan: I ... visit my grandma.",
-                  "sourceText": "Plan to visit",
-                  "targetText": "am going to"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_3_1_3",
-                  "prompt": "Look at those clouds! It _ rain.",
-                  "options": ["will", "is going to", "shall"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_3_1_4",
-                  "prompt": "Promise: I ... help you.",
-                  "sourceText": "Promise to help",
-                  "targetText": "will"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_3_1_5",
-                  "prompt": "The train _ at 9 PM.",
-                  "options": ["leaves", "leaving", "leave"],
-                  "correctIndex": 0
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -620,43 +194,8 @@
             {
               "id": "sub_3_4_1",
               "title": "Conditionals",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_4_1_1",
-                  "prompt": "If it rains, I _ stay home.",
-                  "options": ["will", "would", "had"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_4_1_2",
-                  "prompt": "If I were you, I ... study.",
-                  "sourceText": "Advice",
-                  "targetText": "would"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_4_1_3",
-                  "prompt": "If she _ time, she would come.",
-                  "options": ["has", "had", "have"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_3_4_1_4",
-                  "prompt": "Unless you hurry, you ... be late.",
-                  "sourceText": "Consequence",
-                  "targetText": "will"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_3_4_1_5",
-                  "prompt": "Water boils if you _ it to 100C.",
-                  "options": ["heat", "heated", "will heat"],
-                  "correctIndex": 0
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         }
@@ -678,42 +217,8 @@
             {
               "id": "sub_4_1_1",
               "title": "Business Ethics",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_1_1_1",
-                  "prompt": "Companies must comply _ regulations.",
-                  "options": ["to", "with", "for"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_1_1_2",
-                  "prompt": "Moral principles.",
-                  "sourceText": "Concept",
-                  "targetText": "ethics"
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_4_1_1_3",
-                  "prompt": "Type the word you hear.",
-                  "correctWord": "Integrity"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_1_1_4",
-                  "prompt": "A conflict of _.",
-                  "options": ["interest", "money", "time"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_1_1_5",
-                  "prompt": "Responsible for actions.",
-                  "sourceText": "Accountable",
-                  "targetText": "accountability"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -726,42 +231,8 @@
             {
               "id": "sub_4_2_1",
               "title": "Tech Impact",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_2_1_1",
-                  "prompt": "AI stands for _ Intelligence.",
-                  "options": ["Automated", "Artificial", "Advanced"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_2_1_2",
-                  "prompt": "Protecting data.",
-                  "sourceText": "Security field",
-                  "targetText": "cybersecurity"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_2_1_3",
-                  "prompt": "The _ of social media.",
-                  "options": ["impact", "hit", "crash"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_4_2_1_4",
-                  "prompt": "Type the word you hear.",
-                  "correctWord": "Algorithm"
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_2_1_5",
-                  "prompt": "New and creative idea.",
-                  "sourceText": "Novelty/Creation",
-                  "targetText": "innovation"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -774,43 +245,8 @@
             {
               "id": "sub_4_3_1",
               "title": "Advanced Structures",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_3_1_1",
-                  "prompt": "Never _ I seen such a thing.",
-                  "options": ["have", "had", "did"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_3_1_2",
-                  "prompt": "Had I known, I ... have come.",
-                  "sourceText": "Conditional completion",
-                  "targetText": "would"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_3_1_3",
-                  "prompt": "Little _ he know about the surprise.",
-                  "options": ["does", "did", "do"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_3_1_4",
-                  "prompt": "Not only ... he smart, but also kind.",
-                  "sourceText": "Inversion",
-                  "targetText": "is"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_3_1_5",
-                  "prompt": "Should you _ assistance, call us.",
-                  "options": ["need", "needed", "needs"],
-                  "correctIndex": 0
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
@@ -823,42 +259,8 @@
             {
               "id": "sub_4_4_1",
               "title": "Philosophy & Art",
-              "exercises": [
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_4_1_1",
-                  "prompt": "The study of existence.",
-                  "options": ["Biology", "Philosophy", "Physics"],
-                  "correctIndex": 1
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_4_1_2",
-                  "prompt": "Appreciation of beauty.",
-                  "sourceText": "Concept",
-                  "targetText": "aesthetics"
-                },
-                {
-                  "type": "audio_match",
-                  "id": "ex_4_4_1_3",
-                  "prompt": "Type the word you hear.",
-                  "correctWord": "Metaphor"
-                },
-                {
-                  "type": "multiple_choice",
-                  "id": "ex_4_4_1_4",
-                  "prompt": "Abstract art does not represent _ reality.",
-                  "options": ["external", "internal", "dream"],
-                  "correctIndex": 0
-                },
-                {
-                  "type": "translate_sentence",
-                  "id": "ex_4_4_1_5",
-                  "prompt": "A deep thinker.",
-                  "sourceText": "Person",
-                  "targetText": "philosopher"
-                }
-              ]
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         }

@@ -1,0 +1,142 @@
+{
+  "id": "sub_2_3_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_1",
+      "prompt": "Yesterday, I _ to the park.",
+      "options": ["go", "went", "gone"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_3_1_2",
+      "prompt": "Past tense of 'see'.",
+      "sourceText": "see (Past)",
+      "targetText": "saw"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_3",
+      "prompt": "Did you _ the movie?",
+      "options": ["watch", "watched", "watching"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_3_1_4",
+      "prompt": "Past tense of 'play'.",
+      "sourceText": "play (Past)",
+      "targetText": "played"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_5",
+      "prompt": "He _ not happy yesterday.",
+      "options": ["is", "was", "were"],
+      "correctIndex": 1
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_6",
+      "prompt": "We _ pizza last night.",
+      "options": ["eat", "ate", "eaten"],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_3_1_7",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Went"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_8",
+      "prompt": "She _ a book.",
+      "options": ["read", "reads", "reading"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_3_1_9",
+      "prompt": "Past tense of 'buy'.",
+      "sourceText": "buy (Past)",
+      "targetText": "bought"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_10",
+      "prompt": "They _ football.",
+      "options": ["played", "play", "playing"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_3_1_11",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Did"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_12",
+      "prompt": "I _ him yesterday.",
+      "options": ["met", "meet", "meeting"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_3_1_13",
+      "prompt": "Past tense of 'go'.",
+      "sourceText": "go (Past)",
+      "targetText": "went"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_14",
+      "prompt": "Did she _ you?",
+      "options": ["call", "called", "calling"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_3_1_15",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Had"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_16",
+      "prompt": "We _ a great time.",
+      "options": ["had", "have", "has"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_3_1_17",
+      "prompt": "Past tense of 'make'.",
+      "sourceText": "make (Past)",
+      "targetText": "made"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_18",
+      "prompt": "He _ to school.",
+      "options": ["walked", "walk", "walking"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_3_1_19",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Came"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_3_1_20",
+      "prompt": "I _ it.",
+      "options": ["liked", "like", "liking"],
+      "correctIndex": 0
+    }
+  ]
+}

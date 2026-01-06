@@ -8,7 +8,7 @@ class SettingsPage extends GetView<SettingsViewModel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
+      appBar: AppBar(title: const Text('Settings'), centerTitle: false),
       body: ListView(
         children: [
           ListTile(

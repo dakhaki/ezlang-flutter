@@ -1,0 +1,141 @@
+{
+  "id": "sub_4_2_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_1",
+      "prompt": "AI stands for _ Intelligence.",
+      "options": ["Automated", "Artificial", "Advanced"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_2_1_2",
+      "prompt": "Protecting data.",
+      "sourceText": "Security field",
+      "targetText": "cybersecurity"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_3",
+      "prompt": "The _ of social media.",
+      "options": ["impact", "hit", "crash"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_2_1_4",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Algorithm"
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_2_1_5",
+      "prompt": "New and creative idea.",
+      "sourceText": "Novelty/Creation",
+      "targetText": "innovation"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_6",
+      "prompt": "Virtual _.",
+      "options": ["Reality", "Real", "Life"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_2_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Data"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_8",
+      "prompt": "Machine _.",
+      "options": ["Learning", "Teaching", "Knowing"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_2_1_9",
+      "prompt": "Write 'Automation'.",
+      "sourceText": "Automatic process",
+      "targetText": "Automation"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_10",
+      "prompt": "Cloud _.",
+      "options": ["Computing", "Computer", "Compute"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_2_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Network"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_12",
+      "prompt": "Digital _.",
+      "options": ["Transformation", "Change", "Shift"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_2_1_13",
+      "prompt": "Write 'Privacy'.",
+      "sourceText": "Confidentiality",
+      "targetText": "Privacy"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_14",
+      "prompt": "Big _.",
+      "options": ["Data", "Info", "Fact"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_2_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Robot"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_16",
+      "prompt": "Smart _.",
+      "options": ["Phone", "Call", "Talk"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_2_1_17",
+      "prompt": "Write 'Internet'.",
+      "sourceText": "Web",
+      "targetText": "Internet"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_18",
+      "prompt": "Social _.",
+      "options": ["Network", "Work", "Net"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_2_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Software"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_2_1_20",
+      "prompt": "User _.",
+      "options": ["Interface", "Face", "Look"],
+      "correctIndex": 0
+    }
+  ]
+}

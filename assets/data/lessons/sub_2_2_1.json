@@ -1,0 +1,141 @@
+{
+  "id": "sub_2_2_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_1",
+      "prompt": "A person who teaches is a _.",
+      "options": ["Doctor", "Teacher", "Driver"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_2_1_2",
+      "prompt": "I work in an office.",
+      "sourceText": "Workplace: Office",
+      "targetText": "office"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_2_1_3",
+      "prompt": "Type the job you hear.",
+      "correctWord": "Doctor"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_4",
+      "prompt": "She works _ a hospital.",
+      "options": ["on", "at", "under"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_2_1_5",
+      "prompt": "A person who cooks food.",
+      "sourceText": "Job title",
+      "targetText": "chef"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_6",
+      "prompt": "He drives a bus. He is a _.",
+      "options": ["Driver", "Pilot", "Cook"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_2_1_7",
+      "prompt": "Type the job you hear.",
+      "correctWord": "Nurse"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_8",
+      "prompt": "I am looking for a _.",
+      "options": ["job", "work", "employ"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_2_1_9",
+      "prompt": "Write 'Engineer'.",
+      "sourceText": "Builder/Designer",
+      "targetText": "Engineer"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_10",
+      "prompt": "She is a _.",
+      "options": ["student", "study", "learn"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_2_1_11",
+      "prompt": "Type the job you hear.",
+      "correctWord": "Artist"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_12",
+      "prompt": "He works _ a bank.",
+      "options": ["in", "on", "to"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_2_1_13",
+      "prompt": "Write 'Police'.",
+      "sourceText": "Officer",
+      "targetText": "Police"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_14",
+      "prompt": "A person who acts.",
+      "options": ["Actor", "Act", "Action"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_2_1_15",
+      "prompt": "Type the job you hear.",
+      "correctWord": "Farmer"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_16",
+      "prompt": "My boss is _.",
+      "options": ["nice", "job", "work"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_2_1_17",
+      "prompt": "Write 'Waiter'.",
+      "sourceText": "Server",
+      "targetText": "Waiter"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_18",
+      "prompt": "I want to be a _.",
+      "options": ["singer", "sing", "song"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_2_1_19",
+      "prompt": "Type the job you hear.",
+      "correctWord": "Pilot"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_2_1_20",
+      "prompt": "She has a full-time _.",
+      "options": ["job", "work", "task"],
+      "correctIndex": 0
+    }
+  ]
+}

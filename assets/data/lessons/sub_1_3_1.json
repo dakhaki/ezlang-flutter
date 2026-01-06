@@ -1,0 +1,142 @@
+{
+  "id": "sub_1_3_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_1",
+      "prompt": "I _ a student.",
+      "options": ["is", "am", "are"],
+      "correctIndex": 1
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_2",
+      "prompt": "She _ happy.",
+      "options": ["is", "am", "are"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_3_1_3",
+      "prompt": "Complete: They _ friends.",
+      "sourceText": "They ... friends",
+      "targetText": "are"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_4",
+      "prompt": "We _ at home.",
+      "options": ["am", "is", "are"],
+      "correctIndex": 2
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_3_1_5",
+      "prompt": "Past tense of 'is'.",
+      "sourceText": "is (Past)",
+      "targetText": "was"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_6",
+      "prompt": "He _ my brother.",
+      "options": ["is", "are", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_3_1_7",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Are"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_8",
+      "prompt": "You _ nice.",
+      "options": ["are", "is", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_3_1_9",
+      "prompt": "Complete: It ... a cat.",
+      "sourceText": "It ... a cat",
+      "targetText": "is"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_10",
+      "prompt": "They _ here yesterday.",
+      "options": ["were", "was", "is"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_3_1_11",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Was"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_12",
+      "prompt": "I _ tired last night.",
+      "options": ["was", "were", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_3_1_13",
+      "prompt": "Complete: We ... happy.",
+      "sourceText": "We ... happy",
+      "targetText": "are"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_14",
+      "prompt": "The dog _ big.",
+      "options": ["is", "are", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_3_1_15",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Were"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_16",
+      "prompt": "She _ not here.",
+      "options": ["is", "are", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_3_1_17",
+      "prompt": "Complete: You ... late.",
+      "sourceText": "You ... late",
+      "targetText": "are"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_18",
+      "prompt": "It _ cold today.",
+      "options": ["is", "are", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_3_1_19",
+      "prompt": "Type the verb you hear.",
+      "correctWord": "Is"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_3_1_20",
+      "prompt": "We _ hungry.",
+      "options": ["are", "is", "am"],
+      "correctIndex": 0
+    }
+  ]
+}

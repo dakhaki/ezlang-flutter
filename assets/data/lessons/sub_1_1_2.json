@@ -1,0 +1,41 @@
+{
+  "id": "sub_1_1_2",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_2_1",
+      "prompt": "What color is a strawberry?",
+      "options": ["Blue", "Red", "Green"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_2_2",
+      "prompt": "Write the color of the sky.",
+      "sourceText": "Sky Color",
+      "targetText": "Blue"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_2_3",
+      "prompt": "Which day comes after Monday?",
+      "options": ["Sunday", "Tuesday", "Friday"],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_2_4",
+      "prompt": "Type the color you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/green-us.mp3",
+      "correctWord": "Green"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_2_5",
+      "prompt": "How many months are in a year?",
+      "options": ["10", "12", "15"],
+      "correctIndex": 1
+    }
+  ]
+}

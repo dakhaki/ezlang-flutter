@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
-import 'package:ezlang/domain/entities/curriculum_entity.dart';
+import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/audio_match_widget.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/multiple_choice_widget.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/translate_sentence_widget.dart';
@@ -18,38 +18,44 @@ class ExercisePage extends GetView<ExerciseViewModel> {
           icon: const Icon(Icons.close),
           onPressed: () => Get.back(),
         ),
-        title: Obx(
-          () => LinearProgressIndicator(
-            value: controller.progress,
-            backgroundColor: Colors.grey.shade200,
-            valueColor: const AlwaysStoppedAnimation<Color>(
-              AppPalette.successGreen,
+        title: controller.obx(
+          (_) => Obx(
+            () => LinearProgressIndicator(
+              value: controller.progress,
+              backgroundColor: Colors.grey.shade200,
+              valueColor: const AlwaysStoppedAnimation<Color>(
+                AppPalette.successGreen,
+              ),
+              minHeight: 8,
+              borderRadius: BorderRadius.circular(4),
             ),
-            minHeight: 8,
-            borderRadius: BorderRadius.circular(4),
           ),
+          onLoading: const SizedBox.shrink(),
         ),
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(24),
-              child: Obx(() {
-                final exercise = controller.currentExercise;
-                if (exercise is MultipleChoice) {
-                  return MultipleChoiceWidget(exercise: exercise);
-                } else if (exercise is TranslateSentence) {
-                  return TranslateSentenceWidget(exercise: exercise);
-                } else if (exercise is AudioMatch) {
-                  return AudioMatchWidget(exercise: exercise);
-                }
-                return const SizedBox.shrink();
-              }),
+      body: controller.obx(
+        (content) => Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(24),
+                child: Obx(() {
+                  final exercise = controller.currentExercise;
+                  if (exercise is MultipleChoice) {
+                    return MultipleChoiceWidget(exercise: exercise);
+                  } else if (exercise is TranslateSentence) {
+                    return TranslateSentenceWidget(exercise: exercise);
+                  } else if (exercise is AudioMatch) {
+                    return AudioMatchWidget(exercise: exercise);
+                  }
+                  return const SizedBox.shrink();
+                }),
+              ),
             ),
-          ),
-          _buildBottomBar(context),
-        ],
+            _buildBottomBar(context),
+          ],
+        ),
+        onLoading: const Center(child: CircularProgressIndicator()),
       ),
     );
   }

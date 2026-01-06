@@ -1,0 +1,141 @@
+{
+  "id": "sub_1_4_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_4_1_1",
+      "prompt": "Complete the phrase: My ... is John.",
+      "sourceText": "My ... is John",
+      "targetText": "name"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_2",
+      "prompt": "How do you say hello in the morning?",
+      "options": ["Good night", "Good morning", "Goodbye"],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_4_1_3",
+      "prompt": "Type the greeting you hear.",
+      "correctWord": "Hello"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_4",
+      "prompt": "Nice to _ you.",
+      "options": ["see", "meet", "hear"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_4_1_5",
+      "prompt": "Complete: How ... you?",
+      "sourceText": "How ... you?",
+      "targetText": "are"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_6",
+      "prompt": "I _ from Spain.",
+      "options": ["am", "is", "are"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_4_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Name"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_8",
+      "prompt": "What is _ name?",
+      "options": ["your", "you", "me"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_4_1_9",
+      "prompt": "Write 'Thanks'.",
+      "sourceText": "Thank you",
+      "targetText": "Thanks"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_10",
+      "prompt": "Where _ you from?",
+      "options": ["are", "is", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_4_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Meet"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_12",
+      "prompt": "See you _.",
+      "options": ["later", "now", "yesterday"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_4_1_13",
+      "prompt": "Write 'Please'.",
+      "sourceText": "Polite word",
+      "targetText": "Please"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_14",
+      "prompt": "How old _ you?",
+      "options": ["are", "is", "have"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_4_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "From"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_16",
+      "prompt": "I am _ years old.",
+      "options": ["20", "twenty", "twenties"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_4_1_17",
+      "prompt": "Write 'Excuse me'.",
+      "sourceText": "Polite attention",
+      "targetText": "Excuse me"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_18",
+      "prompt": "This is _ friend.",
+      "options": ["my", "me", "I"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_4_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Friend"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_4_1_20",
+      "prompt": "Good _.",
+      "options": ["bye", "hello", "hi"],
+      "correctIndex": 0
+    }
+  ]
+}

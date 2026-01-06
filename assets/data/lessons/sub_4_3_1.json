@@ -1,0 +1,142 @@
+{
+  "id": "sub_4_3_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_1",
+      "prompt": "Never _ I seen such a thing.",
+      "options": ["have", "had", "did"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_3_1_2",
+      "prompt": "Had I known, I ... have come.",
+      "sourceText": "Conditional completion",
+      "targetText": "would"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_3",
+      "prompt": "Little _ he know about the surprise.",
+      "options": ["does", "did", "do"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_3_1_4",
+      "prompt": "Not only ... he smart, but also kind.",
+      "sourceText": "Inversion",
+      "targetText": "is"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_5",
+      "prompt": "Should you _ assistance, call us.",
+      "options": ["need", "needed", "needs"],
+      "correctIndex": 0
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_6",
+      "prompt": "Hardly _ I arrived when it rained.",
+      "options": ["had", "have", "did"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_3_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Seldom"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_8",
+      "prompt": "Under no circumstances _ you open it.",
+      "options": ["should", "shall", "will"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_3_1_9",
+      "prompt": "Write 'Rarely'.",
+      "sourceText": "Not often",
+      "targetText": "Rarely"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_10",
+      "prompt": "Were I _ you, I would go.",
+      "options": ["to", "for", "at"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_3_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Scarcely"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_12",
+      "prompt": "No sooner _ we left than it snowed.",
+      "options": ["had", "have", "did"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_3_1_13",
+      "prompt": "Write 'Barely'.",
+      "sourceText": "Hardly",
+      "targetText": "Barely"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_14",
+      "prompt": "Only then _ I understand.",
+      "options": ["did", "do", "does"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_3_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Never"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_16",
+      "prompt": "In no way _ I agree.",
+      "options": ["do", "did", "does"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_3_1_17",
+      "prompt": "Write 'Neither'.",
+      "sourceText": "Nor",
+      "targetText": "Neither"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_18",
+      "prompt": "So happy _ I.",
+      "options": ["was", "were", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_3_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Nor"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_3_1_20",
+      "prompt": "Such _ the force of the storm.",
+      "options": ["was", "were", "is"],
+      "correctIndex": 0
+    }
+  ]
+}

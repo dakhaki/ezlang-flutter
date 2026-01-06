@@ -10,7 +10,7 @@ class ProfilePage extends GetView<ProfileViewModel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('My Profile')),
+      appBar: AppBar(title: const Text('My Profile'), centerTitle: false),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(

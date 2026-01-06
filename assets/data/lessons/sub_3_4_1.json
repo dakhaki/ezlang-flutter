@@ -1,0 +1,142 @@
+{
+  "id": "sub_3_4_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_1",
+      "prompt": "If it rains, I _ stay home.",
+      "options": ["will", "would", "had"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_4_1_2",
+      "prompt": "If I were you, I ... study.",
+      "sourceText": "Advice",
+      "targetText": "would"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_3",
+      "prompt": "If she _ time, she would come.",
+      "options": ["has", "had", "have"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_4_1_4",
+      "prompt": "Unless you hurry, you ... be late.",
+      "sourceText": "Consequence",
+      "targetText": "will"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_5",
+      "prompt": "Water boils if you _ it to 100C.",
+      "options": ["heat", "heated", "will heat"],
+      "correctIndex": 0
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_6",
+      "prompt": "If I _ rich, I would travel.",
+      "options": ["was", "were", "am"],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_4_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Unless"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_8",
+      "prompt": "If you _ hard, you pass.",
+      "options": ["study", "studied", "will study"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_4_1_9",
+      "prompt": "Write 'If'.",
+      "sourceText": "Condition",
+      "targetText": "If"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_10",
+      "prompt": "I would go if I _ you.",
+      "options": ["knew", "know", "known"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_4_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Would"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_12",
+      "prompt": "If it _ tomorrow, we cancel.",
+      "options": ["rains", "rained", "rain"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_4_1_13",
+      "prompt": "Write 'Condition'.",
+      "sourceText": "Requirement",
+      "targetText": "Condition"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_14",
+      "prompt": "If I see him, I _ tell him.",
+      "options": ["will", "would", "did"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_4_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Could"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_16",
+      "prompt": "If I had money, I _ buy it.",
+      "options": ["would", "will", "can"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_4_1_17",
+      "prompt": "Write 'Result'.",
+      "sourceText": "Outcome",
+      "targetText": "Result"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_18",
+      "prompt": "If you mix red and blue, you _ purple.",
+      "options": ["get", "got", "getting"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_4_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Might"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_4_1_20",
+      "prompt": "If he comes, I _ be happy.",
+      "options": ["will", "would", "am"],
+      "correctIndex": 0
+    }
+  ]
+}

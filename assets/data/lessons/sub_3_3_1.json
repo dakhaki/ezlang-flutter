@@ -1,0 +1,142 @@
+{
+  "id": "sub_3_3_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_1",
+      "prompt": "I _ call you later.",
+      "options": ["will", "going to", "am"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_3_1_2",
+      "prompt": "Plan: I ... visit my grandma.",
+      "sourceText": "Plan to visit",
+      "targetText": "am going to"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_3",
+      "prompt": "Look at those clouds! It _ rain.",
+      "options": ["will", "is going to", "shall"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_3_1_4",
+      "prompt": "Promise: I ... help you.",
+      "sourceText": "Promise to help",
+      "targetText": "will"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_5",
+      "prompt": "The train _ at 9 PM.",
+      "options": ["leaves", "leaving", "leave"],
+      "correctIndex": 0
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_6",
+      "prompt": "I think he _ win.",
+      "options": ["will", "is going to", "shall"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_3_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Tomorrow"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_8",
+      "prompt": "We _ fly to London.",
+      "options": ["are going to", "will", "shall"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_3_1_9",
+      "prompt": "Write 'Next week'.",
+      "sourceText": "Future time",
+      "targetText": "Next week"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_10",
+      "prompt": "What _ you do?",
+      "options": ["will", "are", "do"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_3_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Future"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_12",
+      "prompt": "I _ be there.",
+      "options": ["will", "am", "do"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_3_1_13",
+      "prompt": "Write 'Soon'.",
+      "sourceText": "Short time",
+      "targetText": "Soon"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_14",
+      "prompt": "It _ be fun.",
+      "options": ["will", "is", "has"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_3_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Plan"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_16",
+      "prompt": "Are you _ to eat?",
+      "options": ["going", "will", "go"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_3_1_17",
+      "prompt": "Write 'Later'.",
+      "sourceText": "After now",
+      "targetText": "Later"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_18",
+      "prompt": "I _ see you.",
+      "options": ["will", "am", "do"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_3_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Goal"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_3_1_20",
+      "prompt": "She _ arrive soon.",
+      "options": ["will", "is", "has"],
+      "correctIndex": 0
+    }
+  ]
+}

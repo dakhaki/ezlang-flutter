@@ -1,0 +1,141 @@
+{
+  "id": "sub_3_2_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_1",
+      "prompt": "You should _ a doctor.",
+      "options": ["see", "look", "watch"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_2_1_2",
+      "prompt": "Pain in the head.",
+      "sourceText": "Head pain",
+      "targetText": "headache"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_3",
+      "prompt": "I have a _ throat.",
+      "options": ["pain", "sore", "hurt"],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_2_1_4",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Medicine"
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_2_1_5",
+      "prompt": "Physical activity for health.",
+      "sourceText": "Activity",
+      "targetText": "exercise"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_6",
+      "prompt": "I feel _.",
+      "options": ["sick", "bad", "wrong"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_2_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Healthy"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_8",
+      "prompt": "Eat more _.",
+      "options": ["vegetables", "candy", "sugar"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_2_1_9",
+      "prompt": "Write 'Fever'.",
+      "sourceText": "High temperature",
+      "targetText": "Fever"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_10",
+      "prompt": "Take this _.",
+      "options": ["pill", "candy", "food"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_2_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Doctor"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_12",
+      "prompt": "I broke my _.",
+      "options": ["leg", "hair", "shirt"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_2_1_13",
+      "prompt": "Write 'Hospital'.",
+      "sourceText": "Medical place",
+      "targetText": "Hospital"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_14",
+      "prompt": "Drink plenty of _.",
+      "options": ["water", "soda", "coffee"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_2_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Nurse"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_16",
+      "prompt": "I have a _.",
+      "options": ["cold", "cool", "freeze"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_3_2_1_17",
+      "prompt": "Write 'Dentist'.",
+      "sourceText": "Tooth doctor",
+      "targetText": "Dentist"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_18",
+      "prompt": "My stomach _.",
+      "options": ["hurts", "pains", "sore"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_3_2_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Pharmacy"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_3_2_1_20",
+      "prompt": "Stay in _.",
+      "options": ["bed", "chair", "floor"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "sub_2_1_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_1",
+      "prompt": "How _ is this shirt?",
+      "options": ["many", "much", "price"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_1_1_2",
+      "prompt": "I want to ... this apple.",
+      "sourceText": "Purchase action",
+      "targetText": "buy"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_3",
+      "prompt": "Can I pay by _ card?",
+      "options": ["credit", "money", "paper"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_1_1_4",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Market"
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_1_1_5",
+      "prompt": "The opposite of cheap.",
+      "sourceText": "Not cheap",
+      "targetText": "expensive"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_6",
+      "prompt": "Where is the changing _?",
+      "options": ["room", "house", "place"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_1_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Price"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_8",
+      "prompt": "Do you have this in a smaller _?",
+      "options": ["size", "shape", "color"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_1_1_9",
+      "prompt": "Write 'Receipt'.",
+      "sourceText": "Proof of purchase",
+      "targetText": "Receipt"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_10",
+      "prompt": "I am just _.",
+      "options": ["looking", "watching", "seeing"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_1_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Sale"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_12",
+      "prompt": "It fits _.",
+      "options": ["perfectly", "good", "nice"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_1_1_13",
+      "prompt": "Write 'Cash'.",
+      "sourceText": "Paper money",
+      "targetText": "Cash"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_14",
+      "prompt": "Can I _ it on?",
+      "options": ["try", "put", "wear"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_1_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Shop"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_16",
+      "prompt": "The store is _.",
+      "options": ["open", "start", "begin"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_2_1_1_17",
+      "prompt": "Write 'Customer'.",
+      "sourceText": "Buyer",
+      "targetText": "Customer"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_18",
+      "prompt": "I need a shopping _.",
+      "options": ["bag", "box", "case"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_2_1_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Cost"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_2_1_1_20",
+      "prompt": "Is there a _?",
+      "options": ["discount", "less", "cheap"],
+      "correctIndex": 0
+    }
+  ]
+}

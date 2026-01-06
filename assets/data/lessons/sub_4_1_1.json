@@ -1,0 +1,141 @@
+{
+  "id": "sub_4_1_1",
+  "materials": [],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_1",
+      "prompt": "Companies must comply _ regulations.",
+      "options": ["to", "with", "for"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_1_1_2",
+      "prompt": "Moral principles.",
+      "sourceText": "Concept",
+      "targetText": "ethics"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_1_1_3",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Integrity"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_4",
+      "prompt": "A conflict of _.",
+      "options": ["interest", "money", "time"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_1_1_5",
+      "prompt": "Responsible for actions.",
+      "sourceText": "Accountable",
+      "targetText": "accountability"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_6",
+      "prompt": "Corporate Social _.",
+      "options": ["Responsibility", "Response", "Respect"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_1_1_7",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Compliance"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_8",
+      "prompt": "Unethical behavior is _.",
+      "options": ["wrong", "right", "good"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_1_1_9",
+      "prompt": "Write 'Transparency'.",
+      "sourceText": "Openness",
+      "targetText": "Transparency"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_10",
+      "prompt": "A code of _.",
+      "options": ["conduct", "law", "rule"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_1_1_11",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Values"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_12",
+      "prompt": "Fair _.",
+      "options": ["trade", "buy", "sell"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_1_1_13",
+      "prompt": "Write 'Bribery'.",
+      "sourceText": "Illegal payment",
+      "targetText": "Bribery"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_14",
+      "prompt": "Whistle_.",
+      "options": ["blower", "player", "maker"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_1_1_15",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Honesty"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_16",
+      "prompt": "Sustainable _.",
+      "options": ["development", "growth", "rise"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_4_1_1_17",
+      "prompt": "Write 'Fraud'.",
+      "sourceText": "Deception",
+      "targetText": "Fraud"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_18",
+      "prompt": "Workplace _.",
+      "options": ["culture", "style", "mode"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_4_1_1_19",
+      "prompt": "Type the word you hear.",
+      "correctWord": "Trust"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_4_1_1_20",
+      "prompt": "Human _.",
+      "options": ["rights", "lefts", "wrongs"],
+      "correctIndex": 0
+    }
+  ]
+}
