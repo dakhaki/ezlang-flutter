@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,32 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
   }
 
   Future<void> _initAudio() async {
+    // Configure AudioContext to handle audio focus and interruptions
+    await _player.setAudioContext(
+      AudioContext(
+        iOS: Platform.isIOS
+            ? AudioContextIOS(
+                category: AVAudioSessionCategory.playback,
+                options: const {
+                  /// check runs on real device
+                  AVAudioSessionOptions.defaultToSpeaker,
+                  AVAudioSessionOptions.allowAirPlay,
+                  AVAudioSessionOptions.allowBluetooth,
+                },
+              )
+            : null,
+        android: Platform.isAndroid
+            ? AudioContextAndroid(
+                isSpeakerphoneOn: true,
+                stayAwake: true,
+                contentType: AndroidContentType.music,
+                usageType: AndroidUsageType.media,
+                audioFocus: AndroidAudioFocus.gain,
+              )
+            : null,
+      ),
+    );
+
     _player.onPlayerStateChanged.listen((state) {
       if (mounted) setState(() => _playerState = state);
     });
@@ -76,50 +103,55 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
       appBar: AppBar(title: Text(widget.title)),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.audiotrack, size: 100, color: Colors.grey),
-            const SizedBox(height: 32),
-            if (_isLoading)
-              const CircularProgressIndicator()
-            else ...[
-              Slider(
-                min: 0,
-                max: _duration.inSeconds.toDouble(),
-                value: _position.inSeconds.toDouble().clamp(
-                  0,
-                  _duration.inSeconds.toDouble(),
-                ),
-                onChanged: (value) async {
-                  final position = Duration(seconds: value.toInt());
-                  await _player.seek(position);
-                },
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(_formatDuration(_position)),
-                    Text(_formatDuration(_duration)),
-                  ],
-                ),
-              ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Icon(Icons.audiotrack, size: 100, color: Colors.grey),
               const SizedBox(height: 32),
-              IconButton(
-                iconSize: 64,
-                icon: Icon(isPlaying ? Icons.pause_circle : Icons.play_circle),
-                onPressed: () async {
-                  if (isPlaying) {
-                    await _player.pause();
-                  } else {
-                    await _player.resume();
-                  }
-                },
-              ),
+              if (_isLoading)
+                const CircularProgressIndicator()
+              else ...[
+                Slider(
+                  min: 0,
+                  max: _duration.inSeconds.toDouble(),
+                  value: _position.inSeconds.toDouble().clamp(
+                    0,
+                    _duration.inSeconds.toDouble(),
+                  ),
+                  onChanged: (value) async {
+                    final position = Duration(seconds: value.toInt());
+                    await _player.seek(position);
+                  },
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(_formatDuration(_position)),
+                      Text(_formatDuration(_duration)),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 32),
+                IconButton(
+                  iconSize: 64,
+                  icon: Icon(
+                    isPlaying ? Icons.pause_circle : Icons.play_circle,
+                  ),
+                  onPressed: () async {
+                    if (isPlaying) {
+                      await _player.pause();
+                    } else {
+                      await _player.resume();
+                    }
+                  },
+                ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );
