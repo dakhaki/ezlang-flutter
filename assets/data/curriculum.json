@@ -23,15 +23,21 @@
             },
             {
               "id": "sub_1_1_2",
-              "title": "Colors & Dates",
+              "title": "Easy Numbers",
               "materialCount": 0,
-              "exerciseCount": 5
+              "exerciseCount": 20
             },
             {
               "id": "sub_1_1_3",
+              "title": "Colors & Dates",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_1_1_4",
               "title": "Basic Greetings",
               "materialCount": 0,
-              "exerciseCount": 5
+              "exerciseCount": 20
             }
           ]
         },
@@ -43,7 +49,31 @@
           "subTopics": [
             {
               "id": "sub_1_2_1",
-              "title": "Family & Feelings",
+              "title": "Family Members",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_1_2_2",
+              "title": "Food & Drinks",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_1_2_3",
+              "title": "Household Objects",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_1_2_4",
+              "title": "Body Parts",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_1_2_5",
+              "title": "Feelings or Emotions",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -60,6 +90,18 @@
               "title": "Verb 'to be'",
               "materialCount": 0,
               "exerciseCount": 20
+            },
+            {
+              "id": "sub_1_3_2",
+              "title": "Nouns & Pronouns",
+              "materialCount": 0,
+              "exerciseCount": 15
+            },
+            {
+              "id": "sub_1_3_3",
+              "title": "Definite/Indefinite Articles (a, an, the)",
+              "materialCount": 0,
+              "exerciseCount": 15
             }
           ]
         },
@@ -72,6 +114,12 @@
             {
               "id": "sub_1_4_1",
               "title": "Introductions",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_1_4_2",
+              "title": "Asking Phrases",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -90,7 +138,7 @@
       "topics": [
         {
           "id": "topic_2_1",
-          "title": "Shopping & Geography",
+          "title": "Topics",
           "iconAsset": "assets/images/shopping.png",
           "isPremium": false,
           "subTopics": [
@@ -99,18 +147,48 @@
               "title": "Shopping",
               "materialCount": 0,
               "exerciseCount": 20
+            },
+            {
+              "id": "sub_2_1_2",
+              "title": "Local Geography",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_2_1_3",
+              "title": "Employment",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_2_1_4",
+              "title": "Routines & Hobbies",
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
         {
           "id": "topic_2_2",
-          "title": "Employment & Leisure",
+          "title": "Grammar",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": false,
           "subTopics": [
             {
               "id": "sub_2_2_1",
-              "title": "Jobs",
+              "title": "Past Simple",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_2_2_2",
+              "title": "Present Continuous",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_2_2_3",
+              "title": "Modal Verbs",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -118,13 +196,19 @@
         },
         {
           "id": "topic_2_3",
-          "title": "Grammar",
+          "title": "Comparisons",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": false,
           "subTopics": [
             {
               "id": "sub_2_3_1",
-              "title": "Past Simple",
+              "title": "Comparatives",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_2_3_1",
+              "title": "Superlatives",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -132,13 +216,19 @@
         },
         {
           "id": "topic_2_4",
-          "title": "Time & Comparisons",
+          "title": "Time",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": false,
           "subTopics": [
             {
               "id": "sub_2_4_1",
-              "title": "Comparisons",
+              "title": "Telling Time Precisely",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_2_4_2",
+              "title": "Prepositions",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -157,7 +247,7 @@
       "topics": [
         {
           "id": "topic_3_1",
-          "title": "Travel & Entertainment",
+          "title": "Topics",
           "iconAsset": "assets/images/travel.png",
           "isPremium": true,
           "subTopics": [
@@ -166,18 +256,48 @@
               "title": "Travel Experiences",
               "materialCount": 0,
               "exerciseCount": 20
+            },
+            {
+              "id": "sub_3_1_2",
+              "title": "Entertainment (Movies & Music)",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_3_1_3",
+              "title": "Health and Fitness",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_3_1_4",
+              "title": "Environmental Issues",
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
         {
           "id": "topic_3_2",
-          "title": "Health & Environment",
+          "title": "Grammar",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": true,
           "subTopics": [
             {
               "id": "sub_3_2_1",
-              "title": "Health",
+              "title": "Future Tenses",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_3_2_2",
+              "title": "Present Perfect vs. Past Simple",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_3_2_3",
+              "title": "Passive Voice",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -185,27 +305,25 @@
         },
         {
           "id": "topic_3_3",
-          "title": "Grammar",
-          "iconAsset": "assets/images/daily_life.png",
-          "isPremium": true,
-          "subTopics": [
-            {
-              "id": "sub_3_3_1",
-              "title": "Future Tenses",
-              "materialCount": 0,
-              "exerciseCount": 20
-            }
-          ]
-        },
-        {
-          "id": "topic_3_4",
           "title": "Logic & Vocabulary",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": true,
           "subTopics": [
             {
-              "id": "sub_3_4_1",
+              "id": "sub_3_3_1",
               "title": "Conditionals",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_3_3_2",
+              "title": "Phrasal Verbs & Idioms",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_3_3_3",
+              "title": "Connectors (cause and effect)",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -224,7 +342,7 @@
       "topics": [
         {
           "id": "topic_4_1",
-          "title": "Professional & Ethics",
+          "title": "Topics",
           "iconAsset": "assets/images/business.png",
           "isPremium": true,
           "subTopics": [
@@ -233,18 +351,48 @@
               "title": "Business Ethics",
               "materialCount": 0,
               "exerciseCount": 20
+            },
+            {
+              "id": "sub_4_1_2",
+              "title": "Technology's Impact",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_4_1_3",
+              "title": "Complex News Events",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_4_1_4",
+              "title": "Abstract Concepts",
+              "materialCount": 0,
+              "exerciseCount": 20
             }
           ]
         },
         {
           "id": "topic_4_2",
-          "title": "Technology & Society",
+          "title": "Grammar",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": true,
           "subTopics": [
             {
-              "id": "sub_4_2_1",
-              "title": "Tech Impact",
+              "id": "sub_4_2_2",
+              "title": "Mixed & 3rd Conditionals",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_4_2_3",
+              "title": "Advanced Inversion",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_4_2_4",
+              "title": "Complex Sentence Structures",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -252,13 +400,25 @@
         },
         {
           "id": "topic_4_3",
-          "title": "Grammar",
+          "title": "Refinement",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": true,
           "subTopics": [
             {
               "id": "sub_4_3_1",
-              "title": "Advanced Structures",
+              "title": "Subtle Jokes & Humor",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_4_3_2",
+              "title": "Regional Accents & Dialects",
+              "materialCount": 0,
+              "exerciseCount": 10
+            },
+            {
+              "id": "sub_4_3_3",
+              "title": "Industry-Specific Vocabulary",
               "materialCount": 0,
               "exerciseCount": 20
             }
@@ -266,13 +426,25 @@
         },
         {
           "id": "topic_4_4",
-          "title": "Abstract Concepts",
+          "title": "Professional",
           "iconAsset": "assets/images/daily_life.png",
           "isPremium": true,
           "subTopics": [
             {
               "id": "sub_4_4_1",
-              "title": "Philosophy & Art",
+              "title": "Writing Formal Reports",
+              "materialCount": 0,
+              "exerciseCount": 20
+            },
+            {
+              "id": "sub_4_4_2",
+              "title": "Resumes",
+              "materialCount": 0,
+              "exerciseCount": 10
+            },
+            {
+              "id": "sub_4_4_3",
+              "title": "Academic Essays",
               "materialCount": 0,
               "exerciseCount": 20
             }
