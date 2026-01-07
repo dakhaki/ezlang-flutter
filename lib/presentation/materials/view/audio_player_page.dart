@@ -35,9 +35,9 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
                 category: AVAudioSessionCategory.playback,
                 options: const {
                   /// check runs on real device
-                  AVAudioSessionOptions.defaultToSpeaker,
-                  AVAudioSessionOptions.allowAirPlay,
-                  AVAudioSessionOptions.allowBluetooth,
+                  // AVAudioSessionOptions.defaultToSpeaker,
+                  // AVAudioSessionOptions.allowAirPlay,
+                  // AVAudioSessionOptions.allowBluetooth,
                 },
               )
             : null,
