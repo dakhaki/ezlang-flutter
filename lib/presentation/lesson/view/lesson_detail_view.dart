@@ -76,21 +76,32 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   const SizedBox(height: 8),
-                  ...level.topics.map(
-                    (topic) => Card(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          backgroundColor: Colors.grey[200],
-                          child: const Icon(Icons.book, color: Colors.black54),
+                  ...level.topics.asMap().entries.map((entry) {
+                    final index = entry.key;
+                    final topic = entry.value;
+                    return _AnimatedTopicCard(
+                      index: index,
+                      child: Card(
+                        margin: const EdgeInsets.only(bottom: 16),
+                        child: ListTile(
+                          leading: CircleAvatar(
+                            backgroundColor: Colors.grey[200],
+                            child: const Icon(
+                              Icons.book,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          title: Text(topic.title),
+                          subtitle: Text('${topic.subTopics.length} Lessons'),
+                          trailing: const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 16,
+                          ),
+                          onTap: () => controller.navigateToTopic(topic),
                         ),
-                        title: Text(topic.title),
-                        subtitle: Text('${topic.subTopics.length} Lessons'),
-                        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                        onTap: () => controller.navigateToTopic(topic),
                       ),
-                    ),
-                  ),
+                    );
+                  }),
                   // const SizedBox(height: 32),
                   SafeArea(
                     child: SizedBox(
@@ -112,6 +123,60 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _AnimatedTopicCard extends StatefulWidget {
+  final int index;
+  final Widget child;
+
+  const _AnimatedTopicCard({required this.index, required this.child});
+
+  @override
+  State<_AnimatedTopicCard> createState() => _AnimatedTopicCardState();
+}
+
+class _AnimatedTopicCardState extends State<_AnimatedTopicCard>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<Offset> _offsetAnimation;
+  late Animation<double> _fadeAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 600),
+      vsync: this,
+    );
+
+    _offsetAnimation = Tween<Offset>(
+      begin: const Offset(0.0, 0.2),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
+
+    _fadeAnimation = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
+
+    Future.delayed(Duration(milliseconds: widget.index * 100), () {
+      if (mounted) _controller.forward();
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FadeTransition(
+      opacity: _fadeAnimation,
+      child: SlideTransition(position: _offsetAnimation, child: widget.child),
     );
   }
 }
