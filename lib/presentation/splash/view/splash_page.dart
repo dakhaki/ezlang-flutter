@@ -26,7 +26,7 @@ class SplashPage extends GetView<SplashViewModel> {
               alignment: Alignment.bottomCenter,
               children: [
                 Image.asset(
-                  'assets/images/logo_home_512.png',
+                  'assets/images/logo.png',
                   width: logoSize,
                   height: logoSize,
                   fit: BoxFit.contain,
@@ -45,12 +45,12 @@ class SplashPage extends GetView<SplashViewModel> {
                         FittedBox(
                           fit: BoxFit.scaleDown,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: const EdgeInsets.symmetric(horizontal: 0),
                             child: Stack(
                               children: [
                                 // Layer 1: Thick Outer Border (Sticker Effect)
                                 Text(
-                                  'Basic Kids Learning',
+                                  'eZlang',
                                   style: TextStyle(
                                     fontSize: dynamicFontSize,
                                     fontWeight:
@@ -66,7 +66,7 @@ class SplashPage extends GetView<SplashViewModel> {
                                 ),
                                 // Layer 2: Main Text with Soft Shadow
                                 Text(
-                                  'Basic Kids Learning',
+                                  'eZlang',
                                   style: TextStyle(
                                     fontSize: dynamicFontSize,
                                     fontWeight: FontWeight.bold,

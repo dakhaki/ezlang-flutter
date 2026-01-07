@@ -14,7 +14,7 @@ class HomePage extends GetView<HomeViewModel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('eZlang Curriculum'),
+        title: const Text('eZlang English'),
         centerTitle: false,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(30),
@@ -108,10 +108,7 @@ class _LevelCard extends StatelessWidget {
                   height: 120,
                   width: double.infinity,
                   color: Color(int.parse(level.backgroundColorHex, radix: 16)),
-                  child: Image.asset(
-                    level.imageLocalAsset,
-                    fit: BoxFit.contain,
-                  ),
+                  child: Image.asset(level.imageLocalAsset, fit: BoxFit.cover),
                 ),
               ),
             ),
@@ -154,7 +151,7 @@ class _LevelCard extends StatelessWidget {
                   // const SizedBox(height: 4),
                   Text(
                     level.description,
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   const SizedBox(height: 12),
                   Wrap(
@@ -165,7 +162,7 @@ class _LevelCard extends StatelessWidget {
                             avatar: const Icon(Icons.topic, size: 16),
                             label: Text(
                               t.title,
-                              style: const TextStyle(fontSize: 10),
+                              style: const TextStyle(fontSize: 12),
                             ),
                           ),
                         )
