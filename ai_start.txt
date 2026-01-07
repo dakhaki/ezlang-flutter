@@ -1,0 +1,63 @@
+learning English language with comprehensive for all ages, your curriculum should follow the Common European Framework of Reference for Languages (CEFR). This structure ensures a logical progression from "Absolute Beginner" to "Proficient Speaker".
+
+Bussiness Requirement Document:
+# Level 1: Absolute Beginner (CEFR A0–A1)
+- Focus: Foundations and basic survival English.
+- Vocabulary: Letters (A–Z), numbers (1–100), colors, days of the week, months, and basic greetings.
+- Daily Life: Family members, common food and drinks, household objects, body parts, and simple feelings/emotions.
+- Grammar: Verb "to be" (present/past), singular/plural nouns, personal pronouns, and definite/indefinite articles (a, an, the).
+- Key Phrases: "My name is...", "How much is this?", and "Where is the...?".
+
+# Level 2: Elementary (CEFR A2)
+- Focus: Simple sentences and frequently used expressions.
+- Topics: Shopping, local geography, employment/jobs, and routine leisure activities.
+- Grammar: Past Simple (regular and irregular verbs), Present Continuous (now), and basic modal verbs (can, could, should, must).
+- Comparisons: Using comparatives and superlatives (bigger, the biggest).
+Time: Telling time precisely and using prepositions of time/place (in, on, at).
+
+# Level 3: Intermediate (CEFR B1–B2)
+- Focus: Independent communication and expressing opinions.
+- Topics: Travel experiences, entertainment (movies/music), health and fitness, and environmental issues.
+- Grammar: Future tenses (will, going to), Present Perfect vs. Past Simple, and the Passive Voice.
+- Logic: 1st and 2nd Conditionals for hypothetical situations (If I were you...).
+- Vocabulary: Phrasal verbs, common idioms, and connectors for cause and effect (because, so, therefore).
+
+# Level 4: Advanced (CEFR C1–C2)
+- Focus: Fluency, nuance, and professional/academic use.
+- Topics: Business ethics, technology’s impact on society, complex news events, and abstract concepts like philosophy or art.
+- Grammar: Mixed conditionals, 3rd conditional (regrets), advanced inversion for style, and complex sentence structures.
+- Refinement: Subtle jokes, regional accents/dialects, and industry-specific vocabulary.
+-Professional: Writing formal reports, resumes, and academic essays.
+
+# Feature in this App:
+- Gamification: Use "streaks," rewards, and bite-sized lessons to keep users motivated.
+- For Kids: Include animated songs, fairy tales, and character-based stories.
+- For Adults: Add practical sections for "Business Magazine" style reading or email writing.
+- Multi-Modal: Combine reading, writing, listening, and AI-powered speaking practice.
+
+
+Flutter Clean Architecture + SOLID + GetX with best practices and use Isolates for heavy computation
+
+Specs:
+# Directories structure:
+- lib/core
+- lib/data
+- lib/domain
+- lib/presentation
+# Communication flow: ViewModel <> UseCases <> Repository <> Local or Remote DataSource
+# Expected library used:
+- freezed
+- flutter_cache_manager and cached_network_image: to load and cache images
+- retrofit : for REST API
+- get : DI, Routing, Reactive Programming
+- get_storage
+- palette_generator : to change screen background with interval 
+- package_info_plus : to provide app version into about or settings page
+- logger
+- connectivity_plus: to detect network state
+- fpdart
+- flutter_tts
+- confetti
+
+Notes:
+- Please provide data samples json files that's added to assets/data/
