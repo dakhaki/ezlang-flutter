@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:confetti/confetti.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/core/routes/routes.dart';
@@ -40,10 +39,10 @@ class HomePage extends GetView<HomeViewModel> {
           ),
         ),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.celebration),
-            onPressed: controller.celebrate,
-          ),
+          // IconButton(
+          //   icon: const Icon(Icons.celebration),
+          //   onPressed: controller.celebrate,
+          // ),
           IconButton(
             icon: const Icon(Icons.person),
             onPressed: () => Get.toNamed(PageTo.profile),
@@ -103,20 +102,16 @@ class _LevelCard extends StatelessWidget {
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(12),
               ),
-              child: CachedNetworkImage(
-                imageUrl: level.imageUrl,
-                height: 120,
-                width: double.infinity,
-                fit: BoxFit.cover,
-                placeholder: (context, url) => Container(
+              child: Hero(
+                tag: level.id,
+                child: Container(
                   height: 120,
-                  color: Colors.grey[300],
-                  child: const Center(child: Icon(Icons.image)),
-                ),
-                errorWidget: (context, url, error) => Container(
-                  height: 120,
-                  color: Colors.grey[300],
-                  child: const Center(child: Icon(Icons.error)),
+                  width: double.infinity,
+                  color: Color(int.parse(level.backgroundColorHex, radix: 16)),
+                  child: Image.asset(
+                    level.imageLocalAsset,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),

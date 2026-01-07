@@ -4,6 +4,8 @@ class EnglishLevel {
   final String cefrCode;
   final String description;
   final String imageUrl;
+  final String imageLocalAsset;
+  final String backgroundColorHex;
   final List<Topic> topics;
 
   EnglishLevel({
@@ -12,6 +14,8 @@ class EnglishLevel {
     required this.cefrCode,
     required this.description,
     required this.imageUrl,
+    required this.imageLocalAsset,
+    required this.backgroundColorHex,
     required this.topics,
   });
 }

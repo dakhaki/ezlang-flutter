@@ -284,7 +284,7 @@ as List<EnglishLevelModel>,
 /// @nodoc
 mixin _$EnglishLevelModel {
 
- String get id; String get title; String get cefrCode; String get description; String get imageUrl; List<TopicModel> get topics;
+ String get id; String get title; String get cefrCode; String get description; String get imageUrl; String get imageLocalAsset; String get backgroundColorHex; List<TopicModel> get topics;
 /// Create a copy of EnglishLevelModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -297,16 +297,16 @@ $EnglishLevelModelCopyWith<EnglishLevelModel> get copyWith => _$EnglishLevelMode
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EnglishLevelModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.cefrCode, cefrCode) || other.cefrCode == cefrCode)&&(identical(other.description, description) || other.description == description)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&const DeepCollectionEquality().equals(other.topics, topics));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is EnglishLevelModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.cefrCode, cefrCode) || other.cefrCode == cefrCode)&&(identical(other.description, description) || other.description == description)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.imageLocalAsset, imageLocalAsset) || other.imageLocalAsset == imageLocalAsset)&&(identical(other.backgroundColorHex, backgroundColorHex) || other.backgroundColorHex == backgroundColorHex)&&const DeepCollectionEquality().equals(other.topics, topics));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,title,cefrCode,description,imageUrl,const DeepCollectionEquality().hash(topics));
+int get hashCode => Object.hash(runtimeType,id,title,cefrCode,description,imageUrl,imageLocalAsset,backgroundColorHex,const DeepCollectionEquality().hash(topics));
 
 @override
 String toString() {
-  return 'EnglishLevelModel(id: $id, title: $title, cefrCode: $cefrCode, description: $description, imageUrl: $imageUrl, topics: $topics)';
+  return 'EnglishLevelModel(id: $id, title: $title, cefrCode: $cefrCode, description: $description, imageUrl: $imageUrl, imageLocalAsset: $imageLocalAsset, backgroundColorHex: $backgroundColorHex, topics: $topics)';
 }
 
 
@@ -317,7 +317,7 @@ abstract mixin class $EnglishLevelModelCopyWith<$Res>  {
   factory $EnglishLevelModelCopyWith(EnglishLevelModel value, $Res Function(EnglishLevelModel) _then) = _$EnglishLevelModelCopyWithImpl;
 @useResult
 $Res call({
- String id, String title, String cefrCode, String description, String imageUrl, List<TopicModel> topics
+ String id, String title, String cefrCode, String description, String imageUrl, String imageLocalAsset, String backgroundColorHex, List<TopicModel> topics
 });
 
 
@@ -334,13 +334,15 @@ class _$EnglishLevelModelCopyWithImpl<$Res>
 
 /// Create a copy of EnglishLevelModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? cefrCode = null,Object? description = null,Object? imageUrl = null,Object? topics = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? cefrCode = null,Object? description = null,Object? imageUrl = null,Object? imageLocalAsset = null,Object? backgroundColorHex = null,Object? topics = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
 as String,cefrCode: null == cefrCode ? _self.cefrCode : cefrCode // ignore: cast_nullable_to_non_nullable
 as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
 as String,imageUrl: null == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String,imageLocalAsset: null == imageLocalAsset ? _self.imageLocalAsset : imageLocalAsset // ignore: cast_nullable_to_non_nullable
+as String,backgroundColorHex: null == backgroundColorHex ? _self.backgroundColorHex : backgroundColorHex // ignore: cast_nullable_to_non_nullable
 as String,topics: null == topics ? _self.topics : topics // ignore: cast_nullable_to_non_nullable
 as List<TopicModel>,
   ));
@@ -427,10 +429,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String title,  String cefrCode,  String description,  String imageUrl,  List<TopicModel> topics)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String title,  String cefrCode,  String description,  String imageUrl,  String imageLocalAsset,  String backgroundColorHex,  List<TopicModel> topics)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _EnglishLevelModel() when $default != null:
-return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imageUrl,_that.topics);case _:
+return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imageUrl,_that.imageLocalAsset,_that.backgroundColorHex,_that.topics);case _:
   return orElse();
 
 }
@@ -448,10 +450,10 @@ return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imag
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String title,  String cefrCode,  String description,  String imageUrl,  List<TopicModel> topics)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String title,  String cefrCode,  String description,  String imageUrl,  String imageLocalAsset,  String backgroundColorHex,  List<TopicModel> topics)  $default,) {final _that = this;
 switch (_that) {
 case _EnglishLevelModel():
-return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imageUrl,_that.topics);case _:
+return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imageUrl,_that.imageLocalAsset,_that.backgroundColorHex,_that.topics);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -468,10 +470,10 @@ return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imag
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String title,  String cefrCode,  String description,  String imageUrl,  List<TopicModel> topics)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String title,  String cefrCode,  String description,  String imageUrl,  String imageLocalAsset,  String backgroundColorHex,  List<TopicModel> topics)?  $default,) {final _that = this;
 switch (_that) {
 case _EnglishLevelModel() when $default != null:
-return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imageUrl,_that.topics);case _:
+return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imageUrl,_that.imageLocalAsset,_that.backgroundColorHex,_that.topics);case _:
   return null;
 
 }
@@ -483,7 +485,7 @@ return $default(_that.id,_that.title,_that.cefrCode,_that.description,_that.imag
 @JsonSerializable()
 
 class _EnglishLevelModel extends EnglishLevelModel {
-  const _EnglishLevelModel({required this.id, required this.title, required this.cefrCode, required this.description, required this.imageUrl, required final  List<TopicModel> topics}): _topics = topics,super._();
+  const _EnglishLevelModel({required this.id, required this.title, required this.cefrCode, required this.description, required this.imageUrl, required this.imageLocalAsset, required this.backgroundColorHex, required final  List<TopicModel> topics}): _topics = topics,super._();
   factory _EnglishLevelModel.fromJson(Map<String, dynamic> json) => _$EnglishLevelModelFromJson(json);
 
 @override final  String id;
@@ -491,6 +493,8 @@ class _EnglishLevelModel extends EnglishLevelModel {
 @override final  String cefrCode;
 @override final  String description;
 @override final  String imageUrl;
+@override final  String imageLocalAsset;
+@override final  String backgroundColorHex;
  final  List<TopicModel> _topics;
 @override List<TopicModel> get topics {
   if (_topics is EqualUnmodifiableListView) return _topics;
@@ -512,16 +516,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EnglishLevelModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.cefrCode, cefrCode) || other.cefrCode == cefrCode)&&(identical(other.description, description) || other.description == description)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&const DeepCollectionEquality().equals(other._topics, _topics));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EnglishLevelModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.cefrCode, cefrCode) || other.cefrCode == cefrCode)&&(identical(other.description, description) || other.description == description)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.imageLocalAsset, imageLocalAsset) || other.imageLocalAsset == imageLocalAsset)&&(identical(other.backgroundColorHex, backgroundColorHex) || other.backgroundColorHex == backgroundColorHex)&&const DeepCollectionEquality().equals(other._topics, _topics));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,title,cefrCode,description,imageUrl,const DeepCollectionEquality().hash(_topics));
+int get hashCode => Object.hash(runtimeType,id,title,cefrCode,description,imageUrl,imageLocalAsset,backgroundColorHex,const DeepCollectionEquality().hash(_topics));
 
 @override
 String toString() {
-  return 'EnglishLevelModel(id: $id, title: $title, cefrCode: $cefrCode, description: $description, imageUrl: $imageUrl, topics: $topics)';
+  return 'EnglishLevelModel(id: $id, title: $title, cefrCode: $cefrCode, description: $description, imageUrl: $imageUrl, imageLocalAsset: $imageLocalAsset, backgroundColorHex: $backgroundColorHex, topics: $topics)';
 }
 
 
@@ -532,7 +536,7 @@ abstract mixin class _$EnglishLevelModelCopyWith<$Res> implements $EnglishLevelM
   factory _$EnglishLevelModelCopyWith(_EnglishLevelModel value, $Res Function(_EnglishLevelModel) _then) = __$EnglishLevelModelCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String title, String cefrCode, String description, String imageUrl, List<TopicModel> topics
+ String id, String title, String cefrCode, String description, String imageUrl, String imageLocalAsset, String backgroundColorHex, List<TopicModel> topics
 });
 
 
@@ -549,13 +553,15 @@ class __$EnglishLevelModelCopyWithImpl<$Res>
 
 /// Create a copy of EnglishLevelModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? cefrCode = null,Object? description = null,Object? imageUrl = null,Object? topics = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? cefrCode = null,Object? description = null,Object? imageUrl = null,Object? imageLocalAsset = null,Object? backgroundColorHex = null,Object? topics = null,}) {
   return _then(_EnglishLevelModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
 as String,cefrCode: null == cefrCode ? _self.cefrCode : cefrCode // ignore: cast_nullable_to_non_nullable
 as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
 as String,imageUrl: null == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String,imageLocalAsset: null == imageLocalAsset ? _self.imageLocalAsset : imageLocalAsset // ignore: cast_nullable_to_non_nullable
+as String,backgroundColorHex: null == backgroundColorHex ? _self.backgroundColorHex : backgroundColorHex // ignore: cast_nullable_to_non_nullable
 as String,topics: null == topics ? _self._topics : topics // ignore: cast_nullable_to_non_nullable
 as List<TopicModel>,
   ));

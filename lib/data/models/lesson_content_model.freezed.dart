@@ -312,6 +312,10 @@ LearningMaterialModel _$LearningMaterialModelFromJson(
           return _HtmlMaterialModel.fromJson(
             json
           );
+                case 'audio':
+          return _AudioMaterialModel.fromJson(
+            json
+          );
         
           default:
             throw CheckedFromJsonException(
@@ -402,14 +406,15 @@ extension LearningMaterialModelPatterns on LearningMaterialModel {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _VideoMaterialModel value)?  video,TResult Function( _ArticleMaterialModel value)?  article,TResult Function( _PdfMaterialModel value)?  pdf,TResult Function( _HtmlMaterialModel value)?  html,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _VideoMaterialModel value)?  video,TResult Function( _ArticleMaterialModel value)?  article,TResult Function( _PdfMaterialModel value)?  pdf,TResult Function( _HtmlMaterialModel value)?  html,TResult Function( _AudioMaterialModel value)?  audio,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case _VideoMaterialModel() when video != null:
 return video(_that);case _ArticleMaterialModel() when article != null:
 return article(_that);case _PdfMaterialModel() when pdf != null:
 return pdf(_that);case _HtmlMaterialModel() when html != null:
-return html(_that);case _:
+return html(_that);case _AudioMaterialModel() when audio != null:
+return audio(_that);case _:
   return orElse();
 
 }
@@ -427,14 +432,15 @@ return html(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _VideoMaterialModel value)  video,required TResult Function( _ArticleMaterialModel value)  article,required TResult Function( _PdfMaterialModel value)  pdf,required TResult Function( _HtmlMaterialModel value)  html,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _VideoMaterialModel value)  video,required TResult Function( _ArticleMaterialModel value)  article,required TResult Function( _PdfMaterialModel value)  pdf,required TResult Function( _HtmlMaterialModel value)  html,required TResult Function( _AudioMaterialModel value)  audio,}){
 final _that = this;
 switch (_that) {
 case _VideoMaterialModel():
 return video(_that);case _ArticleMaterialModel():
 return article(_that);case _PdfMaterialModel():
 return pdf(_that);case _HtmlMaterialModel():
-return html(_that);}
+return html(_that);case _AudioMaterialModel():
+return audio(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
 ///
@@ -448,14 +454,15 @@ return html(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _VideoMaterialModel value)?  video,TResult? Function( _ArticleMaterialModel value)?  article,TResult? Function( _PdfMaterialModel value)?  pdf,TResult? Function( _HtmlMaterialModel value)?  html,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _VideoMaterialModel value)?  video,TResult? Function( _ArticleMaterialModel value)?  article,TResult? Function( _PdfMaterialModel value)?  pdf,TResult? Function( _HtmlMaterialModel value)?  html,TResult? Function( _AudioMaterialModel value)?  audio,}){
 final _that = this;
 switch (_that) {
 case _VideoMaterialModel() when video != null:
 return video(_that);case _ArticleMaterialModel() when article != null:
 return article(_that);case _PdfMaterialModel() when pdf != null:
 return pdf(_that);case _HtmlMaterialModel() when html != null:
-return html(_that);case _:
+return html(_that);case _AudioMaterialModel() when audio != null:
+return audio(_that);case _:
   return null;
 
 }
@@ -472,13 +479,14 @@ return html(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  String title,  String url)?  video,TResult Function( String id,  String title,  String content)?  article,TResult Function( String id,  String title,  String url)?  pdf,TResult Function( String id,  String title,  String content)?  html,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  String title,  String url)?  video,TResult Function( String id,  String title,  String content)?  article,TResult Function( String id,  String title,  String url)?  pdf,TResult Function( String id,  String title,  String content)?  html,TResult Function( String id,  String title,  String url)?  audio,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _VideoMaterialModel() when video != null:
 return video(_that.id,_that.title,_that.url);case _ArticleMaterialModel() when article != null:
 return article(_that.id,_that.title,_that.content);case _PdfMaterialModel() when pdf != null:
 return pdf(_that.id,_that.title,_that.url);case _HtmlMaterialModel() when html != null:
-return html(_that.id,_that.title,_that.content);case _:
+return html(_that.id,_that.title,_that.content);case _AudioMaterialModel() when audio != null:
+return audio(_that.id,_that.title,_that.url);case _:
   return orElse();
 
 }
@@ -496,13 +504,14 @@ return html(_that.id,_that.title,_that.content);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  String title,  String url)  video,required TResult Function( String id,  String title,  String content)  article,required TResult Function( String id,  String title,  String url)  pdf,required TResult Function( String id,  String title,  String content)  html,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  String title,  String url)  video,required TResult Function( String id,  String title,  String content)  article,required TResult Function( String id,  String title,  String url)  pdf,required TResult Function( String id,  String title,  String content)  html,required TResult Function( String id,  String title,  String url)  audio,}) {final _that = this;
 switch (_that) {
 case _VideoMaterialModel():
 return video(_that.id,_that.title,_that.url);case _ArticleMaterialModel():
 return article(_that.id,_that.title,_that.content);case _PdfMaterialModel():
 return pdf(_that.id,_that.title,_that.url);case _HtmlMaterialModel():
-return html(_that.id,_that.title,_that.content);}
+return html(_that.id,_that.title,_that.content);case _AudioMaterialModel():
+return audio(_that.id,_that.title,_that.url);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -516,13 +525,14 @@ return html(_that.id,_that.title,_that.content);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  String title,  String url)?  video,TResult? Function( String id,  String title,  String content)?  article,TResult? Function( String id,  String title,  String url)?  pdf,TResult? Function( String id,  String title,  String content)?  html,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  String title,  String url)?  video,TResult? Function( String id,  String title,  String content)?  article,TResult? Function( String id,  String title,  String url)?  pdf,TResult? Function( String id,  String title,  String content)?  html,TResult? Function( String id,  String title,  String url)?  audio,}) {final _that = this;
 switch (_that) {
 case _VideoMaterialModel() when video != null:
 return video(_that.id,_that.title,_that.url);case _ArticleMaterialModel() when article != null:
 return article(_that.id,_that.title,_that.content);case _PdfMaterialModel() when pdf != null:
 return pdf(_that.id,_that.title,_that.url);case _HtmlMaterialModel() when html != null:
-return html(_that.id,_that.title,_that.content);case _:
+return html(_that.id,_that.title,_that.content);case _AudioMaterialModel() when audio != null:
+return audio(_that.id,_that.title,_that.url);case _:
   return null;
 
 }
@@ -838,6 +848,83 @@ as String,
 
 }
 
+/// @nodoc
+@JsonSerializable()
+
+class _AudioMaterialModel extends LearningMaterialModel {
+  const _AudioMaterialModel({required this.id, required this.title, required this.url, final  String? $type}): $type = $type ?? 'audio',super._();
+  factory _AudioMaterialModel.fromJson(Map<String, dynamic> json) => _$AudioMaterialModelFromJson(json);
+
+@override final  String id;
+@override final  String title;
+ final  String url;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of LearningMaterialModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AudioMaterialModelCopyWith<_AudioMaterialModel> get copyWith => __$AudioMaterialModelCopyWithImpl<_AudioMaterialModel>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$AudioMaterialModelToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AudioMaterialModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&(identical(other.url, url) || other.url == url));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,title,url);
+
+@override
+String toString() {
+  return 'LearningMaterialModel.audio(id: $id, title: $title, url: $url)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$AudioMaterialModelCopyWith<$Res> implements $LearningMaterialModelCopyWith<$Res> {
+  factory _$AudioMaterialModelCopyWith(_AudioMaterialModel value, $Res Function(_AudioMaterialModel) _then) = __$AudioMaterialModelCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String title, String url
+});
+
+
+
+
+}
+/// @nodoc
+class __$AudioMaterialModelCopyWithImpl<$Res>
+    implements _$AudioMaterialModelCopyWith<$Res> {
+  __$AudioMaterialModelCopyWithImpl(this._self, this._then);
+
+  final _AudioMaterialModel _self;
+  final $Res Function(_AudioMaterialModel) _then;
+
+/// Create a copy of LearningMaterialModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? url = null,}) {
+  return _then(_AudioMaterialModel(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String,url: null == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
+}
+
 ExerciseModel _$ExerciseModelFromJson(
   Map<String, dynamic> json
 ) {
@@ -852,6 +939,10 @@ ExerciseModel _$ExerciseModelFromJson(
           );
                 case 'audio_match':
           return _AudioMatchModel.fromJson(
+            json
+          );
+                case 'image_selection':
+          return _ImageSelectionModel.fromJson(
             json
           );
         
@@ -869,7 +960,7 @@ ExerciseModel _$ExerciseModelFromJson(
 /// @nodoc
 mixin _$ExerciseModel {
 
- String get id; String get prompt;
+ String get id; String get prompt; String? get imageUrl;
 /// Create a copy of ExerciseModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -882,16 +973,16 @@ $ExerciseModelCopyWith<ExerciseModel> get copyWith => _$ExerciseModelCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ExerciseModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ExerciseModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,prompt);
+int get hashCode => Object.hash(runtimeType,id,prompt,imageUrl);
 
 @override
 String toString() {
-  return 'ExerciseModel(id: $id, prompt: $prompt)';
+  return 'ExerciseModel(id: $id, prompt: $prompt, imageUrl: $imageUrl)';
 }
 
 
@@ -902,7 +993,7 @@ abstract mixin class $ExerciseModelCopyWith<$Res>  {
   factory $ExerciseModelCopyWith(ExerciseModel value, $Res Function(ExerciseModel) _then) = _$ExerciseModelCopyWithImpl;
 @useResult
 $Res call({
- String id, String prompt
+ String id, String prompt, String? imageUrl
 });
 
 
@@ -919,11 +1010,12 @@ class _$ExerciseModelCopyWithImpl<$Res>
 
 /// Create a copy of ExerciseModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? prompt = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? prompt = null,Object? imageUrl = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,prompt: null == prompt ? _self.prompt : prompt // ignore: cast_nullable_to_non_nullable
-as String,
+as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -944,13 +1036,14 @@ extension ExerciseModelPatterns on ExerciseModel {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _MultipleChoiceModel value)?  multipleChoice,TResult Function( _TranslateSentenceModel value)?  translateSentence,TResult Function( _AudioMatchModel value)?  audioMatch,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _MultipleChoiceModel value)?  multipleChoice,TResult Function( _TranslateSentenceModel value)?  translateSentence,TResult Function( _AudioMatchModel value)?  audioMatch,TResult Function( _ImageSelectionModel value)?  imageSelection,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case _MultipleChoiceModel() when multipleChoice != null:
 return multipleChoice(_that);case _TranslateSentenceModel() when translateSentence != null:
 return translateSentence(_that);case _AudioMatchModel() when audioMatch != null:
-return audioMatch(_that);case _:
+return audioMatch(_that);case _ImageSelectionModel() when imageSelection != null:
+return imageSelection(_that);case _:
   return orElse();
 
 }
@@ -968,13 +1061,14 @@ return audioMatch(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _MultipleChoiceModel value)  multipleChoice,required TResult Function( _TranslateSentenceModel value)  translateSentence,required TResult Function( _AudioMatchModel value)  audioMatch,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _MultipleChoiceModel value)  multipleChoice,required TResult Function( _TranslateSentenceModel value)  translateSentence,required TResult Function( _AudioMatchModel value)  audioMatch,required TResult Function( _ImageSelectionModel value)  imageSelection,}){
 final _that = this;
 switch (_that) {
 case _MultipleChoiceModel():
 return multipleChoice(_that);case _TranslateSentenceModel():
 return translateSentence(_that);case _AudioMatchModel():
-return audioMatch(_that);}
+return audioMatch(_that);case _ImageSelectionModel():
+return imageSelection(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
 ///
@@ -988,13 +1082,14 @@ return audioMatch(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _MultipleChoiceModel value)?  multipleChoice,TResult? Function( _TranslateSentenceModel value)?  translateSentence,TResult? Function( _AudioMatchModel value)?  audioMatch,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _MultipleChoiceModel value)?  multipleChoice,TResult? Function( _TranslateSentenceModel value)?  translateSentence,TResult? Function( _AudioMatchModel value)?  audioMatch,TResult? Function( _ImageSelectionModel value)?  imageSelection,}){
 final _that = this;
 switch (_that) {
 case _MultipleChoiceModel() when multipleChoice != null:
 return multipleChoice(_that);case _TranslateSentenceModel() when translateSentence != null:
 return translateSentence(_that);case _AudioMatchModel() when audioMatch != null:
-return audioMatch(_that);case _:
+return audioMatch(_that);case _ImageSelectionModel() when imageSelection != null:
+return imageSelection(_that);case _:
   return null;
 
 }
@@ -1011,12 +1106,13 @@ return audioMatch(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  String prompt,  List<String> options,  int correctIndex)?  multipleChoice,TResult Function( String id,  String prompt,  String sourceText,  String targetText)?  translateSentence,TResult Function( String id,  String prompt,  String correctWord)?  audioMatch,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  String prompt,  String? imageUrl,  List<String> options,  int correctIndex)?  multipleChoice,TResult Function( String id,  String prompt,  String? imageUrl,  String sourceText,  String targetText)?  translateSentence,TResult Function( String id,  String prompt,  String? imageUrl,  String correctWord)?  audioMatch,TResult Function( String id,  String prompt,  String? imageUrl,  List<String> options,  int correctIndex)?  imageSelection,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _MultipleChoiceModel() when multipleChoice != null:
-return multipleChoice(_that.id,_that.prompt,_that.options,_that.correctIndex);case _TranslateSentenceModel() when translateSentence != null:
-return translateSentence(_that.id,_that.prompt,_that.sourceText,_that.targetText);case _AudioMatchModel() when audioMatch != null:
-return audioMatch(_that.id,_that.prompt,_that.correctWord);case _:
+return multipleChoice(_that.id,_that.prompt,_that.imageUrl,_that.options,_that.correctIndex);case _TranslateSentenceModel() when translateSentence != null:
+return translateSentence(_that.id,_that.prompt,_that.imageUrl,_that.sourceText,_that.targetText);case _AudioMatchModel() when audioMatch != null:
+return audioMatch(_that.id,_that.prompt,_that.imageUrl,_that.correctWord);case _ImageSelectionModel() when imageSelection != null:
+return imageSelection(_that.id,_that.prompt,_that.imageUrl,_that.options,_that.correctIndex);case _:
   return orElse();
 
 }
@@ -1034,12 +1130,13 @@ return audioMatch(_that.id,_that.prompt,_that.correctWord);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  String prompt,  List<String> options,  int correctIndex)  multipleChoice,required TResult Function( String id,  String prompt,  String sourceText,  String targetText)  translateSentence,required TResult Function( String id,  String prompt,  String correctWord)  audioMatch,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  String prompt,  String? imageUrl,  List<String> options,  int correctIndex)  multipleChoice,required TResult Function( String id,  String prompt,  String? imageUrl,  String sourceText,  String targetText)  translateSentence,required TResult Function( String id,  String prompt,  String? imageUrl,  String correctWord)  audioMatch,required TResult Function( String id,  String prompt,  String? imageUrl,  List<String> options,  int correctIndex)  imageSelection,}) {final _that = this;
 switch (_that) {
 case _MultipleChoiceModel():
-return multipleChoice(_that.id,_that.prompt,_that.options,_that.correctIndex);case _TranslateSentenceModel():
-return translateSentence(_that.id,_that.prompt,_that.sourceText,_that.targetText);case _AudioMatchModel():
-return audioMatch(_that.id,_that.prompt,_that.correctWord);}
+return multipleChoice(_that.id,_that.prompt,_that.imageUrl,_that.options,_that.correctIndex);case _TranslateSentenceModel():
+return translateSentence(_that.id,_that.prompt,_that.imageUrl,_that.sourceText,_that.targetText);case _AudioMatchModel():
+return audioMatch(_that.id,_that.prompt,_that.imageUrl,_that.correctWord);case _ImageSelectionModel():
+return imageSelection(_that.id,_that.prompt,_that.imageUrl,_that.options,_that.correctIndex);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -1053,12 +1150,13 @@ return audioMatch(_that.id,_that.prompt,_that.correctWord);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  String prompt,  List<String> options,  int correctIndex)?  multipleChoice,TResult? Function( String id,  String prompt,  String sourceText,  String targetText)?  translateSentence,TResult? Function( String id,  String prompt,  String correctWord)?  audioMatch,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  String prompt,  String? imageUrl,  List<String> options,  int correctIndex)?  multipleChoice,TResult? Function( String id,  String prompt,  String? imageUrl,  String sourceText,  String targetText)?  translateSentence,TResult? Function( String id,  String prompt,  String? imageUrl,  String correctWord)?  audioMatch,TResult? Function( String id,  String prompt,  String? imageUrl,  List<String> options,  int correctIndex)?  imageSelection,}) {final _that = this;
 switch (_that) {
 case _MultipleChoiceModel() when multipleChoice != null:
-return multipleChoice(_that.id,_that.prompt,_that.options,_that.correctIndex);case _TranslateSentenceModel() when translateSentence != null:
-return translateSentence(_that.id,_that.prompt,_that.sourceText,_that.targetText);case _AudioMatchModel() when audioMatch != null:
-return audioMatch(_that.id,_that.prompt,_that.correctWord);case _:
+return multipleChoice(_that.id,_that.prompt,_that.imageUrl,_that.options,_that.correctIndex);case _TranslateSentenceModel() when translateSentence != null:
+return translateSentence(_that.id,_that.prompt,_that.imageUrl,_that.sourceText,_that.targetText);case _AudioMatchModel() when audioMatch != null:
+return audioMatch(_that.id,_that.prompt,_that.imageUrl,_that.correctWord);case _ImageSelectionModel() when imageSelection != null:
+return imageSelection(_that.id,_that.prompt,_that.imageUrl,_that.options,_that.correctIndex);case _:
   return null;
 
 }
@@ -1070,11 +1168,12 @@ return audioMatch(_that.id,_that.prompt,_that.correctWord);case _:
 @JsonSerializable()
 
 class _MultipleChoiceModel extends ExerciseModel {
-  const _MultipleChoiceModel({required this.id, required this.prompt, required final  List<String> options, required this.correctIndex, final  String? $type}): _options = options,$type = $type ?? 'multiple_choice',super._();
+  const _MultipleChoiceModel({required this.id, required this.prompt, this.imageUrl, required final  List<String> options, required this.correctIndex, final  String? $type}): _options = options,$type = $type ?? 'multiple_choice',super._();
   factory _MultipleChoiceModel.fromJson(Map<String, dynamic> json) => _$MultipleChoiceModelFromJson(json);
 
 @override final  String id;
 @override final  String prompt;
+@override final  String? imageUrl;
  final  List<String> _options;
  List<String> get options {
   if (_options is EqualUnmodifiableListView) return _options;
@@ -1101,16 +1200,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MultipleChoiceModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&const DeepCollectionEquality().equals(other._options, _options)&&(identical(other.correctIndex, correctIndex) || other.correctIndex == correctIndex));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MultipleChoiceModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&const DeepCollectionEquality().equals(other._options, _options)&&(identical(other.correctIndex, correctIndex) || other.correctIndex == correctIndex));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,prompt,const DeepCollectionEquality().hash(_options),correctIndex);
+int get hashCode => Object.hash(runtimeType,id,prompt,imageUrl,const DeepCollectionEquality().hash(_options),correctIndex);
 
 @override
 String toString() {
-  return 'ExerciseModel.multipleChoice(id: $id, prompt: $prompt, options: $options, correctIndex: $correctIndex)';
+  return 'ExerciseModel.multipleChoice(id: $id, prompt: $prompt, imageUrl: $imageUrl, options: $options, correctIndex: $correctIndex)';
 }
 
 
@@ -1121,7 +1220,7 @@ abstract mixin class _$MultipleChoiceModelCopyWith<$Res> implements $ExerciseMod
   factory _$MultipleChoiceModelCopyWith(_MultipleChoiceModel value, $Res Function(_MultipleChoiceModel) _then) = __$MultipleChoiceModelCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String prompt, List<String> options, int correctIndex
+ String id, String prompt, String? imageUrl, List<String> options, int correctIndex
 });
 
 
@@ -1138,11 +1237,12 @@ class __$MultipleChoiceModelCopyWithImpl<$Res>
 
 /// Create a copy of ExerciseModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? options = null,Object? correctIndex = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? imageUrl = freezed,Object? options = null,Object? correctIndex = null,}) {
   return _then(_MultipleChoiceModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,prompt: null == prompt ? _self.prompt : prompt // ignore: cast_nullable_to_non_nullable
-as String,options: null == options ? _self._options : options // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String?,options: null == options ? _self._options : options // ignore: cast_nullable_to_non_nullable
 as List<String>,correctIndex: null == correctIndex ? _self.correctIndex : correctIndex // ignore: cast_nullable_to_non_nullable
 as int,
   ));
@@ -1155,11 +1255,12 @@ as int,
 @JsonSerializable()
 
 class _TranslateSentenceModel extends ExerciseModel {
-  const _TranslateSentenceModel({required this.id, required this.prompt, required this.sourceText, required this.targetText, final  String? $type}): $type = $type ?? 'translate_sentence',super._();
+  const _TranslateSentenceModel({required this.id, required this.prompt, this.imageUrl, required this.sourceText, required this.targetText, final  String? $type}): $type = $type ?? 'translate_sentence',super._();
   factory _TranslateSentenceModel.fromJson(Map<String, dynamic> json) => _$TranslateSentenceModelFromJson(json);
 
 @override final  String id;
 @override final  String prompt;
+@override final  String? imageUrl;
  final  String sourceText;
  final  String targetText;
 
@@ -1180,16 +1281,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TranslateSentenceModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.sourceText, sourceText) || other.sourceText == sourceText)&&(identical(other.targetText, targetText) || other.targetText == targetText));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TranslateSentenceModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.sourceText, sourceText) || other.sourceText == sourceText)&&(identical(other.targetText, targetText) || other.targetText == targetText));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,prompt,sourceText,targetText);
+int get hashCode => Object.hash(runtimeType,id,prompt,imageUrl,sourceText,targetText);
 
 @override
 String toString() {
-  return 'ExerciseModel.translateSentence(id: $id, prompt: $prompt, sourceText: $sourceText, targetText: $targetText)';
+  return 'ExerciseModel.translateSentence(id: $id, prompt: $prompt, imageUrl: $imageUrl, sourceText: $sourceText, targetText: $targetText)';
 }
 
 
@@ -1200,7 +1301,7 @@ abstract mixin class _$TranslateSentenceModelCopyWith<$Res> implements $Exercise
   factory _$TranslateSentenceModelCopyWith(_TranslateSentenceModel value, $Res Function(_TranslateSentenceModel) _then) = __$TranslateSentenceModelCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String prompt, String sourceText, String targetText
+ String id, String prompt, String? imageUrl, String sourceText, String targetText
 });
 
 
@@ -1217,11 +1318,12 @@ class __$TranslateSentenceModelCopyWithImpl<$Res>
 
 /// Create a copy of ExerciseModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? sourceText = null,Object? targetText = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? imageUrl = freezed,Object? sourceText = null,Object? targetText = null,}) {
   return _then(_TranslateSentenceModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,prompt: null == prompt ? _self.prompt : prompt // ignore: cast_nullable_to_non_nullable
-as String,sourceText: null == sourceText ? _self.sourceText : sourceText // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String?,sourceText: null == sourceText ? _self.sourceText : sourceText // ignore: cast_nullable_to_non_nullable
 as String,targetText: null == targetText ? _self.targetText : targetText // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -1234,11 +1336,12 @@ as String,
 @JsonSerializable()
 
 class _AudioMatchModel extends ExerciseModel {
-  const _AudioMatchModel({required this.id, required this.prompt, required this.correctWord, final  String? $type}): $type = $type ?? 'audio_match',super._();
+  const _AudioMatchModel({required this.id, required this.prompt, this.imageUrl, required this.correctWord, final  String? $type}): $type = $type ?? 'audio_match',super._();
   factory _AudioMatchModel.fromJson(Map<String, dynamic> json) => _$AudioMatchModelFromJson(json);
 
 @override final  String id;
 @override final  String prompt;
+@override final  String? imageUrl;
  final  String correctWord;
 
 @JsonKey(name: 'type')
@@ -1258,16 +1361,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AudioMatchModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.correctWord, correctWord) || other.correctWord == correctWord));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AudioMatchModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.correctWord, correctWord) || other.correctWord == correctWord));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,prompt,correctWord);
+int get hashCode => Object.hash(runtimeType,id,prompt,imageUrl,correctWord);
 
 @override
 String toString() {
-  return 'ExerciseModel.audioMatch(id: $id, prompt: $prompt, correctWord: $correctWord)';
+  return 'ExerciseModel.audioMatch(id: $id, prompt: $prompt, imageUrl: $imageUrl, correctWord: $correctWord)';
 }
 
 
@@ -1278,7 +1381,7 @@ abstract mixin class _$AudioMatchModelCopyWith<$Res> implements $ExerciseModelCo
   factory _$AudioMatchModelCopyWith(_AudioMatchModel value, $Res Function(_AudioMatchModel) _then) = __$AudioMatchModelCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String prompt, String correctWord
+ String id, String prompt, String? imageUrl, String correctWord
 });
 
 
@@ -1295,12 +1398,100 @@ class __$AudioMatchModelCopyWithImpl<$Res>
 
 /// Create a copy of ExerciseModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? correctWord = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? imageUrl = freezed,Object? correctWord = null,}) {
   return _then(_AudioMatchModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,prompt: null == prompt ? _self.prompt : prompt // ignore: cast_nullable_to_non_nullable
-as String,correctWord: null == correctWord ? _self.correctWord : correctWord // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String?,correctWord: null == correctWord ? _self.correctWord : correctWord // ignore: cast_nullable_to_non_nullable
 as String,
+  ));
+}
+
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _ImageSelectionModel extends ExerciseModel {
+  const _ImageSelectionModel({required this.id, required this.prompt, this.imageUrl, required final  List<String> options, required this.correctIndex, final  String? $type}): _options = options,$type = $type ?? 'image_selection',super._();
+  factory _ImageSelectionModel.fromJson(Map<String, dynamic> json) => _$ImageSelectionModelFromJson(json);
+
+@override final  String id;
+@override final  String prompt;
+@override final  String? imageUrl;
+ final  List<String> _options;
+ List<String> get options {
+  if (_options is EqualUnmodifiableListView) return _options;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_options);
+}
+
+ final  int correctIndex;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of ExerciseModel
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ImageSelectionModelCopyWith<_ImageSelectionModel> get copyWith => __$ImageSelectionModelCopyWithImpl<_ImageSelectionModel>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ImageSelectionModelToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ImageSelectionModel&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&const DeepCollectionEquality().equals(other._options, _options)&&(identical(other.correctIndex, correctIndex) || other.correctIndex == correctIndex));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,prompt,imageUrl,const DeepCollectionEquality().hash(_options),correctIndex);
+
+@override
+String toString() {
+  return 'ExerciseModel.imageSelection(id: $id, prompt: $prompt, imageUrl: $imageUrl, options: $options, correctIndex: $correctIndex)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ImageSelectionModelCopyWith<$Res> implements $ExerciseModelCopyWith<$Res> {
+  factory _$ImageSelectionModelCopyWith(_ImageSelectionModel value, $Res Function(_ImageSelectionModel) _then) = __$ImageSelectionModelCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String prompt, String? imageUrl, List<String> options, int correctIndex
+});
+
+
+
+
+}
+/// @nodoc
+class __$ImageSelectionModelCopyWithImpl<$Res>
+    implements _$ImageSelectionModelCopyWith<$Res> {
+  __$ImageSelectionModelCopyWithImpl(this._self, this._then);
+
+  final _ImageSelectionModel _self;
+  final $Res Function(_ImageSelectionModel) _then;
+
+/// Create a copy of ExerciseModel
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? imageUrl = freezed,Object? options = null,Object? correctIndex = null,}) {
+  return _then(_ImageSelectionModel(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,prompt: null == prompt ? _self.prompt : prompt // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String?,options: null == options ? _self._options : options // ignore: cast_nullable_to_non_nullable
+as List<String>,correctIndex: null == correctIndex ? _self.correctIndex : correctIndex // ignore: cast_nullable_to_non_nullable
+as int,
   ));
 }
 

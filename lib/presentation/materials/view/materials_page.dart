@@ -31,6 +31,8 @@ class MaterialsPage extends GetView<MaterialsViewModel> {
                     icon = Icons.article;
                   } else if (material is PdfMaterial) {
                     icon = Icons.picture_as_pdf;
+                  } else if (material is AudioMaterial) {
+                    icon = Icons.audiotrack;
                   } else {
                     icon = Icons.web;
                   }

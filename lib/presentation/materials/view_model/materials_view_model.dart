@@ -2,6 +2,10 @@ import 'package:get/get.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
 import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/domain/use_cases/get_lesson_content_use_case.dart';
+import 'package:ezlang/presentation/materials/view/pdf_viewer_page.dart';
+import 'package:ezlang/presentation/materials/view/video_player_page.dart';
+import 'package:ezlang/presentation/materials/view/web_view_page.dart';
+import 'package:ezlang/presentation/materials/view/audio_player_page.dart';
 
 class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
   late SubTopic subTopic;
@@ -28,7 +32,6 @@ class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
   }
 
   void openMaterial(LearningMaterial material) {
-    // Implement navigation to specific material viewer or open URL
     if (material is ArticleMaterial) {
       Get.defaultDialog(
         title: material.title,
@@ -37,9 +40,20 @@ class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
         onConfirm: () => Get.back(),
       );
     } else if (material is VideoMaterial) {
-      Get.snackbar("Video", "Opening video: ${material.url}");
+      Get.to(() => VideoPlayerPage(url: material.url, title: material.title));
+    } else if (material is PdfMaterial) {
+      Get.to(() => PdfViewerPage(url: material.url, title: material.title));
+    } else if (material is AudioMaterial) {
+      Get.to(() => AudioPlayerPage(url: material.url, title: material.title));
+    } else if (material is HtmlMaterial) {
+      Get.to(
+        () => WebViewPage(content: material.content, title: material.title),
+      );
     } else {
-      Get.snackbar("Material", "Opening ${material.title}");
+      Get.snackbar(
+        "Material",
+        "Opening ${material.title} - Type not supported",
+      );
     }
   }
 }

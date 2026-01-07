@@ -5,16 +5,46 @@
       "type": "video",
       "id": "mat_1_1_1_1",
       "title": "Learn the English Alphabet",
-      "url": "https://www.example.com/videos/english_alphabet.mp4"
+      "url": "https://cdn.pixabay.com/video/2016/06/27/3627-172488393_tiny.mp4"
     },
     {
       "type": "article",
       "id": "mat_1_1_1_2",
       "title": "English Alphabet Basics",
       "content": "The English alphabet consists of 26 letters: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z."
+    },
+    {
+      "type": "pdf",
+      "id": "mat_1_1_1_3",
+      "title": "Alphabet Chart",
+      "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+      "type": "html",
+      "id": "mat_1_1_1_4",
+      "title": "Alphabet History",
+      "content": "<h1>History of the Alphabet</h1><p>The modern English alphabet is a Latin alphabet consisting of 26 letters.</p>"
+    },
+    {
+      "type": "audio",
+      "id": "mat_1_1_1_5",
+      "title": "Pronunciation Guide 1",
+      "url": "https://cdn.pixabay.com/audio/2025/12/18/audio_fcab73293f.mp3"
     }
   ],
   "exercises": [
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_1_21",
+      "prompt": "Select the image of an Apple.",
+      "options": [
+        "https://cdn.pixabay.com/photo/2016/08/12/22/34/apple-1589869_1280.jpg",
+        "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg",
+        "https://cdn.pixabay.com/photo/2016/01/03/17/59/bananas-1119790_1280.jpg",
+        "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg"
+      ],
+      "correctIndex": 0
+    },
     {
       "type": "multiple_choice",
       "id": "ex_1",
@@ -48,6 +78,108 @@
       "prompt": "Which is the first letter of the alphabet?",
       "options": ["Z", "A", "M"],
       "correctIndex": 1
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_6",
+      "prompt": "Which letter comes after 'D'?",
+      "options": ["C", "E", "F"],
+      "correctIndex": 1
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_7",
+      "prompt": "Which letter comes before 'Z'?",
+      "options": ["X", "Y", "A"],
+      "correctIndex": 1
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_8",
+      "prompt": "Select the vowel.",
+      "options": ["B", "C", "A"],
+      "correctIndex": 2
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_9",
+      "prompt": "Select the consonant.",
+      "options": ["A", "E", "B"],
+      "correctIndex": 2
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_1_10",
+      "prompt": "Write the letter 'A' in lowercase.",
+      "sourceText": "A",
+      "targetText": "a"
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_1_11",
+      "prompt": "Write the letter 'b' in uppercase.",
+      "sourceText": "b",
+      "targetText": "B"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_1_12",
+      "prompt": "Type the word 'Apple'.",
+      "correctWord": "Apple"
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_1_13",
+      "prompt": "Type the word 'Ball'.",
+      "correctWord": "Ball"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_14",
+      "prompt": "What is the 5th letter?",
+      "options": ["D", "E", "F"],
+      "correctIndex": 1
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_15",
+      "prompt": "What is the 10th letter?",
+      "options": ["I", "J", "K"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_1_16",
+      "prompt": "Complete the sequence: A, B, C, ...",
+      "sourceText": "A, B, C",
+      "targetText": "D"
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_1_17",
+      "prompt": "Complete the sequence: X, Y, ...",
+      "sourceText": "X, Y",
+      "targetText": "Z"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_18",
+      "prompt": "Which letter looks like a circle?",
+      "options": ["O", "I", "L"],
+      "correctIndex": 0
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_1_19",
+      "prompt": "Which letter looks like a triangle?",
+      "options": ["A", "O", "I"],
+      "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_1_20",
+      "prompt": "Type the word 'Cat'.",
+      "correctWord": "Cat"
     }
   ]
 }

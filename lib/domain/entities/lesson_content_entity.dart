@@ -45,11 +45,17 @@ class HtmlMaterial extends LearningMaterial {
   });
 }
 
+class AudioMaterial extends LearningMaterial {
+  final String url;
+  AudioMaterial({required super.id, required super.title, required this.url});
+}
+
 sealed class Exercise {
   final String id;
   final String prompt;
+  final String? imageUrl;
 
-  Exercise({required this.id, required this.prompt});
+  Exercise({required this.id, required this.prompt, this.imageUrl});
 }
 
 class MultipleChoice extends Exercise {
@@ -59,6 +65,7 @@ class MultipleChoice extends Exercise {
   MultipleChoice({
     required super.id,
     required super.prompt,
+    super.imageUrl,
     required this.options,
     required this.correctIndex,
   });
@@ -71,6 +78,7 @@ class TranslateSentence extends Exercise {
   TranslateSentence({
     required super.id,
     required super.prompt,
+    super.imageUrl,
     required this.sourceText,
     required this.targetText,
   });
@@ -82,6 +90,20 @@ class AudioMatch extends Exercise {
   AudioMatch({
     required super.id,
     required super.prompt,
+    super.imageUrl,
     required this.correctWord,
+  });
+}
+
+class ImageSelection extends Exercise {
+  final List<String> options;
+  final int correctIndex;
+
+  ImageSelection({
+    required super.id,
+    required super.prompt,
+    super.imageUrl,
+    required this.options,
+    required this.correctIndex,
   });
 }

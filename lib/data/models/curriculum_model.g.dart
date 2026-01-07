@@ -23,6 +23,8 @@ _EnglishLevelModel _$EnglishLevelModelFromJson(Map<String, dynamic> json) =>
       cefrCode: json['cefrCode'] as String,
       description: json['description'] as String,
       imageUrl: json['imageUrl'] as String,
+      imageLocalAsset: json['imageLocalAsset'] as String,
+      backgroundColorHex: json['backgroundColorHex'] as String,
       topics: (json['topics'] as List<dynamic>)
           .map((e) => TopicModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -35,6 +37,8 @@ Map<String, dynamic> _$EnglishLevelModelToJson(_EnglishLevelModel instance) =>
       'cefrCode': instance.cefrCode,
       'description': instance.description,
       'imageUrl': instance.imageUrl,
+      'imageLocalAsset': instance.imageLocalAsset,
+      'backgroundColorHex': instance.backgroundColorHex,
       'topics': instance.topics,
     };
 

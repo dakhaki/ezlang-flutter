@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/presentation/lesson/view_model/lesson_detail_view_model.dart';
@@ -9,17 +8,29 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
   @override
   Widget build(BuildContext context) {
     final level = controller.level;
+    final color = Color(int.parse(level.backgroundColorHex, radix: 16));
+    final asset = level.imageLocalAsset;
+
     return Scaffold(
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
             expandedHeight: 200.0,
             pinned: true,
+            backgroundColor: color,
+            leading: const BackButton(color: Colors.black),
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(level.title, style: const TextStyle(fontSize: 16)),
-              background: CachedNetworkImage(
-                imageUrl: level.imageUrl,
-                fit: BoxFit.cover,
+              title: Text(
+                level.title,
+                style: const TextStyle(fontSize: 16, color: Colors.black),
+              ),
+              background: Hero(
+                tag: level.id,
+                child: Container(
+                  color: color,
+                  padding: const EdgeInsets.all(32),
+                  child: Image.asset(asset, fit: BoxFit.contain),
+                ),
               ),
             ),
           ),

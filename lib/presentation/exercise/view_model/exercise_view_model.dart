@@ -17,6 +17,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
 
   // State for Multiple Choice
   final RxInt selectedOptionIndex = (-1).obs;
+  final Rx<dynamic> userAnswer = Rx<dynamic>(null);
 
   // State for Text Input (Translate / Audio)
   final TextEditingController textController = TextEditingController();
@@ -60,6 +61,11 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     selectedOptionIndex.value = index;
   }
 
+  void selectAnswer(dynamic answer) {
+    if (isAnswerChecked.value) return;
+    userAnswer.value = answer;
+  }
+
   Future<void> playAudio(String text) async {
     await audioService.speak(text);
   }
@@ -81,6 +87,9 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
       correct =
           textController.text.trim().toLowerCase() ==
           exercise.correctWord.toLowerCase();
+    } else if (exercise is ImageSelection) {
+      if (userAnswer.value == null) return;
+      correct = userAnswer.value == exercise.correctIndex;
     }
 
     isAnswerCorrect.value = correct;
@@ -108,6 +117,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     isAnswerChecked.value = false;
     isAnswerCorrect.value = false;
     selectedOptionIndex.value = -1;
+    userAnswer.value = null;
     textController.clear();
   }
 }

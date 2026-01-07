@@ -95,10 +95,27 @@ Map<String, dynamic> _$HtmlMaterialModelToJson(_HtmlMaterialModel instance) =>
       'type': instance.$type,
     };
 
+_AudioMaterialModel _$AudioMaterialModelFromJson(Map<String, dynamic> json) =>
+    _AudioMaterialModel(
+      id: json['id'] as String,
+      title: json['title'] as String,
+      url: json['url'] as String,
+      $type: json['type'] as String?,
+    );
+
+Map<String, dynamic> _$AudioMaterialModelToJson(_AudioMaterialModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'url': instance.url,
+      'type': instance.$type,
+    };
+
 _MultipleChoiceModel _$MultipleChoiceModelFromJson(Map<String, dynamic> json) =>
     _MultipleChoiceModel(
       id: json['id'] as String,
       prompt: json['prompt'] as String,
+      imageUrl: json['imageUrl'] as String?,
       options: (json['options'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
@@ -111,6 +128,7 @@ Map<String, dynamic> _$MultipleChoiceModelToJson(
 ) => <String, dynamic>{
   'id': instance.id,
   'prompt': instance.prompt,
+  'imageUrl': instance.imageUrl,
   'options': instance.options,
   'correctIndex': instance.correctIndex,
   'type': instance.$type,
@@ -121,6 +139,7 @@ _TranslateSentenceModel _$TranslateSentenceModelFromJson(
 ) => _TranslateSentenceModel(
   id: json['id'] as String,
   prompt: json['prompt'] as String,
+  imageUrl: json['imageUrl'] as String?,
   sourceText: json['sourceText'] as String,
   targetText: json['targetText'] as String,
   $type: json['type'] as String?,
@@ -131,6 +150,7 @@ Map<String, dynamic> _$TranslateSentenceModelToJson(
 ) => <String, dynamic>{
   'id': instance.id,
   'prompt': instance.prompt,
+  'imageUrl': instance.imageUrl,
   'sourceText': instance.sourceText,
   'targetText': instance.targetText,
   'type': instance.$type,
@@ -140,6 +160,7 @@ _AudioMatchModel _$AudioMatchModelFromJson(Map<String, dynamic> json) =>
     _AudioMatchModel(
       id: json['id'] as String,
       prompt: json['prompt'] as String,
+      imageUrl: json['imageUrl'] as String?,
       correctWord: json['correctWord'] as String,
       $type: json['type'] as String?,
     );
@@ -148,6 +169,30 @@ Map<String, dynamic> _$AudioMatchModelToJson(_AudioMatchModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'prompt': instance.prompt,
+      'imageUrl': instance.imageUrl,
       'correctWord': instance.correctWord,
       'type': instance.$type,
     };
+
+_ImageSelectionModel _$ImageSelectionModelFromJson(Map<String, dynamic> json) =>
+    _ImageSelectionModel(
+      id: json['id'] as String,
+      prompt: json['prompt'] as String,
+      imageUrl: json['imageUrl'] as String?,
+      options: (json['options'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      correctIndex: (json['correctIndex'] as num).toInt(),
+      $type: json['type'] as String?,
+    );
+
+Map<String, dynamic> _$ImageSelectionModelToJson(
+  _ImageSelectionModel instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'prompt': instance.prompt,
+  'imageUrl': instance.imageUrl,
+  'options': instance.options,
+  'correctIndex': instance.correctIndex,
+  'type': instance.$type,
+};

@@ -54,6 +54,12 @@ sealed class LearningMaterialModel with _$LearningMaterialModel {
     required String content,
   }) = _HtmlMaterialModel;
 
+  const factory LearningMaterialModel.audio({
+    required String id,
+    required String title,
+    required String url,
+  }) = _AudioMaterialModel;
+
   factory LearningMaterialModel.fromJson(Map<String, dynamic> json) =>
       _$LearningMaterialModelFromJson(json);
 
@@ -64,6 +70,7 @@ sealed class LearningMaterialModel with _$LearningMaterialModel {
           ArticleMaterial(id: e.id, title: e.title, content: e.content),
       pdf: (e) => PdfMaterial(id: e.id, title: e.title, url: e.url),
       html: (e) => HtmlMaterial(id: e.id, title: e.title, content: e.content),
+      audio: (e) => AudioMaterial(id: e.id, title: e.title, url: e.url),
     );
   }
 }
@@ -75,6 +82,7 @@ sealed class ExerciseModel with _$ExerciseModel {
   const factory ExerciseModel.multipleChoice({
     required String id,
     required String prompt,
+    String? imageUrl,
     required List<String> options,
     required int correctIndex,
   }) = _MultipleChoiceModel;
@@ -82,6 +90,7 @@ sealed class ExerciseModel with _$ExerciseModel {
   const factory ExerciseModel.translateSentence({
     required String id,
     required String prompt,
+    String? imageUrl,
     required String sourceText,
     required String targetText,
   }) = _TranslateSentenceModel;
@@ -89,8 +98,17 @@ sealed class ExerciseModel with _$ExerciseModel {
   const factory ExerciseModel.audioMatch({
     required String id,
     required String prompt,
+    String? imageUrl,
     required String correctWord,
   }) = _AudioMatchModel;
+
+  const factory ExerciseModel.imageSelection({
+    required String id,
+    required String prompt,
+    String? imageUrl,
+    required List<String> options,
+    required int correctIndex,
+  }) = _ImageSelectionModel;
 
   factory ExerciseModel.fromJson(Map<String, dynamic> json) =>
       _$ExerciseModelFromJson(json);
@@ -100,17 +118,30 @@ sealed class ExerciseModel with _$ExerciseModel {
       multipleChoice: (e) => MultipleChoice(
         id: e.id,
         prompt: e.prompt,
+        imageUrl: e.imageUrl,
         options: e.options,
         correctIndex: e.correctIndex,
       ),
       translateSentence: (e) => TranslateSentence(
         id: e.id,
         prompt: e.prompt,
+        imageUrl: e.imageUrl,
         sourceText: e.sourceText,
         targetText: e.targetText,
       ),
-      audioMatch: (e) =>
-          AudioMatch(id: e.id, prompt: e.prompt, correctWord: e.correctWord),
+      audioMatch: (e) => AudioMatch(
+        id: e.id,
+        prompt: e.prompt,
+        imageUrl: e.imageUrl,
+        correctWord: e.correctWord,
+      ),
+      imageSelection: (e) => ImageSelection(
+        id: e.id,
+        prompt: e.prompt,
+        imageUrl: e.imageUrl,
+        options: e.options,
+        correctIndex: e.correctIndex,
+      ),
     );
   }
 }

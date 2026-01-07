@@ -23,6 +23,8 @@ abstract class EnglishLevelModel with _$EnglishLevelModel {
     required String cefrCode,
     required String description,
     required String imageUrl,
+    required String imageLocalAsset,
+    required String backgroundColorHex,
     required List<TopicModel> topics,
   }) = _EnglishLevelModel;
 
@@ -36,6 +38,8 @@ abstract class EnglishLevelModel with _$EnglishLevelModel {
       cefrCode: cefrCode,
       description: description,
       imageUrl: imageUrl,
+      imageLocalAsset: imageLocalAsset,
+      backgroundColorHex: backgroundColorHex,
       topics: topics.map((e) => e.toEntity()).toList(),
     );
   }

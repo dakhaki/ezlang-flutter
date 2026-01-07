@@ -6,6 +6,8 @@
       "cefrCode": "A0–A1",
       "description": "Foundations and basic survival English.",
       "imageUrl": "https://dummyimage.com/600x400/92c952/ffffff",
+      "imageLocalAsset": "assets/images/egg.png",
+      "backgroundColorHex": "FFE3F2FD",
       "topics": [
         {
           "id": "topic_1_1",
@@ -16,8 +18,8 @@
             {
               "id": "sub_1_1_1",
               "title": "The Alphabet",
-              "materialCount": 2,
-              "exerciseCount": 5
+              "materialCount": 5,
+              "exerciseCount": 21
             },
             {
               "id": "sub_1_1_2",
@@ -77,6 +79,8 @@
       "cefrCode": "A2",
       "description": "Simple sentences and frequently used expressions.",
       "imageUrl": "https://dummyimage.com/600x400/771796/ffffff",
+      "imageLocalAsset": "assets/images/larva.png",
+      "backgroundColorHex": "FFE8F5E9",
       "topics": [
         {
           "id": "topic_2_1",
@@ -142,6 +146,8 @@
       "cefrCode": "B1–B2",
       "description": "Independent communication and expressing opinions.",
       "imageUrl": "https://dummyimage.com/600x400/24f355/ffffff",
+      "imageLocalAsset": "assets/images/pupa.png",
+      "backgroundColorHex": "FFFFF3E0",
       "topics": [
         {
           "id": "topic_3_1",
@@ -207,6 +213,8 @@
       "cefrCode": "C1–C2",
       "description": "Fluency, nuance, and professional/academic use.",
       "imageUrl": "https://dummyimage.com/600x400/d32776/ffffff",
+      "imageLocalAsset": "assets/images/adult.png",
+      "backgroundColorHex": "FFF3E5F5",
       "topics": [
         {
           "id": "topic_4_1",

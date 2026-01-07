@@ -1,8 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/audio_match_widget.dart';
+import 'package:ezlang/presentation/exercise/view/widgets/image_selection_widget.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/multiple_choice_widget.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/translate_sentence_widget.dart';
 import 'package:ezlang/presentation/exercise/view_model/exercise_view_model.dart';
@@ -42,14 +44,46 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                   padding: const EdgeInsets.all(24),
                   child: Obx(() {
                     final exercise = controller.currentExercise;
+                    Widget exerciseWidget = const SizedBox.shrink();
+
                     if (exercise is MultipleChoice) {
-                      return MultipleChoiceWidget(exercise: exercise);
+                      exerciseWidget = MultipleChoiceWidget(exercise: exercise);
                     } else if (exercise is TranslateSentence) {
-                      return TranslateSentenceWidget(exercise: exercise);
+                      exerciseWidget = TranslateSentenceWidget(
+                        exercise: exercise,
+                      );
                     } else if (exercise is AudioMatch) {
-                      return AudioMatchWidget(exercise: exercise);
+                      exerciseWidget = AudioMatchWidget(exercise: exercise);
+                    } else if (exercise is ImageSelection) {
+                      exerciseWidget = ImageSelectionWidget(exercise: exercise);
                     }
-                    return const SizedBox.shrink();
+
+                    return Column(
+                      children: [
+                        if (exercise.imageUrl != null)
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 24.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: CachedNetworkImage(
+                                imageUrl: exercise.imageUrl!,
+                                height: 200,
+                                fit: BoxFit.contain,
+                                placeholder: (context, url) => const Center(
+                                  child: CircularProgressIndicator(),
+                                ),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(
+                                      Icons.error,
+                                      size: 50,
+                                      color: Colors.red,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        exerciseWidget,
+                      ],
+                    );
                   }),
                 ),
               ),
