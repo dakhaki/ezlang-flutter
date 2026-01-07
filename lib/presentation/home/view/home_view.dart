@@ -1,5 +1,5 @@
 import 'package:confetti/confetti.dart';
-import 'package:ezlang/core/theme/app_palette.dart';
+// import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/core/routes/routes.dart';
 import 'package:ezlang/presentation/widgets/bouncing_widget.dart';
 import 'package:flutter/material.dart';
@@ -16,28 +16,28 @@ class HomePage extends GetView<HomeViewModel> {
       appBar: AppBar(
         title: const Text('eZlang English'),
         centerTitle: false,
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(30),
-          child: Obx(
-            () => Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(
-                    Icons.local_fire_department,
-                    color: AppPalette.orangeAccent,
-                  ),
-                  const SizedBox(width: 4),
-                  Text(
-                    '${controller.streak.value} Day Streak',
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        // bottom: PreferredSize(
+        //   preferredSize: const Size.fromHeight(30),
+        //   child: Obx(
+        //     () => Padding(
+        //       padding: const EdgeInsets.only(bottom: 8.0),
+        //       child: Row(
+        //         mainAxisAlignment: MainAxisAlignment.center,
+        //         children: [
+        //           const Icon(
+        //             Icons.local_fire_department,
+        //             color: AppPalette.orangeAccent,
+        //           ),
+        //           const SizedBox(width: 4),
+        //           Text(
+        //             '${controller.streak.value} Day Streak',
+        //             style: const TextStyle(fontWeight: FontWeight.bold),
+        //           ),
+        //         ],
+        //       ),
+        //     ),
+        //   ),
+        // ),
         actions: [
           // IconButton(
           //   icon: const Icon(Icons.celebration),
