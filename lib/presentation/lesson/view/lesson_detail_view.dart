@@ -73,19 +73,21 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 32),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton.icon(
-                      onPressed: controller.completeLevel,
-                      icon: const Icon(Icons.check),
-                      label: const Text('Mark as Completed'),
-                      style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
+                  // const SizedBox(height: 32),
+                  SafeArea(
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: controller.completeLevel,
+                        icon: const Icon(Icons.check),
+                        label: const Text('Mark as Completed'),
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                        ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  // const SizedBox(height: 32),
                 ],
               ),
             ),

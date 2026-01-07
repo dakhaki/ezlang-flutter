@@ -50,29 +50,33 @@ class HomePage extends GetView<HomeViewModel> {
           ),
         ],
       ),
-      body: Stack(
-        children: [
-          controller.obx(
-            (levels) => ListView.builder(
-              padding: const EdgeInsets.all(16),
-              itemCount: levels?.length ?? 0,
-              itemBuilder: (context, index) {
-                final level = levels![index];
-                return _LevelCard(level: level, controller: controller);
-              },
+
+      // >> Implement a video player widget to handle the VideoMaterial type in the MaterialsPage. also Pdf, webview, audio
+      body: SafeArea(
+        child: Stack(
+          children: [
+            controller.obx(
+              (levels) => ListView.builder(
+                padding: const EdgeInsets.all(16),
+                itemCount: levels?.length ?? 0,
+                itemBuilder: (context, index) {
+                  final level = levels![index];
+                  return _LevelCard(level: level, controller: controller);
+                },
+              ),
+              onLoading: const Center(child: CircularProgressIndicator()),
+              onError: (error) => Center(child: Text('Error: $error')),
             ),
-            onLoading: const Center(child: CircularProgressIndicator()),
-            onError: (error) => Center(child: Text('Error: $error')),
-          ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: ConfettiWidget(
-              confettiController: controller.confettiController,
-              blastDirectionality: BlastDirectionality.explosive,
-              shouldLoop: false,
+            Align(
+              alignment: Alignment.topCenter,
+              child: ConfettiWidget(
+                confettiController: controller.confettiController,
+                blastDirectionality: BlastDirectionality.explosive,
+                shouldLoop: false,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -33,29 +33,31 @@ class ExercisePage extends GetView<ExerciseViewModel> {
           onLoading: const SizedBox.shrink(),
         ),
       ),
-      body: controller.obx(
-        (content) => Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(24),
-                child: Obx(() {
-                  final exercise = controller.currentExercise;
-                  if (exercise is MultipleChoice) {
-                    return MultipleChoiceWidget(exercise: exercise);
-                  } else if (exercise is TranslateSentence) {
-                    return TranslateSentenceWidget(exercise: exercise);
-                  } else if (exercise is AudioMatch) {
-                    return AudioMatchWidget(exercise: exercise);
-                  }
-                  return const SizedBox.shrink();
-                }),
+      body: SafeArea(
+        child: controller.obx(
+          (content) => Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(24),
+                  child: Obx(() {
+                    final exercise = controller.currentExercise;
+                    if (exercise is MultipleChoice) {
+                      return MultipleChoiceWidget(exercise: exercise);
+                    } else if (exercise is TranslateSentence) {
+                      return TranslateSentenceWidget(exercise: exercise);
+                    } else if (exercise is AudioMatch) {
+                      return AudioMatchWidget(exercise: exercise);
+                    }
+                    return const SizedBox.shrink();
+                  }),
+                ),
               ),
-            ),
-            _buildBottomBar(context),
-          ],
+              _buildBottomBar(context),
+            ],
+          ),
+          onLoading: const Center(child: CircularProgressIndicator()),
         ),
-        onLoading: const Center(child: CircularProgressIndicator()),
       ),
     );
   }
