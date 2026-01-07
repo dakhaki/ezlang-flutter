@@ -124,11 +124,13 @@ class _LevelCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        level.cefrCode,
-                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                          color: Theme.of(context).primaryColor,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        // '${level.title} - ${level.cefrCode}',
+                        '${level.title}',
+                        style: Theme.of(context).textTheme.headlineMedium
+                            ?.copyWith(
+                              color: Theme.of(context).primaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
                       ),
                       Obx(() {
                         final isCompleted = controller.completedLevels.contains(
@@ -145,11 +147,11 @@ class _LevelCard extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 8),
-                  Text(
-                    level.title,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  const SizedBox(height: 4),
+                  // Text(
+                  //   '${level.title}', // '${level.title} [${level.cefrCode}]',
+                  //   style: Theme.of(context).textTheme.titleLarge,
+                  // ),
+                  // const SizedBox(height: 4),
                   Text(
                     level.description,
                     style: Theme.of(context).textTheme.bodyMedium,

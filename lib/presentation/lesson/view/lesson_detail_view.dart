@@ -20,10 +20,10 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
             backgroundColor: color,
             leading: const BackButton(color: Colors.black),
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(
-                level.title,
-                style: const TextStyle(fontSize: 16, color: Colors.black),
-              ),
+              // title: Text(
+              //   level.title,
+              //   style: const TextStyle(fontSize: 16, color: Colors.black),
+              // ),
               background: Hero(
                 tag: level.id,
                 child: Container(
@@ -40,24 +40,31 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Chip(
-                        label: Text(level.cefrCode),
-                        backgroundColor: Theme.of(
-                          context,
-                        ).primaryColor.withOpacity(0.1),
-                        labelStyle: TextStyle(
-                          color: Theme.of(context).primaryColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
+                  // Row(
+                  //   children: [
+                  //     Chip(
+                  //       label: Text(level.cefrCode),
+                  //       backgroundColor: Theme.of(
+                  //         context,
+                  //       ).primaryColor.withOpacity(0.1),
+                  //       labelStyle: TextStyle(
+                  //         color: Theme.of(context).primaryColor,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                   Text(
-                    'Overview',
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    level.title,
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      color: Theme.of(context).primaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+                  // const SizedBox(height: 16),
+                  // Text(
+                  //   'Overview',
+                  //   style: Theme.of(context).textTheme.headlineSmall,
+                  // ),
                   const SizedBox(height: 8),
                   Text(
                     level.description,
