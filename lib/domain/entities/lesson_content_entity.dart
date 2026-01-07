@@ -86,12 +86,14 @@ class TranslateSentence extends Exercise {
 
 class AudioMatch extends Exercise {
   final String correctWord;
+  final String? audioUrl;
 
   AudioMatch({
     required super.id,
     required super.prompt,
     super.imageUrl,
     required this.correctWord,
+    this.audioUrl,
   });
 }
 

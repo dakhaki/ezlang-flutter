@@ -22,13 +22,17 @@ class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
 
   Future<void> fetchContent() async {
     change(null, status: RxStatus.loading());
-    final result = await getLessonContentUseCase(subTopic.id);
-    result.fold(
-      (failure) => change(null, status: RxStatus.error(failure.message)),
-      (data) {
-        change(data, status: RxStatus.success());
-      },
-    );
+    try {
+      final result = await getLessonContentUseCase(subTopic.id);
+      result.fold(
+        (failure) => change(null, status: RxStatus.error(failure.message)),
+        (data) {
+          change(data, status: RxStatus.success());
+        },
+      );
+    } catch (e) {
+      change(null, status: RxStatus.error(e.toString()));
+    }
   }
 
   void openMaterial(LearningMaterial material) {

@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ezlang/presentation/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
@@ -90,7 +91,23 @@ class ExercisePage extends GetView<ExerciseViewModel> {
               _buildBottomBar(context),
             ],
           ),
-          onLoading: const Center(child: CircularProgressIndicator()),
+          onLoading: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const LoadingIndicator(),
+                const SizedBox(height: 24),
+                Obx(() {
+                  final percent = (controller.preloadProgress.value * 100)
+                      .toInt();
+                  return Text(
+                    'Loading resources... $percent%',
+                    style: const TextStyle(color: Colors.grey, fontSize: 16),
+                  );
+                }),
+              ],
+            ),
+          ),
         ),
       ),
     );

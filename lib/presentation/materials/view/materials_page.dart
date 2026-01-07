@@ -1,3 +1,5 @@
+import 'package:ezlang/presentation/widgets/error_view.dart';
+import 'package:ezlang/presentation/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/domain/entities/lesson_content_entity.dart';
@@ -57,7 +59,11 @@ class MaterialsPage extends GetView<MaterialsViewModel> {
                   );
                 },
               ),
-        onLoading: const Center(child: CircularProgressIndicator()),
+        onLoading: const Center(child: LoadingIndicator()),
+        onError: (error) => ErrorView(
+          message: error ?? 'Failed to load materials',
+          onRetry: controller.fetchContent,
+        ),
       ),
     );
   }

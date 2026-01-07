@@ -13,8 +13,10 @@ class AudioService extends GetxService {
     return this;
   }
 
-  Future<void> speak(String text) async {
+  Future<void> speak(String text, {double speed = 0.5}) async {
     if (text.isNotEmpty) {
+      await _flutterTts.stop();
+      await _flutterTts.setSpeechRate(speed);
       await _flutterTts.speak(text);
     }
   }

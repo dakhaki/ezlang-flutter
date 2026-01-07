@@ -70,6 +70,7 @@
       "type": "audio_match",
       "id": "ex_1_1_1_4",
       "prompt": "Type the word you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/one-us.mp3",
       "correctWord": "One"
     },
     {
@@ -125,12 +126,14 @@
       "type": "audio_match",
       "id": "ex_1_1_1_12",
       "prompt": "Type the word 'Apple'.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/apple-us.mp3",
       "correctWord": "Apple"
     },
     {
       "type": "audio_match",
       "id": "ex_1_1_1_13",
       "prompt": "Type the word 'Ball'.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ball-us.mp3",
       "correctWord": "Ball"
     },
     {
@@ -179,6 +182,7 @@
       "type": "audio_match",
       "id": "ex_1_1_1_20",
       "prompt": "Type the word 'Cat'.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cat-us.mp3",
       "correctWord": "Cat"
     }
   ]

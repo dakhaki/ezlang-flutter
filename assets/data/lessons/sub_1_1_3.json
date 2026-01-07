@@ -1,0 +1,46 @@
+{
+  "id": "sub_1_1_3",
+  "materials": [
+    {
+      "type": "html",
+      "id": "mat_1_1_3_1",
+      "title": "Colors of the Rainbow",
+      "content": "<h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>"
+    }
+  ],
+  "exercises": [
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_3_1",
+      "prompt": "Select the Blue color.",
+      "options": [
+        "https://dummyimage.com/300x300/ff0000/fff&text=Red",
+        "https://dummyimage.com/300x300/0000ff/fff&text=Blue",
+        "https://dummyimage.com/300x300/00ff00/fff&text=Green",
+        "https://dummyimage.com/300x300/ffff00/fff&text=Yellow"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_3_2",
+      "prompt": "Type the color you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/red-us.mp3",
+      "correctWord": "Red"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_3_3",
+      "prompt": "What day is today if yesterday was Sunday?",
+      "options": ["Monday", "Tuesday", "Wednesday"],
+      "correctIndex": 0
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_3_4",
+      "prompt": "Write 'Green' in uppercase.",
+      "sourceText": "Green",
+      "targetText": "GREEN"
+    }
+  ]
+}

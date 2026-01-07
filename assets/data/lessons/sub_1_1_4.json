@@ -1,0 +1,46 @@
+{
+  "id": "sub_1_1_4",
+  "materials": [
+    {
+      "type": "article",
+      "id": "mat_1_1_4_1",
+      "title": "Greetings",
+      "content": "Hello, Hi, Good Morning, Good Afternoon, Good Evening."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_4_1",
+      "prompt": "Type the greeting you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hello-au.mp3",
+      "correctWord": "Hello"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_4_2",
+      "prompt": "How do you say goodbye at night?",
+      "options": ["Good morning", "Good night", "Hello"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_4_3",
+      "prompt": "Write 'Hi' in lowercase.",
+      "sourceText": "Hi",
+      "targetText": "hi"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_4_4",
+      "prompt": "Select the waving hand.",
+      "options": [
+        "https://dummyimage.com/300x300/ccc/000&text=Wave",
+        "https://dummyimage.com/300x300/ccc/000&text=Sleep",
+        "https://dummyimage.com/300x300/ccc/000&text=Eat",
+        "https://dummyimage.com/300x300/ccc/000&text=Run"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

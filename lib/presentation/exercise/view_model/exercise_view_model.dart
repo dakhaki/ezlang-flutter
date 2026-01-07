@@ -1,4 +1,6 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/services/audio_service.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
@@ -22,6 +24,12 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
   // State for Text Input (Translate / Audio)
   final TextEditingController textController = TextEditingController();
 
+  final RxDouble preloadProgress = 0.0.obs;
+  final Rx<String?> currentPlayingAudioId = Rx<String?>(null);
+  final RxBool isAudioLoading = false.obs;
+  final RxBool hasPlayedAudio = false.obs;
+  final AudioPlayer _audioPlayer = AudioPlayer();
+
   ExerciseViewModel({
     required this.audioService,
     required this.getLessonContentUseCase,
@@ -30,6 +38,9 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
   @override
   void onInit() {
     super.onInit();
+    _audioPlayer.onPlayerComplete.listen((_) {
+      currentPlayingAudioId.value = null;
+    });
     if (Get.arguments is SubTopic) {
       subTopic = Get.arguments as SubTopic;
       fetchContent();
@@ -42,10 +53,11 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
   Future<void> fetchContent() async {
     change(null, status: RxStatus.loading());
     final result = await getLessonContentUseCase(subTopic.id);
-    result.fold(
-      (failure) => change(null, status: RxStatus.error(failure.message)),
-      (data) {
+    await result.fold(
+      (failure) async => change(null, status: RxStatus.error(failure.message)),
+      (data) async {
         content = data;
+        await _preloadAssets(data);
         change(data, status: RxStatus.success());
       },
     );
@@ -66,8 +78,39 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     userAnswer.value = answer;
   }
 
-  Future<void> playAudio(String text) async {
-    await audioService.speak(text);
+  Future<void> playAudio(
+    String text, {
+    String? url,
+    String? id,
+    double speed = 0.5,
+  }) async {
+    if (isAudioLoading.value) return;
+
+    // Stop any currently playing audio/TTS to prevent overlap
+    await _audioPlayer.stop();
+    await audioService.stop();
+    currentPlayingAudioId.value = null;
+
+    // isAudioLoading.value = true;
+
+    if (id != null) currentPlayingAudioId.value = id;
+
+    /// disable play url
+    // if (url != null && url.isNotEmpty) {
+    //   try {
+    //     final file = await DefaultCacheManager().getSingleFile(url);
+    //     await _audioPlayer.setPlaybackRate(speed);
+    //     await _audioPlayer.setVolume(1);
+    //     await _audioPlayer.play(DeviceFileSource(file.path));
+    //     isAudioLoading.value = false;
+    //     return;
+    //   } catch (_) {
+    //     // Fallback to TTS if online audio fails
+    //   }
+    // }
+    await audioService.speak(text, speed: speed);
+    // isAudioLoading.value = false;
+    currentPlayingAudioId.value = null;
   }
 
   void checkAnswer() {
@@ -119,5 +162,59 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     selectedOptionIndex.value = -1;
     userAnswer.value = null;
     textController.clear();
+    hasPlayedAudio.value = false;
+  }
+
+  @override
+  void onClose() {
+    _audioPlayer.dispose();
+    super.onClose();
+  }
+
+  Future<void> _preloadAssets(LessonContent content) async {
+    final urls = <String>{};
+    for (var exercise in content.exercises) {
+      if (exercise.imageUrl != null && exercise.imageUrl!.isNotEmpty) {
+        urls.add(exercise.imageUrl!);
+      }
+
+      /// disable play url
+      // if (exercise is AudioMatch &&
+      //     exercise.audioUrl != null &&
+      //     exercise.audioUrl!.isNotEmpty) {
+      //   urls.add(exercise.audioUrl!);
+      // }
+      if (exercise is ImageSelection) {
+        for (var url in exercise.options) {
+          if (url.isNotEmpty) {
+            urls.add(url);
+          }
+        }
+      }
+    }
+
+    if (urls.isEmpty) return;
+
+    int total = urls.length;
+    int completed = 0;
+    preloadProgress.value = 0.0;
+
+    final futures = urls.map((url) async {
+      try {
+        await DefaultCacheManager().getSingleFile(url);
+      } catch (e) {
+        debugPrint('Error caching $url: $e');
+      } finally {
+        completed++;
+        preloadProgress.value = completed / total;
+      }
+    });
+
+    try {
+      // Wait for all downloads with a 10-second timeout
+      await Future.wait(futures).timeout(const Duration(seconds: 10));
+    } catch (e) {
+      debugPrint('Asset preloading timed out or failed: $e');
+    }
   }
 }

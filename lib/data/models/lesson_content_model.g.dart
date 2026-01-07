@@ -162,6 +162,7 @@ _AudioMatchModel _$AudioMatchModelFromJson(Map<String, dynamic> json) =>
       prompt: json['prompt'] as String,
       imageUrl: json['imageUrl'] as String?,
       correctWord: json['correctWord'] as String,
+      audioUrl: json['audioUrl'] as String?,
       $type: json['type'] as String?,
     );
 
@@ -171,6 +172,7 @@ Map<String, dynamic> _$AudioMatchModelToJson(_AudioMatchModel instance) =>
       'prompt': instance.prompt,
       'imageUrl': instance.imageUrl,
       'correctWord': instance.correctWord,
+      'audioUrl': instance.audioUrl,
       'type': instance.$type,
     };
 

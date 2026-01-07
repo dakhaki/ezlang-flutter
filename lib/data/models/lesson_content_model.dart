@@ -100,6 +100,7 @@ sealed class ExerciseModel with _$ExerciseModel {
     required String prompt,
     String? imageUrl,
     required String correctWord,
+    String? audioUrl,
   }) = _AudioMatchModel;
 
   const factory ExerciseModel.imageSelection({
@@ -134,6 +135,7 @@ sealed class ExerciseModel with _$ExerciseModel {
         prompt: e.prompt,
         imageUrl: e.imageUrl,
         correctWord: e.correctWord,
+        audioUrl: e.audioUrl,
       ),
       imageSelection: (e) => ImageSelection(
         id: e.id,
