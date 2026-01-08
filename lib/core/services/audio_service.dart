@@ -1,8 +1,11 @@
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:get/get.dart';
 
 class AudioService extends GetxService {
   final FlutterTts _flutterTts = FlutterTts();
+  final AudioPlayer _audioPlayer = AudioPlayer();
 
   Future<AudioService> init() async {
     await _flutterTts.setLanguage("en-US");
@@ -22,4 +25,22 @@ class AudioService extends GetxService {
   }
 
   Future<void> stop() async => await _flutterTts.stop();
+
+  Future<void> playAnswerSound(bool isCorrect) async {
+    try {
+      await _audioPlayer.stop();
+      await _audioPlayer.play(
+        AssetSource(isCorrect ? 'sounds/correct.m4a' : 'sounds/boing.m4a'),
+      );
+    } catch (e) {
+      debugPrint('Error playing answer sound: $e');
+    }
+  }
+
+  @override
+  void onClose() {
+    _flutterTts.stop();
+    _audioPlayer.dispose();
+    super.onClose();
+  }
 }

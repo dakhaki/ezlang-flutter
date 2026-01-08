@@ -28,7 +28,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
   final Rx<String?> currentPlayingAudioId = Rx<String?>(null);
   final RxBool isAudioLoading = false.obs;
   final RxBool hasPlayedAudio = false.obs;
-  final AudioPlayer _audioPlayer = AudioPlayer();
+  // final AudioPlayer _audioPlayer = AudioPlayer();
 
   ExerciseViewModel({
     required this.audioService,
@@ -38,9 +38,9 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
   @override
   void onInit() {
     super.onInit();
-    _audioPlayer.onPlayerComplete.listen((_) {
-      currentPlayingAudioId.value = null;
-    });
+    // _audioPlayer.onPlayerComplete.listen((_) {
+    //   currentPlayingAudioId.value = null;
+    // });
     if (Get.arguments is SubTopic) {
       subTopic = Get.arguments as SubTopic;
       fetchContent();
@@ -87,7 +87,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     if (isAudioLoading.value) return;
 
     // Stop any currently playing audio/TTS to prevent overlap
-    await _audioPlayer.stop();
+    // await _audioPlayer.stop();
     await audioService.stop();
     currentPlayingAudioId.value = null;
 
@@ -137,10 +137,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
 
     isAnswerCorrect.value = correct;
     isAnswerChecked.value = true;
-
-    if (!correct) {
-      // Optional: Play error sound or vibration
-    }
+    audioService.playAnswerSound(correct);
   }
 
   void nextExercise() {
@@ -167,7 +164,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
 
   @override
   void onClose() {
-    _audioPlayer.dispose();
+    // _audioPlayer.dispose();
     super.onClose();
   }
 
