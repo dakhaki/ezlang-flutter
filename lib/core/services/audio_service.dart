@@ -37,6 +37,24 @@ class AudioService extends GetxService {
     }
   }
 
+  Future<void> playConfettiSound() async {
+    try {
+      await _audioPlayer.stop();
+      await _audioPlayer.play(AssetSource('sounds/perfect.m4a'));
+    } catch (e) {
+      debugPrint('Error playing confetti sound: $e');
+    }
+  }
+
+  Future<void> playDoneSound() async {
+    try {
+      await _audioPlayer.stop();
+      await _audioPlayer.play(AssetSource('sounds/done.m4a'));
+    } catch (e) {
+      debugPrint('Error playing done sound: $e');
+    }
+  }
+
   @override
   void onClose() {
     _flutterTts.stop();

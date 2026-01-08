@@ -1,4 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:ezlang/presentation/exercise/view/widgets/lesson_completion_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:get/get.dart';
@@ -30,6 +31,9 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
   final RxBool hasPlayedAudio = false.obs;
   // final AudioPlayer _audioPlayer = AudioPlayer();
 
+  DateTime? _startTime;
+  int _correctAnswersCount = 0;
+
   ExerciseViewModel({
     required this.audioService,
     required this.getLessonContentUseCase,
@@ -58,6 +62,8 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
       (data) async {
         content = data;
         await _preloadAssets(data);
+        _startTime = DateTime.now();
+        _correctAnswersCount = 0;
         change(data, status: RxStatus.success());
       },
     );
@@ -136,6 +142,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     }
 
     isAnswerCorrect.value = correct;
+    if (correct) _correctAnswersCount++;
     isAnswerChecked.value = true;
     audioService.playAnswerSound(correct);
   }
@@ -145,10 +152,25 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
       currentExerciseIndex.value++;
       _resetState();
     } else {
-      Get.back();
-      Get.snackbar(
-        'Lesson Complete',
-        'Great job completing ${subTopic.title}!',
+      final duration = DateTime.now().difference(_startTime ?? DateTime.now());
+
+      if (_correctAnswersCount == content.exercises.length) {
+        audioService.playConfettiSound();
+      } else {
+        audioService.playDoneSound();
+      }
+
+      Get.dialog(
+        LessonCompletionDialog(
+          correctCount: _correctAnswersCount,
+          totalCount: content.exercises.length,
+          duration: duration,
+          onClose: () {
+            Get.back(); // Close dialog
+            Get.back(); // Close page
+          },
+        ),
+        barrierDismissible: false,
       );
     }
   }
