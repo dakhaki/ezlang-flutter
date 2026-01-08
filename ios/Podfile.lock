@@ -14,6 +14,8 @@ PODS:
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
+  - share_plus (0.0.1):
+    - Flutter
   - sqflite_darwin (0.0.4):
     - Flutter
     - FlutterMacOS
@@ -38,6 +40,7 @@ DEPENDENCIES:
   - flutter_tts (from `.symlinks/plugins/flutter_tts/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - share_plus (from `.symlinks/plugins/share_plus/ios`)
   - sqflite_darwin (from `.symlinks/plugins/sqflite_darwin/darwin`)
   - syncfusion_flutter_pdfviewer (from `.symlinks/plugins/syncfusion_flutter_pdfviewer/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
@@ -60,6 +63,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/package_info_plus/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  share_plus:
+    :path: ".symlinks/plugins/share_plus/ios"
   sqflite_darwin:
     :path: ".symlinks/plugins/sqflite_darwin/darwin"
   syncfusion_flutter_pdfviewer:
@@ -81,6 +86,7 @@ SPEC CHECKSUMS:
   flutter_tts: 91ad1884033cd95ef6e9338754adad54f01f090f
   package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
   path_provider_foundation: 0b743cbb62d8e47eab856f09262bb8c1ddcfe6ba
+  share_plus: 8b6f8b3447e494cca5317c8c3073de39b3600d1f
   sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
   syncfusion_flutter_pdfviewer: cfcf23c03816192575902e615fa50adc9f95b724
   url_launcher_ios: bb13df5870e8c4234ca12609d04010a21be43dfa
