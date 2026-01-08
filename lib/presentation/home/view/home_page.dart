@@ -96,14 +96,11 @@ class _LevelCard extends StatelessWidget {
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(12),
               ),
-              child: Hero(
-                tag: level.id,
-                child: Container(
-                  height: 120,
-                  width: double.infinity,
-                  color: Color(int.parse(level.backgroundColorHex, radix: 16)),
-                  child: Image.asset(level.imageLocalAsset, fit: BoxFit.cover),
-                ),
+              child: Container(
+                height: 120,
+                width: double.infinity,
+                color: Color(int.parse(level.backgroundColorHex, radix: 16)),
+                child: Image.asset(level.imageLocalAsset, fit: BoxFit.cover),
               ),
             ),
             Padding(
@@ -114,14 +111,19 @@ class _LevelCard extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        // '${level.title} - ${level.cefrCode}',
-                        '${level.title}',
-                        style: Theme.of(context).textTheme.headlineMedium
-                            ?.copyWith(
-                              color: Theme.of(context).primaryColor,
-                              fontWeight: FontWeight.bold,
-                            ),
+                      Hero(
+                        tag: level.id,
+                        child: Material(
+                          type: MaterialType.transparency,
+                          child: Text(
+                            '${level.title}',
+                            style: Theme.of(context).textTheme.headlineMedium
+                                ?.copyWith(
+                                  color: Theme.of(context).primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                        ),
                       ),
                       Obx(() {
                         final isCompleted = controller.completedLevels.contains(

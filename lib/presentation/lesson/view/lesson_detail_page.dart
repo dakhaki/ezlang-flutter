@@ -25,13 +25,10 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
               //   level.title,
               //   style: const TextStyle(fontSize: 16, color: Colors.black),
               // ),
-              background: Hero(
-                tag: level.id,
-                child: Container(
-                  color: color,
-                  padding: const EdgeInsets.all(32),
-                  child: Image.asset(asset, fit: BoxFit.contain),
-                ),
+              background: Container(
+                color: color,
+                padding: const EdgeInsets.all(32),
+                child: Image.asset(asset, fit: BoxFit.contain),
               ),
             ),
           ),
@@ -54,11 +51,15 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                   //     ),
                   //   ],
                   // ),
-                  Text(
-                    level.title,
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      color: Theme.of(context).primaryColor,
-                      fontWeight: FontWeight.bold,
+                  Hero(
+                    tag: level.id,
+                    child: Text(
+                      level.title,
+                      style: Theme.of(context).textTheme.headlineMedium
+                          ?.copyWith(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ),
                   // const SizedBox(height: 16),
