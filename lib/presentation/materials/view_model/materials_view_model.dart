@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
 import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/domain/use_cases/get_lesson_content_use_case.dart';
+import 'package:ezlang/presentation/materials/view/article_page.dart';
 import 'package:ezlang/presentation/materials/view/pdf_viewer_page.dart';
 import 'package:ezlang/presentation/materials/view/video_player_page.dart';
 import 'package:ezlang/presentation/materials/view/web_view_page.dart';
@@ -37,11 +38,8 @@ class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
 
   void openMaterial(LearningMaterial material) {
     if (material is ArticleMaterial) {
-      Get.defaultDialog(
-        title: material.title,
-        middleText: material.content,
-        textConfirm: "Close",
-        onConfirm: () => Get.back(),
+      Get.to(
+        () => ArticlePage(title: material.title, content: material.content),
       );
     } else if (material is VideoMaterial) {
       Get.to(() => VideoPlayerPage(url: material.url, title: material.title));

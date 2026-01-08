@@ -14,7 +14,7 @@ class HomePage extends GetView<HomeViewModel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('eZlang English'),
+        title: const Text('eZlang'),
         centerTitle: false,
         // bottom: PreferredSize(
         //   preferredSize: const Size.fromHeight(30),
@@ -39,18 +39,12 @@ class HomePage extends GetView<HomeViewModel> {
         //   ),
         // ),
         actions: [
-          // IconButton(
-          //   icon: const Icon(Icons.celebration),
-          //   onPressed: controller.celebrate,
-          // ),
           IconButton(
-            icon: const Icon(Icons.person),
+            icon: Image.asset('assets/images/logo_small.png', height: 28),
             onPressed: () => Get.toNamed(PageTo.profile),
           ),
         ],
       ),
-
-      // >> Implement a video player widget to handle the VideoMaterial type in the MaterialsPage. also Pdf, webview, audio
       body: SafeArea(
         child: Stack(
           children: [

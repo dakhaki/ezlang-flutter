@@ -21,7 +21,15 @@ class AppTheme {
     ),
 
     appBarTheme: const AppBarTheme(
-      systemOverlayStyle: SystemUiOverlayStyle.dark,
+      // systemOverlayStyle: SystemUiOverlayStyle.dark,
+      // Override specific properties to match the theme
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
+        systemNavigationBarColor: AppPalette.background,
+        systemNavigationBarIconBrightness: Brightness.dark,
+      ),
       backgroundColor: AppPalette.background,
       elevation: 0,
       foregroundColor: AppPalette.textPrimary,
@@ -39,6 +47,7 @@ class AppTheme {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       margin: const EdgeInsets.all(8),
+      clipBehavior: Clip.hardEdge,
     ),
 
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -99,20 +108,28 @@ class AppTheme {
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppPalette.backgroundDark,
     cardColor: AppPalette.cardColorDark,
-    primaryColor: AppPalette.primary,
+    primaryColor: AppPalette.primaryDark,
 
     colorScheme: ColorScheme.fromSeed(
-      seedColor: AppPalette.primary,
+      seedColor: AppPalette.primaryDark,
       brightness: Brightness.dark,
       surface: AppPalette.cardColorDark,
-      primary: AppPalette.primary,
+      primary: AppPalette.primaryDark,
       secondary: AppPalette.secondary,
       onPrimary: AppPalette.white,
       onSurface: AppPalette.textPrimaryDark,
     ),
 
     appBarTheme: const AppBarTheme(
-      systemOverlayStyle: SystemUiOverlayStyle.light,
+      // systemOverlayStyle: SystemUiOverlayStyle.light,
+      // Override specific properties to match the theme
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+        systemNavigationBarColor: AppPalette.backgroundDark,
+        systemNavigationBarIconBrightness: Brightness.light,
+      ),
       backgroundColor: Colors.transparent,
       elevation: 0,
       foregroundColor: AppPalette.textPrimaryDark,
@@ -130,6 +147,7 @@ class AppTheme {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       margin: const EdgeInsets.all(8),
+      clipBehavior: Clip.hardEdge,
     ),
 
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -158,6 +176,18 @@ class AppTheme {
         borderSide: const BorderSide(color: Colors.white10),
       ),
       hintStyle: const TextStyle(color: Colors.white38),
+    ),
+
+    chipTheme: ChipThemeData(
+      backgroundColor: AppPalette.primaryDark.withOpacity(0.1),
+      labelStyle: const TextStyle(
+        fontFamily: 'BubblegumSans',
+        color: AppPalette.textPrimaryDark,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+        side: const BorderSide(color: AppPalette.primaryDark),
+      ),
     ),
 
     textTheme:

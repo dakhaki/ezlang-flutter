@@ -7,7 +7,7 @@
       "description": "Foundations and basic survival English.",
       "imageUrl": "https://dummyimage.com/600x400/92c952/ffffff",
       "imageLocalAsset": "assets/images/egg.png",
-      "backgroundColorHex": "FFE3F2FD",
+      "backgroundColorHex": "FF90CAF9",
       "topics": [
         {
           "id": "topic_1_1",
@@ -134,7 +134,7 @@
       "description": "Simple sentences and frequently used expressions.",
       "imageUrl": "https://dummyimage.com/600x400/771796/ffffff",
       "imageLocalAsset": "assets/images/larva.png",
-      "backgroundColorHex": "FFE8F5E9",
+      "backgroundColorHex": "FFA5D6A7",
       "topics": [
         {
           "id": "topic_2_1",
@@ -243,7 +243,7 @@
       "description": "Independent communication and expressing opinions.",
       "imageUrl": "https://dummyimage.com/600x400/24f355/ffffff",
       "imageLocalAsset": "assets/images/pupa.png",
-      "backgroundColorHex": "FFFFF3E0",
+      "backgroundColorHex": "FFFFCC80",
       "topics": [
         {
           "id": "topic_3_1",
@@ -338,7 +338,7 @@
       "description": "Fluency, nuance, and professional/academic use.",
       "imageUrl": "https://dummyimage.com/600x400/d32776/ffffff",
       "imageLocalAsset": "assets/images/adult.png",
-      "backgroundColorHex": "FFF3E5F5",
+      "backgroundColorHex": "FFCE93D8",
       "topics": [
         {
           "id": "topic_4_1",

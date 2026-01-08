@@ -1,3 +1,4 @@
+import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/presentation/splash/view_model/splash_view_model.dart';
@@ -70,7 +71,7 @@ class SplashPage extends GetView<SplashViewModel> {
                                   style: TextStyle(
                                     fontSize: dynamicFontSize,
                                     fontWeight: FontWeight.bold,
-                                    color: Theme.of(context).primaryColor,
+                                    color: AppPalette.primary,
                                     shadows: [
                                       Shadow(
                                         blurRadius: 8,

@@ -4,17 +4,18 @@ class AppPalette {
   // --- Kid-friendly Single Palette ---
 
   // Background & Surface
-  static const background = Color(0xFFFFF9E6); // Warm Creamy Yellow
-  static const cardColor = Colors.white;
+  static const background = Color(0xFFF2EBD9); // Slightly Darker Warm Cream
+  static const cardColor = Color(0xFFFAF9F6); // Soft Off-White
 
   // Dark Mode Colors
   static const backgroundDark = Color(0xFF1F2937); // Dark Slate
   static const cardColorDark = Color(0xFF374151); // Lighter Slate
+  static const primaryDark = Color(0xFFA29BFE); // Lighter Purple for Dark Mode
   static const textPrimaryDark = Colors.white;
   static const textSecondaryDark = Colors.white70;
 
   // Text
-  static const textPrimary = Color(0xFF2D3436); // Soft Black
+  static const textPrimary = Color(0xFF4A4A4A); // Softer Grey-Black
   static const textSecondary = Color(0xFF636E72); // Greyish
   static const white = Colors.white;
 

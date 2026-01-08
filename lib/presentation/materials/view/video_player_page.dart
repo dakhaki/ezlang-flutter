@@ -2,6 +2,7 @@ import 'package:chewie/chewie.dart';
 import 'package:ezlang/presentation/widgets/error_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerPage extends StatefulWidget {
@@ -65,7 +66,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text(widget.title), centerTitle: false),
       backgroundColor: Colors.black,
       body: _errorMessage != null
           ? ErrorView(

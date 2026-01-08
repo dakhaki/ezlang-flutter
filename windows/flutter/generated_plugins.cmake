@@ -6,6 +6,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   audioplayers_windows
   connectivity_plus
   flutter_tts
+  share_plus
   syncfusion_pdfviewer_windows
   url_launcher_windows
 )

@@ -21,18 +21,19 @@ class ExercisePage extends GetView<ExerciseViewModel> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Container(
-          margin: const EdgeInsets.all(8),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.only(left: 16),
+          child: Material(
             color: Theme.of(context).cardColor,
-            shape: BoxShape.circle,
-          ),
-          child: IconButton(
-            icon: Icon(Icons.close, color: Theme.of(context).iconTheme.color),
-            onPressed: () => _showQuitDialog(context),
+            shape: const CircleBorder(),
+            clipBehavior: Clip.hardEdge,
+            child: IconButton(
+              icon: Icon(Icons.close, color: Theme.of(context).iconTheme.color),
+              onPressed: () => _showQuitDialog(context),
+            ),
           ),
         ),
         title: controller.obx(
-          (_) => Obx(
+          (content) => Obx(
             () => Container(
               padding: const EdgeInsets.all(4),
               decoration: BoxDecoration(
@@ -60,7 +61,7 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                       ),
                     ),
                     Text(
-                      '${(value * 100).toInt()}%',
+                      '${controller.currentExerciseIndex.value + 1}/${content?.exercises.length ?? 0}',
                       style: TextStyle(
                         color: Theme.of(context).textTheme.bodyMedium?.color,
                         fontSize: 14,
@@ -94,55 +95,91 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                       ),
                     ],
                   ),
-                  child: SingleChildScrollView(
-                    padding: const EdgeInsets.all(24),
-                    child: Obx(() {
-                      final exercise = controller.currentExercise;
-                      Widget exerciseWidget = const SizedBox.shrink();
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(24),
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(24),
+                      child: Obx(() {
+                        final exercise = controller.currentExercise;
+                        Widget exerciseWidget = const SizedBox.shrink();
 
-                      if (exercise is MultipleChoice) {
-                        exerciseWidget = MultipleChoiceWidget(
-                          exercise: exercise,
-                        );
-                      } else if (exercise is TranslateSentence) {
-                        exerciseWidget = TranslateSentenceWidget(
-                          exercise: exercise,
-                        );
-                      } else if (exercise is AudioMatch) {
-                        exerciseWidget = AudioMatchWidget(exercise: exercise);
-                      } else if (exercise is ImageSelection) {
-                        exerciseWidget = ImageSelectionWidget(
-                          exercise: exercise,
-                        );
-                      }
+                        if (exercise is MultipleChoice) {
+                          exerciseWidget = MultipleChoiceWidget(
+                            exercise: exercise,
+                          );
+                        } else if (exercise is TranslateSentence) {
+                          exerciseWidget = TranslateSentenceWidget(
+                            exercise: exercise,
+                          );
+                        } else if (exercise is AudioMatch) {
+                          exerciseWidget = AudioMatchWidget(exercise: exercise);
+                        } else if (exercise is ImageSelection) {
+                          exerciseWidget = ImageSelectionWidget(
+                            exercise: exercise,
+                          );
+                        }
 
-                      return Column(
-                        children: [
-                          if (exercise.imageUrl != null)
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 24.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(16),
-                                child: CachedNetworkImage(
-                                  imageUrl: exercise.imageUrl!,
-                                  height: 200,
-                                  fit: BoxFit.contain,
-                                  placeholder: (context, url) => const Center(
-                                    child: CircularProgressIndicator(),
-                                  ),
-                                  errorWidget: (context, url, error) =>
-                                      const Icon(
-                                        Icons.error,
-                                        size: 50,
-                                        color: Colors.red,
-                                      ),
-                                ),
-                              ),
+                        return AnimatedSwitcher(
+                          duration: const Duration(milliseconds: 400),
+                          switchInCurve: Curves.easeInOut,
+                          switchOutCurve: Curves.easeInOut,
+                          layoutBuilder: (currentChild, previousChildren) {
+                            return Stack(
+                              alignment: Alignment.topCenter,
+                              children: <Widget>[
+                                ...previousChildren,
+                                if (currentChild != null) currentChild,
+                              ],
+                            );
+                          },
+                          transitionBuilder: (child, animation) {
+                            final isNew =
+                                child.key ==
+                                ValueKey(controller.currentExerciseIndex.value);
+                            final offsetAnimation = Tween<Offset>(
+                              begin: isNew
+                                  ? const Offset(1.0, 0.0)
+                                  : const Offset(-1.0, 0.0),
+                              end: Offset.zero,
+                            ).animate(animation);
+                            return SlideTransition(
+                              position: offsetAnimation,
+                              child: child,
+                            );
+                          },
+                          child: Column(
+                            key: ValueKey(
+                              controller.currentExerciseIndex.value,
                             ),
-                          exerciseWidget,
-                        ],
-                      );
-                    }),
+                            children: [
+                              if (exercise.imageUrl != null)
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 24.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(16),
+                                    child: CachedNetworkImage(
+                                      imageUrl: exercise.imageUrl!,
+                                      height: 200,
+                                      fit: BoxFit.contain,
+                                      placeholder: (context, url) =>
+                                          const Center(
+                                            child: CircularProgressIndicator(),
+                                          ),
+                                      errorWidget: (context, url, error) =>
+                                          const Icon(
+                                            Icons.error,
+                                            size: 50,
+                                            color: Colors.red,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                              exerciseWidget,
+                            ],
+                          ),
+                        );
+                      }),
+                    ),
                   ),
                 ),
               ),

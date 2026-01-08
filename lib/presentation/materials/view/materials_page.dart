@@ -22,7 +22,7 @@ class MaterialsPage extends GetView<MaterialsViewModel> {
                 child: Text("No materials available for this lesson."),
               )
             : ListView.builder(
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(12),
                 itemCount: content.materials.length,
                 itemBuilder: (context, index) {
                   final material = content.materials[index];

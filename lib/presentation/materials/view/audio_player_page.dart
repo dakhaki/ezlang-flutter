@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:ezlang/presentation/widgets/error_view.dart';
+import 'package:ezlang/presentation/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
@@ -104,7 +105,7 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
     final isPlaying = _playerState == PlayerState.playing;
 
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text(widget.title), centerTitle: false),
       body: _errorMessage != null
           ? ErrorView(
               message: _errorMessage!,
@@ -123,11 +124,15 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Icon(Icons.audiotrack, size: 100, color: Colors.grey),
-                    const SizedBox(height: 32),
                     if (_isLoading)
-                      const CircularProgressIndicator()
+                      const LoadingIndicator()
                     else ...[
+                      const Icon(
+                        Icons.audiotrack,
+                        size: 100,
+                        color: Colors.grey,
+                      ),
+                      const SizedBox(height: 32),
                       Slider(
                         min: 0,
                         max: _duration.inSeconds.toDouble(),
