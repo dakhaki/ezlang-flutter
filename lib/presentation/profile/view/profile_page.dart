@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
+import 'package:ezlang/core/theme/theme_controller.dart';
 import 'package:ezlang/presentation/materials/view/web_view_page.dart';
 import 'package:ezlang/presentation/profile/view_model/profile_view_model.dart';
 import 'package:ezlang/presentation/widgets/sticker_widget.dart';
@@ -12,7 +13,7 @@ class ProfilePage extends GetView<ProfileViewModel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F9FF),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         title: const Text('My Profile'),
         centerTitle: true,
@@ -31,7 +32,7 @@ class ProfilePage extends GetView<ProfileViewModel> {
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.circular(24),
                 boxShadow: [
                   BoxShadow(
@@ -104,7 +105,7 @@ class ProfilePage extends GetView<ProfileViewModel> {
                       width: double.infinity,
                       padding: const EdgeInsets.all(32.0),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Theme.of(context).cardColor,
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(color: Colors.grey.shade200),
                       ),
@@ -142,6 +143,63 @@ class ProfilePage extends GetView<ProfileViewModel> {
                         );
                       },
                     ),
+            ),
+
+            const SizedBox(height: 32),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Settings',
+                style: Theme.of(
+                  context,
+                ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Container(
+              margin: const EdgeInsets.only(bottom: 12),
+              decoration: BoxDecoration(
+                color: Theme.of(context).cardColor,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.05),
+                    blurRadius: 10,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Material(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(16),
+                clipBehavior: Clip.hardEdge,
+                child: GetBuilder<ThemeController>(
+                  builder: (controller) {
+                    return SwitchListTile(
+                      title: const Text(
+                        'Dark Mode',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: const Text('Switch ON to enable dark theme'),
+                      secondary: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.purple.withOpacity(0.1),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          controller.isDarkMode
+                              ? Icons.nightlight_round
+                              : Icons.wb_sunny_rounded,
+                          color: Colors.purple,
+                        ),
+                      ),
+                      value: controller.isDarkMode,
+                      onChanged: controller.changeTheme,
+                    );
+                  },
+                ),
+              ),
             ),
 
             const SizedBox(height: 32),
@@ -221,7 +279,7 @@ class ProfilePage extends GetView<ProfileViewModel> {
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(

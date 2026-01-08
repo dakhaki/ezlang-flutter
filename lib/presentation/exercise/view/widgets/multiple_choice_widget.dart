@@ -71,8 +71,8 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget>
             final isChecked = controller.isAnswerChecked.value;
             final isCorrect = index == widget.exercise.correctIndex;
 
-            Color backgroundColor = Colors.white;
-            Color borderColor = Colors.grey.shade300;
+            Color backgroundColor = Theme.of(context).scaffoldBackgroundColor;
+            Color borderColor = Theme.of(context).dividerColor;
 
             if (isChecked) {
               if (isCorrect) {
@@ -101,8 +101,9 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget>
                   ),
                   child: Text(
                     widget.exercise.options[index],
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 18,
+                      color: Theme.of(context).textTheme.bodyLarge?.color,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

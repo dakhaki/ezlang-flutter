@@ -16,21 +16,61 @@ class ExercisePage extends GetView<ExerciseViewModel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.close),
-          onPressed: () => Get.back(),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: Container(
+          margin: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+            shape: BoxShape.circle,
+          ),
+          child: IconButton(
+            icon: Icon(Icons.close, color: Theme.of(context).iconTheme.color),
+            onPressed: () => _showQuitDialog(context),
+          ),
         ),
         title: controller.obx(
           (_) => Obx(
-            () => LinearProgressIndicator(
-              value: controller.progress,
-              backgroundColor: Colors.grey.shade200,
-              valueColor: const AlwaysStoppedAnimation<Color>(
-                AppPalette.successGreen,
+            () => Container(
+              padding: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                color: Theme.of(context).cardColor,
+                borderRadius: BorderRadius.circular(20),
               ),
-              minHeight: 8,
-              borderRadius: BorderRadius.circular(4),
+              child: TweenAnimationBuilder<double>(
+                tween: Tween<double>(begin: 0, end: controller.progress),
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
+                builder: (context, value, _) => Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: LinearProgressIndicator(
+                        value: value,
+                        backgroundColor: Theme.of(
+                          context,
+                        ).scaffoldBackgroundColor,
+                        valueColor: const AlwaysStoppedAnimation<Color>(
+                          AppPalette.successGreen,
+                        ),
+                        minHeight: 24,
+                      ),
+                    ),
+                    Text(
+                      '${(value * 100).toInt()}%',
+                      style: TextStyle(
+                        color: Theme.of(context).textTheme.bodyMedium?.color,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'BubblegumSans',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
           onLoading: const SizedBox.shrink(),
@@ -41,51 +81,69 @@ class ExercisePage extends GetView<ExerciseViewModel> {
           (content) => Column(
             children: [
               Expanded(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(24),
-                  child: Obx(() {
-                    final exercise = controller.currentExercise;
-                    Widget exerciseWidget = const SizedBox.shrink();
+                child: Container(
+                  margin: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).cardColor,
+                    borderRadius: BorderRadius.circular(24),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.05),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(24),
+                    child: Obx(() {
+                      final exercise = controller.currentExercise;
+                      Widget exerciseWidget = const SizedBox.shrink();
 
-                    if (exercise is MultipleChoice) {
-                      exerciseWidget = MultipleChoiceWidget(exercise: exercise);
-                    } else if (exercise is TranslateSentence) {
-                      exerciseWidget = TranslateSentenceWidget(
-                        exercise: exercise,
-                      );
-                    } else if (exercise is AudioMatch) {
-                      exerciseWidget = AudioMatchWidget(exercise: exercise);
-                    } else if (exercise is ImageSelection) {
-                      exerciseWidget = ImageSelectionWidget(exercise: exercise);
-                    }
+                      if (exercise is MultipleChoice) {
+                        exerciseWidget = MultipleChoiceWidget(
+                          exercise: exercise,
+                        );
+                      } else if (exercise is TranslateSentence) {
+                        exerciseWidget = TranslateSentenceWidget(
+                          exercise: exercise,
+                        );
+                      } else if (exercise is AudioMatch) {
+                        exerciseWidget = AudioMatchWidget(exercise: exercise);
+                      } else if (exercise is ImageSelection) {
+                        exerciseWidget = ImageSelectionWidget(
+                          exercise: exercise,
+                        );
+                      }
 
-                    return Column(
-                      children: [
-                        if (exercise.imageUrl != null)
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 24.0),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: CachedNetworkImage(
-                                imageUrl: exercise.imageUrl!,
-                                height: 200,
-                                fit: BoxFit.contain,
-                                placeholder: (context, url) => const Center(
-                                  child: CircularProgressIndicator(),
+                      return Column(
+                        children: [
+                          if (exercise.imageUrl != null)
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 24.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(16),
+                                child: CachedNetworkImage(
+                                  imageUrl: exercise.imageUrl!,
+                                  height: 200,
+                                  fit: BoxFit.contain,
+                                  placeholder: (context, url) => const Center(
+                                    child: CircularProgressIndicator(),
+                                  ),
+                                  errorWidget: (context, url, error) =>
+                                      const Icon(
+                                        Icons.error,
+                                        size: 50,
+                                        color: Colors.red,
+                                      ),
                                 ),
-                                errorWidget: (context, url, error) =>
-                                    const Icon(
-                                      Icons.error,
-                                      size: 50,
-                                      color: Colors.red,
-                                    ),
                               ),
                             ),
-                          ),
-                        exerciseWidget,
-                      ],
-                    );
-                  }),
+                          exerciseWidget,
+                        ],
+                      );
+                    }),
+                  ),
                 ),
               ),
               _buildBottomBar(context),
@@ -118,7 +176,7 @@ class ExercisePage extends GetView<ExerciseViewModel> {
       final isChecked = controller.isAnswerChecked.value;
       final isCorrect = controller.isAnswerCorrect.value;
 
-      Color barColor = Colors.white;
+      Color barColor = Theme.of(context).cardColor;
       String message = '';
       IconData icon = Icons.check;
       Color messageColor = Colors.transparent;
@@ -138,7 +196,14 @@ class ExercisePage extends GetView<ExerciseViewModel> {
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
           color: barColor,
-          border: Border(top: BorderSide(color: Colors.grey.shade200)),
+          // borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 10,
+              offset: const Offset(0, -4),
+            ),
+          ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -154,6 +219,7 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                       color: messageColor,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'BubblegumSans',
                     ),
                   ),
                 ],
@@ -168,6 +234,17 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                 backgroundColor: isChecked
                     ? (isCorrect ? AppPalette.successGreen : AppPalette.primary)
                     : AppPalette.primary,
+                foregroundColor: Colors.white,
+                elevation: 4,
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                textStyle: const TextStyle(
+                  fontFamily: 'BubblegumSans',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               child: Text(isChecked ? 'Continue' : 'Check'),
             ),
@@ -175,5 +252,97 @@ class ExercisePage extends GetView<ExerciseViewModel> {
         ),
       );
     });
+  }
+
+  void _showQuitDialog(BuildContext context) {
+    showGeneralDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+      barrierColor: Colors.black54,
+      transitionDuration: const Duration(milliseconds: 500),
+      pageBuilder: (context, animation, secondaryAnimation) => AlertDialog(
+        backgroundColor: Theme.of(context).cardColor,
+        surfaceTintColor: Colors.transparent,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
+        contentPadding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
+        title: const Column(
+          children: [
+            // Icon(
+            //   Icons.sentiment_dissatisfied_rounded,
+            //   size: 64,
+            //   color: Colors.orange,
+            // ),
+            // SizedBox(height: 16),
+            const Text(
+              'Quit Exercise?',
+              style: TextStyle(
+                fontFamily: 'BubblegumSans',
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+        content: const Text(
+          'Are you sure you want to stop? You will lose your progress!',
+          style: TextStyle(fontSize: 18, fontFamily: 'BubblegumSans'),
+          textAlign: TextAlign.center,
+        ),
+        actions: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppPalette.successGreen,
+                  foregroundColor: Colors.white,
+                  elevation: 0,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                child: const Text(
+                  'Keep Playing',
+                  style: TextStyle(
+                    fontFamily: 'BubblegumSans',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  Get.back();
+                },
+                style: TextButton.styleFrom(
+                  foregroundColor: AppPalette.errorRed,
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+                child: const Text(
+                  'I want to quit',
+                  style: TextStyle(
+                    fontFamily: 'BubblegumSans',
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+      transitionBuilder: (context, animation, secondaryAnimation, child) {
+        return ScaleTransition(
+          scale: CurvedAnimation(parent: animation, curve: Curves.elasticOut),
+          child: child,
+        );
+      },
+    );
   }
 }

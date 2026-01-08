@@ -35,10 +35,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final themeController = Get.put(ThemeController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'eZlang',
-      theme: AppTheme.theme,
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      themeMode: themeController.theme,
       initialRoute: PageTo.splash,
       getPages: BaseRoute.pages(),
     );

@@ -148,8 +148,8 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
             insetPadding: isLandscape
                 ? const EdgeInsets.symmetric(horizontal: 0, vertical: 0)
                 : const EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0),
-            backgroundColor: Colors.white,
-            surfaceTintColor: Colors.white,
+            backgroundColor: Theme.of(context).cardColor,
+            surfaceTintColor: Colors.transparent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32),
               side: BorderSide(
@@ -184,9 +184,11 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
                         horizontal: 8,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.grey.shade50,
+                        color: Theme.of(context).scaffoldBackgroundColor,
                         borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.grey.shade200),
+                        border: Border.all(
+                          color: Theme.of(context).dividerColor,
+                        ),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -200,7 +202,7 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
                           Container(
                             width: 1,
                             height: 40,
-                            color: Colors.grey.shade300,
+                            color: Theme.of(context).dividerColor,
                           ),
                           _buildStatItem(
                             Icons.timer_rounded,
@@ -296,8 +298,9 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
         const SizedBox(height: 8),
         Text(
           value,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 20,
+            color: Theme.of(context).textTheme.bodyLarge?.color,
             fontWeight: FontWeight.bold,
             fontFamily: 'BubblegumSans',
           ),
@@ -305,7 +308,7 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
         Text(
           label,
           style: TextStyle(
-            color: Colors.grey[600],
+            color: Colors.grey[400],
             fontSize: 14,
             fontFamily: 'BubblegumSans',
           ),

@@ -162,7 +162,7 @@ class _LevelCard extends StatelessWidget {
                             avatar: const Icon(Icons.topic, size: 16),
                             label: Text(
                               t.title,
-                              style: const TextStyle(fontSize: 12),
+                              style: const TextStyle(fontSize: 14),
                             ),
                           ),
                         )

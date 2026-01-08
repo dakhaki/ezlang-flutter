@@ -61,22 +61,20 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget>
       children: [
         Text(
           widget.exercise.prompt,
-          style: Theme.of(
-            context,
-          ).textTheme.titleMedium?.copyWith(color: AppPalette.textSecondary),
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         const SizedBox(height: 16),
         Container(
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Theme.of(context).scaffoldBackgroundColor,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: Colors.grey.shade200),
+            border: Border.all(color: Theme.of(context).dividerColor),
           ),
           child: Text(
             widget.exercise.sourceText,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              color: AppPalette.textPrimary,
+              color: Theme.of(context).textTheme.headlineSmall?.color,
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
@@ -103,11 +101,12 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget>
                 child: TextField(
                   controller: controller.textController,
                   enabled: !isChecked,
+                  style: Theme.of(context).textTheme.bodyLarge,
                   decoration: InputDecoration(
                     hintText: 'Type the translation...',
                     border: const OutlineInputBorder(),
                     filled: true,
-                    fillColor: Colors.white,
+                    fillColor: Theme.of(context).inputDecorationTheme.fillColor,
                     disabledBorder: isChecked
                         ? OutlineInputBorder(
                             borderSide: BorderSide(
@@ -138,9 +137,9 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget>
                       const SizedBox(height: 4),
                       Text(
                         widget.exercise.targetText,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 16,
-                          color: AppPalette.textPrimary,
+                          color: Theme.of(context).textTheme.bodyLarge?.color,
                         ),
                       ),
                     ],

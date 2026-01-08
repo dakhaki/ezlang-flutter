@@ -36,7 +36,7 @@ class ImageSelectionWidget extends GetView<ExerciseViewModel> {
               final isChecked = controller.isAnswerChecked.value;
               final isCorrect = index == exercise.correctIndex;
 
-              Color borderColor = Colors.grey.shade300;
+              Color borderColor = Theme.of(context).dividerColor;
               double borderWidth = 1;
 
               if (isChecked) {

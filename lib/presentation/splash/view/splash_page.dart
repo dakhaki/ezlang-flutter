@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/presentation/splash/view_model/splash_view_model.dart';
 
 class SplashPage extends GetView<SplashViewModel> {
@@ -10,6 +9,7 @@ class SplashPage extends GetView<SplashViewModel> {
   Widget build(BuildContext context) {
     Get.find<SplashViewModel>();
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Center(
         key: const ValueKey('loading'),
         child: LayoutBuilder(
@@ -70,7 +70,7 @@ class SplashPage extends GetView<SplashViewModel> {
                                   style: TextStyle(
                                     fontSize: dynamicFontSize,
                                     fontWeight: FontWeight.bold,
-                                    color: AppPalette.errorRed,
+                                    color: Theme.of(context).primaryColor,
                                     shadows: [
                                       Shadow(
                                         blurRadius: 8,

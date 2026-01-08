@@ -92,11 +92,12 @@ class _AudioMatchWidgetState extends State<AudioMatchWidget>
                 child: TextField(
                   controller: controller.textController,
                   enabled: !isChecked,
+                  style: Theme.of(context).textTheme.bodyLarge,
                   decoration: InputDecoration(
                     hintText: 'Type what you hear...',
                     border: const OutlineInputBorder(),
                     filled: true,
-                    fillColor: Colors.white,
+                    fillColor: Theme.of(context).inputDecorationTheme.fillColor,
                     disabledBorder: isChecked
                         ? OutlineInputBorder(
                             borderSide: BorderSide(
@@ -126,9 +127,9 @@ class _AudioMatchWidgetState extends State<AudioMatchWidget>
                       const SizedBox(height: 4),
                       Text(
                         widget.exercise.correctWord,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 16,
-                          color: AppPalette.textPrimary,
+                          color: Theme.of(context).textTheme.bodyLarge?.color,
                         ),
                       ),
                     ],

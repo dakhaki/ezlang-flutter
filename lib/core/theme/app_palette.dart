@@ -7,6 +7,12 @@ class AppPalette {
   static const background = Color(0xFFFFF9E6); // Warm Creamy Yellow
   static const cardColor = Colors.white;
 
+  // Dark Mode Colors
+  static const backgroundDark = Color(0xFF1F2937); // Dark Slate
+  static const cardColorDark = Color(0xFF374151); // Lighter Slate
+  static const textPrimaryDark = Colors.white;
+  static const textSecondaryDark = Colors.white70;
+
   // Text
   static const textPrimary = Color(0xFF2D3436); // Soft Black
   static const textSecondary = Color(0xFF636E72); // Greyish
