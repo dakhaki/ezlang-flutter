@@ -1,4 +1,3 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/lesson_completion_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -129,9 +128,7 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
       if (selectedOptionIndex.value == -1) return;
       correct = selectedOptionIndex.value == exercise.correctIndex;
     } else if (exercise is TranslateSentence) {
-      correct =
-          textController.text.trim().toLowerCase() ==
-          exercise.targetText.toLowerCase();
+      correct = textController.text.trim() == exercise.targetText;
     } else if (exercise is AudioMatch) {
       correct =
           textController.text.trim().toLowerCase() ==
@@ -169,10 +166,19 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
             Get.back(); // Close dialog
             Get.back(); // Close page
           },
+          onRetry: restartLesson,
         ),
         barrierDismissible: false,
       );
     }
+  }
+
+  void restartLesson() {
+    Get.back(); // Close dialog
+    currentExerciseIndex.value = 0;
+    _correctAnswersCount = 0;
+    _startTime = DateTime.now();
+    _resetState();
   }
 
   void _resetState() {

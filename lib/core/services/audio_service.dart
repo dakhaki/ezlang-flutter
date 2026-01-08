@@ -13,6 +13,23 @@ class AudioService extends GetxService {
     await _flutterTts.setSpeechRate(0.3);
     await _flutterTts.setVolume(1.0);
     await _flutterTts.awaitSpeakCompletion(true);
+
+    // Configure AudioPlayer to allow overlapping sounds (mix with others)
+    await AudioPlayer.global.setAudioContext(
+      AudioContext(
+        android: const AudioContextAndroid(
+          isSpeakerphoneOn: true,
+          stayAwake: true,
+          contentType: AndroidContentType.sonification,
+          usageType: AndroidUsageType.game,
+          audioFocus: AndroidAudioFocus.none,
+        ),
+        iOS: AudioContextIOS(
+          category: AVAudioSessionCategory.playback,
+          options: const {AVAudioSessionOptions.mixWithOthers},
+        ),
+      ),
+    );
     return this;
   }
 
@@ -43,6 +60,18 @@ class AudioService extends GetxService {
       await _audioPlayer.play(AssetSource('sounds/perfect.m4a'));
     } catch (e) {
       debugPrint('Error playing confetti sound: $e');
+    }
+  }
+
+  Future<void> playStarSound() async {
+    try {
+      // Using a new player instance to allow overlapping sounds for quick effects
+      final player = AudioPlayer();
+      // Release resources after playing
+      await player.setReleaseMode(ReleaseMode.release);
+      await player.play(AssetSource('sounds/stars.m4a'));
+    } catch (e) {
+      debugPrint('Error playing star sound: $e');
     }
   }
 

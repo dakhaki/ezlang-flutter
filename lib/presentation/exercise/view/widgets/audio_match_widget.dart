@@ -4,10 +4,55 @@ import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/presentation/exercise/view_model/exercise_view_model.dart';
 
-class AudioMatchWidget extends GetView<ExerciseViewModel> {
+class AudioMatchWidget extends StatefulWidget {
   final AudioMatch exercise;
 
   const AudioMatchWidget({super.key, required this.exercise});
+
+  @override
+  State<AudioMatchWidget> createState() => _AudioMatchWidgetState();
+}
+
+class _AudioMatchWidgetState extends State<AudioMatchWidget>
+    with SingleTickerProviderStateMixin {
+  ExerciseViewModel get controller => Get.find<ExerciseViewModel>();
+  late AnimationController _shakeController;
+  late Animation<double> _shakeAnimation;
+  Worker? _worker;
+
+  @override
+  void initState() {
+    super.initState();
+    _shakeController = AnimationController(
+      duration: const Duration(milliseconds: 500),
+      vsync: this,
+    );
+    _shakeAnimation = TweenSequence<double>([
+      TweenSequenceItem(tween: Tween(begin: 0, end: -10), weight: 1),
+      TweenSequenceItem(tween: Tween(begin: -10, end: 10), weight: 2),
+      TweenSequenceItem(tween: Tween(begin: 10, end: -10), weight: 2),
+      TweenSequenceItem(tween: Tween(begin: -10, end: 10), weight: 2),
+      TweenSequenceItem(tween: Tween(begin: 10, end: 0), weight: 1),
+    ]).animate(_shakeController);
+
+    _worker = ever(controller.isAnswerChecked, (isChecked) {
+      if (isChecked) {
+        final isCorrect =
+            controller.textController.text.trim().toLowerCase() ==
+            widget.exercise.correctWord.toLowerCase();
+        if (!isCorrect) {
+          _shakeController.forward(from: 0);
+        }
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _worker?.dispose();
+    _shakeController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,24 +60,83 @@ class AudioMatchWidget extends GetView<ExerciseViewModel> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          exercise.prompt,
+          widget.exercise.prompt,
           style: Theme.of(context).textTheme.titleMedium,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 32),
         Center(
-          child: _AudioButton(controller: controller, exercise: exercise),
-        ),
-        const SizedBox(height: 48),
-        TextField(
-          controller: controller.textController,
-          decoration: const InputDecoration(
-            hintText: 'Type what you hear...',
-            border: OutlineInputBorder(),
-            filled: true,
-            fillColor: Colors.white,
+          child: _AudioButton(
+            controller: controller,
+            exercise: widget.exercise,
           ),
         ),
+        const SizedBox(height: 48),
+        Obx(() {
+          final isChecked = controller.isAnswerChecked.value;
+          final isCorrect =
+              controller.textController.text.trim().toLowerCase() ==
+              widget.exercise.correctWord.toLowerCase();
+
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              AnimatedBuilder(
+                animation: _shakeAnimation,
+                builder: (context, child) {
+                  return Transform.translate(
+                    offset: Offset(_shakeAnimation.value, 0),
+                    child: child,
+                  );
+                },
+                child: TextField(
+                  controller: controller.textController,
+                  enabled: !isChecked,
+                  decoration: InputDecoration(
+                    hintText: 'Type what you hear...',
+                    border: const OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
+                    disabledBorder: isChecked
+                        ? OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: isCorrect
+                                  ? AppPalette.successGreen
+                                  : Colors.red,
+                              width: 2,
+                            ),
+                          )
+                        : null,
+                  ),
+                ),
+              ),
+              if (isChecked && !isCorrect)
+                Padding(
+                  padding: const EdgeInsets.only(top: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Correct answer:',
+                        style: TextStyle(
+                          color: AppPalette.successGreen,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        widget.exercise.correctWord,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          color: AppPalette.textPrimary,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+            ],
+          );
+        }),
       ],
     );
   }

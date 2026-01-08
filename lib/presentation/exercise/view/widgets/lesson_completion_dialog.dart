@@ -1,12 +1,17 @@
+import 'dart:async';
+
 import 'package:confetti/confetti.dart';
+import 'package:ezlang/core/services/audio_service.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LessonCompletionDialog extends StatefulWidget {
   final int correctCount;
   final int totalCount;
   final Duration duration;
   final VoidCallback onClose;
+  final VoidCallback onRetry;
 
   const LessonCompletionDialog({
     super.key,
@@ -14,27 +19,76 @@ class LessonCompletionDialog extends StatefulWidget {
     required this.totalCount,
     required this.duration,
     required this.onClose,
+    required this.onRetry,
   });
 
   @override
   State<LessonCompletionDialog> createState() => _LessonCompletionDialogState();
 }
 
-class _LessonCompletionDialogState extends State<LessonCompletionDialog> {
+class _LessonCompletionDialogState extends State<LessonCompletionDialog>
+    with SingleTickerProviderStateMixin {
   late ConfettiController _confettiController;
+  final List<bool> _starAnimated = [false, false, false];
+  Timer? _starAnimationTimer;
+  final AudioService _audioService = Get.find();
+
+  late AnimationController _dialogAnimationController;
+  late Animation<double> _scaleAnimation;
 
   @override
   void initState() {
     super.initState();
+
+    _dialogAnimationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+
+    _scaleAnimation = CurvedAnimation(
+      parent: _dialogAnimationController,
+      curve: Curves.elasticOut,
+    );
+
+    _dialogAnimationController.forward();
+
     _confettiController = ConfettiController(
       duration: const Duration(seconds: 2),
     );
-    _confettiController.play();
+    if (widget.correctCount == widget.totalCount && widget.totalCount > 0) {
+      _confettiController.play();
+    }
+    _startStarAnimation();
+  }
+
+  void _startStarAnimation() {
+    final stars = _starCount;
+    if (stars == 0) return;
+
+    _starAnimationTimer = Timer.periodic(const Duration(milliseconds: 400), (
+      timer,
+    ) {
+      // Find the first non-animated star
+      int indexToAnimate = _starAnimated.indexWhere((animated) => !animated);
+
+      if (indexToAnimate != -1 && indexToAnimate < stars) {
+        if (mounted) {
+          setState(() {
+            _starAnimated[indexToAnimate] = true;
+            _audioService.playStarSound();
+          });
+        }
+      } else {
+        timer.cancel();
+      }
+    });
   }
 
   @override
   void dispose() {
+    _dialogAnimationController.dispose();
     _confettiController.dispose();
+    _starAnimationTimer?.cancel();
     super.dispose();
   }
 
@@ -44,84 +98,167 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog> {
     return '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}';
   }
 
+  int get _starCount {
+    if (widget.totalCount == 0) return 0;
+    final score = widget.correctCount / widget.totalCount;
+    if (score >= 0.9) return 3;
+    if (score >= 0.6) return 2;
+    if (score > 0) return 1;
+    return 0;
+  }
+
+  Widget _buildStars() {
+    final stars = _starCount;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(3, (index) {
+        final isFilled = index < stars;
+        final showFilledAndAnimated = isFilled && _starAnimated[index];
+
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: AnimatedScale(
+            scale: showFilledAndAnimated || !isFilled ? 1.0 : 0.0,
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.elasticOut,
+            child: Icon(
+              isFilled ? Icons.star_rounded : Icons.star_border_rounded,
+              color: Colors.amber,
+              size: context.isLandscape ? 42 : 48,
+            ),
+          ),
+        );
+      }),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final isLandscape = context.isLandscape;
+    // Use height for width calculation in landscape to maintain portrait-like proportions
+    final dialogWidth = isLandscape ? size.height : size.width * 0.8;
+
     return Stack(
-      alignment: Alignment.topCenter,
+      alignment: Alignment.center,
       children: [
-        AlertDialog(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          contentPadding: EdgeInsets.zero,
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 24),
-                decoration: const BoxDecoration(
-                  color: AppPalette.primary,
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-                ),
-                child: const Icon(
-                  Icons.emoji_events_rounded,
-                  size: 64,
-                  color: Colors.white,
-                ),
+        ScaleTransition(
+          scale: _scaleAnimation,
+          child: AlertDialog(
+            insetPadding: isLandscape
+                ? const EdgeInsets.symmetric(horizontal: 0, vertical: 0)
+                : const EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0),
+            backgroundColor: Colors.white,
+            surfaceTintColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(32),
+              side: BorderSide(
+                color: AppPalette.primary.withOpacity(0.3),
+                width: 4,
               ),
-              const SizedBox(height: 24),
-              const Text(
-                'Lesson Complete!',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            contentPadding: EdgeInsets.all(isLandscape ? 24 : 24),
+            content: Container(
+              width: dialogWidth,
+              constraints: BoxConstraints(
+                maxHeight: isLandscape ? size.height : size.height * 0.8,
               ),
-              const SizedBox(height: 24),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _buildStatItem(
-                    Icons.check_circle_outline,
-                    '${widget.correctCount}/${widget.totalCount}',
-                    'Correct',
-                    AppPalette.successGreen,
-                  ),
-                  _buildStatItem(
-                    Icons.timer_outlined,
-                    _formattedTime,
-                    'Time',
-                    Colors.orange,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 32),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 16,
-                ),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: widget.onClose,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppPalette.primary,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                    child: const Text(
-                      'Continue',
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _buildStars(),
+                    SizedBox(height: isLandscape ? 0 : 24),
+                    const Text(
+                      'Lesson Complete!',
                       style: TextStyle(
-                        fontSize: 16,
+                        fontFamily: 'BubblegumSans',
+                        fontSize: 28,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
                       ),
                     ),
-                  ),
+                    SizedBox(height: isLandscape ? 12 : 24),
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                        vertical: isLandscape ? 8 : 16,
+                        horizontal: 8,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade50,
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: Colors.grey.shade200),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          _buildStatItem(
+                            Icons.check_circle_rounded,
+                            '${widget.correctCount}/${widget.totalCount}',
+                            'Score',
+                            AppPalette.successGreen,
+                          ),
+                          Container(
+                            width: 1,
+                            height: 40,
+                            color: Colors.grey.shade300,
+                          ),
+                          _buildStatItem(
+                            Icons.timer_rounded,
+                            _formattedTime,
+                            'Time',
+                            Colors.orange,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: isLandscape ? 16 : 24),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: widget.onRetry,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.orange.shade50,
+                              foregroundColor: Colors.orange,
+                              elevation: 0,
+                              padding: const EdgeInsets.symmetric(vertical: 16),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            child: const Icon(Icons.refresh_rounded, size: 28),
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          flex: 2,
+                          child: ElevatedButton(
+                            onPressed: widget.onClose,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppPalette.primary,
+                              foregroundColor: Colors.white,
+                              elevation: 2,
+                              padding: const EdgeInsets.symmetric(vertical: 16),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            child: const Text(
+                              'Continue',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'BubblegumSans',
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ),
         ConfettiWidget(
@@ -148,13 +285,31 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog> {
   ) {
     return Column(
       children: [
-        Icon(icon, color: color, size: 32),
+        Container(
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(icon, color: color, size: 24),
+        ),
         const SizedBox(height: 8),
         Text(
           value,
-          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'BubblegumSans',
+          ),
         ),
-        Text(label, style: TextStyle(color: Colors.grey[600], fontSize: 14)),
+        Text(
+          label,
+          style: TextStyle(
+            color: Colors.grey[600],
+            fontSize: 14,
+            fontFamily: 'BubblegumSans',
+          ),
+        ),
       ],
     );
   }

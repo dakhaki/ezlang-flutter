@@ -4,10 +4,55 @@ import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/presentation/exercise/view_model/exercise_view_model.dart';
 
-class MultipleChoiceWidget extends GetView<ExerciseViewModel> {
+class MultipleChoiceWidget extends StatefulWidget {
   final MultipleChoice exercise;
 
   const MultipleChoiceWidget({super.key, required this.exercise});
+
+  @override
+  State<MultipleChoiceWidget> createState() => _MultipleChoiceWidgetState();
+}
+
+class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget>
+    with SingleTickerProviderStateMixin {
+  ExerciseViewModel get controller => Get.find<ExerciseViewModel>();
+  late AnimationController _shakeController;
+  late Animation<double> _shakeAnimation;
+  Worker? _worker;
+
+  @override
+  void initState() {
+    super.initState();
+    _shakeController = AnimationController(
+      duration: const Duration(milliseconds: 500),
+      vsync: this,
+    );
+    _shakeAnimation = TweenSequence<double>([
+      TweenSequenceItem(tween: Tween(begin: 0, end: -10), weight: 1),
+      TweenSequenceItem(tween: Tween(begin: -10, end: 10), weight: 2),
+      TweenSequenceItem(tween: Tween(begin: 10, end: -10), weight: 2),
+      TweenSequenceItem(tween: Tween(begin: -10, end: 10), weight: 2),
+      TweenSequenceItem(tween: Tween(begin: 10, end: 0), weight: 1),
+    ]).animate(_shakeController);
+
+    _worker = ever(controller.isAnswerChecked, (isChecked) {
+      if (isChecked) {
+        final isCorrect =
+            controller.selectedOptionIndex.value ==
+            widget.exercise.correctIndex;
+        if (!isCorrect) {
+          _shakeController.forward(from: 0);
+        }
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _worker?.dispose();
+    _shakeController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +60,16 @@ class MultipleChoiceWidget extends GetView<ExerciseViewModel> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          exercise.prompt,
+          widget.exercise.prompt,
           style: Theme.of(context).textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 32),
-        ...List.generate(exercise.options.length, (index) {
+        ...List.generate(widget.exercise.options.length, (index) {
           return Obx(() {
             final isSelected = controller.selectedOptionIndex.value == index;
             final isChecked = controller.isAnswerChecked.value;
-            final isCorrect = index == exercise.correctIndex;
+            final isCorrect = index == widget.exercise.correctIndex;
 
             Color backgroundColor = Colors.white;
             Color borderColor = Colors.grey.shade300;
@@ -42,7 +87,7 @@ class MultipleChoiceWidget extends GetView<ExerciseViewModel> {
               backgroundColor = AppPalette.primary.withOpacity(0.1);
             }
 
-            return Padding(
+            Widget child = Padding(
               padding: const EdgeInsets.only(bottom: 12.0),
               child: InkWell(
                 onTap: () => controller.selectOption(index),
@@ -55,7 +100,7 @@ class MultipleChoiceWidget extends GetView<ExerciseViewModel> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    exercise.options[index],
+                    widget.exercise.options[index],
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -64,6 +109,20 @@ class MultipleChoiceWidget extends GetView<ExerciseViewModel> {
                 ),
               ),
             );
+
+            if (isSelected) {
+              return AnimatedBuilder(
+                animation: _shakeAnimation,
+                builder: (context, child) {
+                  return Transform.translate(
+                    offset: Offset(_shakeAnimation.value, 0),
+                    child: child,
+                  );
+                },
+                child: child,
+              );
+            }
+            return child;
           });
         }),
       ],
