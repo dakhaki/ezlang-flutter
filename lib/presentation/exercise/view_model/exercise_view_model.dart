@@ -1,6 +1,8 @@
+import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/presentation/exercise/view/widgets/lesson_completion_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/services/audio_service.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
@@ -125,16 +127,30 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     bool correct = false;
 
     if (exercise is MultipleChoice) {
-      if (selectedOptionIndex.value == -1) return;
+      if (selectedOptionIndex.value == -1) {
+        _showValidationMessage('Please select an option');
+        return;
+      }
       correct = selectedOptionIndex.value == exercise.correctIndex;
     } else if (exercise is TranslateSentence) {
+      if (textController.text.trim().isEmpty) {
+        _showValidationMessage('Please type the translation');
+        return;
+      }
       correct = textController.text.trim() == exercise.targetText;
     } else if (exercise is AudioMatch) {
+      if (textController.text.trim().isEmpty) {
+        _showValidationMessage('Please type what you hear');
+        return;
+      }
       correct =
           textController.text.trim().toLowerCase() ==
           exercise.correctWord.toLowerCase();
     } else if (exercise is ImageSelection) {
-      if (userAnswer.value == null) return;
+      if (userAnswer.value == null) {
+        _showValidationMessage('Please select an image');
+        return;
+      }
       correct = userAnswer.value == exercise.correctIndex;
     }
 
@@ -142,6 +158,21 @@ class ExerciseViewModel extends GetxController with StateMixin<LessonContent> {
     if (correct) _correctAnswersCount++;
     isAnswerChecked.value = true;
     audioService.playAnswerSound(correct);
+  }
+
+  void _showValidationMessage(String message) {
+    HapticFeedback.heavyImpact();
+    Get.snackbar(
+      'Action Required',
+      message,
+      snackPosition: SnackPosition.BOTTOM,
+      backgroundColor: AppPalette.accent,
+      colorText: Colors.white,
+      margin: const EdgeInsets.all(16),
+      borderRadius: 20,
+      icon: const Icon(Icons.warning_amber_rounded, color: Colors.white),
+      duration: const Duration(seconds: 2),
+    );
   }
 
   void nextExercise() {

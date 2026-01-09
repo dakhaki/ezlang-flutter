@@ -36,8 +36,10 @@ class LessonDetailViewModel extends GetxController {
         backgroundColor: Colors.transparent,
         child: StickerWidget(
           icon: Icons.star_rounded,
-          label: 'Level Complete!',
+          // label: 'Level Complete!',
           color: Colors.amber,
+          size: 160,
+          animate: true,
         ),
       ),
     );

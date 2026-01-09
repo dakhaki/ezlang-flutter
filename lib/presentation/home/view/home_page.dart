@@ -2,6 +2,7 @@ import 'package:confetti/confetti.dart';
 // import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/core/routes/routes.dart';
 import 'package:ezlang/presentation/home/view/widgets/level_card.dart';
+import 'package:ezlang/presentation/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/presentation/home/view_model/home_view_model.dart';
@@ -15,6 +16,10 @@ class HomePage extends GetView<HomeViewModel> {
       appBar: AppBar(
         title: const Text('eZlang'),
         centerTitle: false,
+        titleTextStyle: Theme.of(context).textTheme.headlineMedium?.copyWith(
+          // color: AppPalette.primary,
+          fontWeight: FontWeight.bold,
+        ),
         // bottom: PreferredSize(
         //   preferredSize: const Size.fromHeight(30),
         //   child: Obx(
@@ -56,7 +61,7 @@ class HomePage extends GetView<HomeViewModel> {
                   return LevelCard(level: level, controller: controller);
                 },
               ),
-              onLoading: const Center(child: CircularProgressIndicator()),
+              onLoading: const Center(child: LoadingIndicator()),
               onError: (error) => Center(child: Text('Error: $error')),
             ),
             Align(

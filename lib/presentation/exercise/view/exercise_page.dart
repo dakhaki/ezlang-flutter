@@ -230,10 +230,11 @@ class ExercisePage extends GetView<ExerciseViewModel> {
       }
 
       return Container(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(32),
+        margin: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
           color: barColor,
-          // borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.05),
@@ -376,7 +377,7 @@ class ExercisePage extends GetView<ExerciseViewModel> {
       ),
       transitionBuilder: (context, animation, secondaryAnimation, child) {
         return ScaleTransition(
-          scale: CurvedAnimation(parent: animation, curve: Curves.elasticOut),
+          scale: CurvedAnimation(parent: animation, curve: Curves.easeOutBack),
           child: child,
         );
       },

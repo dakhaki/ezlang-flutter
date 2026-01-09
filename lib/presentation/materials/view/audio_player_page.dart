@@ -106,74 +106,76 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
 
     return Scaffold(
       appBar: AppBar(title: Text(widget.title), centerTitle: false),
-      body: _errorMessage != null
-          ? ErrorView(
-              message: _errorMessage!,
-              onRetry: () {
-                setState(() {
-                  _isLoading = true;
-                  _errorMessage = null;
-                });
-                _initAudio();
-              },
-            )
-          : Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    if (_isLoading)
-                      const LoadingIndicator()
-                    else ...[
-                      const Icon(
-                        Icons.audiotrack,
-                        size: 100,
-                        color: Colors.grey,
-                      ),
-                      const SizedBox(height: 32),
-                      Slider(
-                        min: 0,
-                        max: _duration.inSeconds.toDouble(),
-                        value: _position.inSeconds.toDouble().clamp(
-                          0,
-                          _duration.inSeconds.toDouble(),
+      body: SafeArea(
+        child: _errorMessage != null
+            ? ErrorView(
+                message: _errorMessage!,
+                onRetry: () {
+                  setState(() {
+                    _isLoading = true;
+                    _errorMessage = null;
+                  });
+                  _initAudio();
+                },
+              )
+            : Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      if (_isLoading)
+                        const LoadingIndicator()
+                      else ...[
+                        const Icon(
+                          Icons.audiotrack,
+                          size: 100,
+                          color: Colors.grey,
                         ),
-                        onChanged: (value) async {
-                          final position = Duration(seconds: value.toInt());
-                          await _player.seek(position);
-                        },
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(_formatDuration(_position)),
-                            Text(_formatDuration(_duration)),
-                          ],
+                        const SizedBox(height: 32),
+                        Slider(
+                          min: 0,
+                          max: _duration.inSeconds.toDouble(),
+                          value: _position.inSeconds.toDouble().clamp(
+                            0,
+                            _duration.inSeconds.toDouble(),
+                          ),
+                          onChanged: (value) async {
+                            final position = Duration(seconds: value.toInt());
+                            await _player.seek(position);
+                          },
                         ),
-                      ),
-                      const SizedBox(height: 32),
-                      IconButton(
-                        iconSize: 64,
-                        icon: Icon(
-                          isPlaying ? Icons.pause_circle : Icons.play_circle,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(_formatDuration(_position)),
+                              Text(_formatDuration(_duration)),
+                            ],
+                          ),
                         ),
-                        onPressed: () async {
-                          if (isPlaying) {
-                            await _player.pause();
-                          } else {
-                            await _player.resume();
-                          }
-                        },
-                      ),
+                        const SizedBox(height: 32),
+                        IconButton(
+                          iconSize: 64,
+                          icon: Icon(
+                            isPlaying ? Icons.pause_circle : Icons.play_circle,
+                          ),
+                          onPressed: () async {
+                            if (isPlaying) {
+                              await _player.pause();
+                            } else {
+                              await _player.resume();
+                            }
+                          },
+                        ),
+                      ],
                     ],
-                  ],
+                  ),
                 ),
               ),
-            ),
+      ),
     );
   }
 }

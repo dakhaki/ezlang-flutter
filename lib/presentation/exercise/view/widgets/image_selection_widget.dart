@@ -56,8 +56,11 @@ class ImageSelectionWidget extends GetView<ExerciseViewModel> {
                 onTap: () => controller.selectAnswer(index),
                 borderRadius: BorderRadius.circular(12),
                 child: Container(
-                  decoration: BoxDecoration(
+                  foregroundDecoration: BoxDecoration(
                     border: Border.all(color: borderColor, width: borderWidth),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                   ),
                   clipBehavior: Clip.antiAlias,

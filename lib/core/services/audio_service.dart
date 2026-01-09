@@ -46,6 +46,7 @@ class AudioService extends GetxService {
   Future<void> playAnswerSound(bool isCorrect) async {
     try {
       await _audioPlayer.stop();
+      await _audioPlayer.setVolume(1.0);
       await _audioPlayer.play(
         AssetSource(isCorrect ? 'sounds/correct.m4a' : 'sounds/boing.m4a'),
       );
@@ -57,6 +58,7 @@ class AudioService extends GetxService {
   Future<void> playConfettiSound() async {
     try {
       await _audioPlayer.stop();
+      await _audioPlayer.setVolume(0.2);
       await _audioPlayer.play(AssetSource('sounds/perfect.m4a'));
     } catch (e) {
       debugPrint('Error playing confetti sound: $e');
@@ -67,6 +69,7 @@ class AudioService extends GetxService {
     try {
       // Using a new player instance to allow overlapping sounds for quick effects
       final player = AudioPlayer();
+      await player.setVolume(0.2);
       // Release resources after playing
       await player.setReleaseMode(ReleaseMode.release);
       await player.play(AssetSource('sounds/stars.m4a'));

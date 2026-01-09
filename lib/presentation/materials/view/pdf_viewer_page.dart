@@ -48,29 +48,31 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title), centerTitle: false),
-      body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : _errorMessage != null
-          ? ErrorView(
-              message: _errorMessage!,
-              onRetry: () {
-                setState(() {
-                  _isLoading = true;
-                  _errorMessage = null;
-                });
-                _loadFile();
-              },
-            )
-          : SfPdfViewer.file(
-              _file!,
-              onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('Failed to load PDF: ${details.error}'),
-                  ),
-                );
-              },
-            ),
+      body: SafeArea(
+        child: _isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : _errorMessage != null
+            ? ErrorView(
+                message: _errorMessage!,
+                onRetry: () {
+                  setState(() {
+                    _isLoading = true;
+                    _errorMessage = null;
+                  });
+                  _loadFile();
+                },
+              )
+            : SfPdfViewer.file(
+                _file!,
+                onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Failed to load PDF: ${details.error}'),
+                    ),
+                  );
+                },
+              ),
+      ),
     );
   }
 }

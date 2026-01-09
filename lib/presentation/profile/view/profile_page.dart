@@ -95,7 +95,6 @@ class ProfilePage extends GetView<ProfileViewModel> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 32),
               Align(
                 alignment: Alignment.centerLeft,
@@ -137,8 +136,8 @@ class ProfilePage extends GetView<ProfileViewModel> {
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 3,
+                            const SliverGridDelegateWithMaxCrossAxisExtent(
+                              maxCrossAxisExtent: 60,
                               crossAxisSpacing: 16,
                               mainAxisSpacing: 16,
                             ),
@@ -146,8 +145,8 @@ class ProfilePage extends GetView<ProfileViewModel> {
                         itemBuilder: (context, index) {
                           return const StickerWidget(
                             icon: Icons.star_rounded,
-                            label: 'Star',
-                            size: 60,
+                            animate: true,
+                            // label: 'Star',
                           );
                         },
                       ),

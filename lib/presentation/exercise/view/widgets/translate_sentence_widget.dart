@@ -61,7 +61,7 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget>
       children: [
         Text(
           widget.exercise.prompt,
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         const SizedBox(height: 16),
         Container(
@@ -131,6 +131,7 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget>
                         'Correct answer:',
                         style: TextStyle(
                           color: AppPalette.successGreen,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

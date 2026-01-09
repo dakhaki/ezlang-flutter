@@ -61,17 +61,10 @@ class _AudioMatchWidgetState extends State<AudioMatchWidget>
       children: [
         Text(
           widget.exercise.prompt,
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Theme.of(context).textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 32),
-        Center(
-          child: _AudioButton(
-            controller: controller,
-            exercise: widget.exercise,
-          ),
-        ),
-        const SizedBox(height: 48),
         Obx(() {
           final isChecked = controller.isAnswerChecked.value;
           final isCorrect =
@@ -138,6 +131,13 @@ class _AudioMatchWidgetState extends State<AudioMatchWidget>
             ],
           );
         }),
+        const SizedBox(height: 48),
+        Center(
+          child: _AudioButton(
+            controller: controller,
+            exercise: widget.exercise,
+          ),
+        ),
       ],
     );
   }

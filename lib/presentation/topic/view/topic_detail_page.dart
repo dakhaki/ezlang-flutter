@@ -34,26 +34,28 @@ class TopicDetailPage extends GetView<TopicDetailViewModel> {
             color: Colors.transparent,
             child: Text(
               topic.title,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
         ),
         centerTitle: false,
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: topic.subTopics.length,
-        itemBuilder: (context, index) {
-          final subTopic = topic.subTopics[index];
-          return AnimatedListItem(
-            index: index,
-            child: _TopicCard(
+      body: SafeArea(
+        child: ListView.builder(
+          padding: const EdgeInsets.all(16),
+          itemCount: topic.subTopics.length,
+          itemBuilder: (context, index) {
+            final subTopic = topic.subTopics[index];
+            return AnimatedListItem(
               index: index,
-              subTopic: subTopic,
-              controller: controller,
-            ),
-          );
-        },
+              child: _TopicCard(
+                index: index,
+                subTopic: subTopic,
+                controller: controller,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -106,7 +108,7 @@ class _TopicCardState extends State<_TopicCard>
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: const EdgeInsets.only(bottom: 16),
       child: Column(
         children: [
           ListTile(
