@@ -58,7 +58,7 @@ class AudioService extends GetxService {
   Future<void> playConfettiSound() async {
     try {
       await _audioPlayer.stop();
-      await _audioPlayer.setVolume(0.2);
+      await _audioPlayer.setVolume(0.4);
       await _audioPlayer.play(AssetSource('sounds/perfect.m4a'));
     } catch (e) {
       debugPrint('Error playing confetti sound: $e');
