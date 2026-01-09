@@ -4,8 +4,8 @@
     {
       "type": "article",
       "id": "mat_1_1_4_1",
-      "title": "Greetings",
-      "content": "Hello, Hi, Good Morning, Good Afternoon, Good Evening."
+      "title": "Greetings: How to Say Hello",
+      "content": "Greetings are the first words we say when we meet someone. Choosing the right one depends on the **time of day** and **how well you know the person**. \n\n### 1. General Greetings\nThese can be used almost anywhere:\n*   **Hello:** Neutral and polite. Use it with anyone!\n*   **Hi:** Informal and friendly. Great for friends and family.\n\n### 2. Time-Based Greetings\nThese change based on the clock. It is a sign of respect to use the correct one:\n*   **Good Morning:** Used from sunrise until noon (12:00 PM).\n*   **Good Afternoon:** Used from noon (12:00 PM) until around 6:00 PM.\n*   **Good Evening:** Used after 6:00 PM until the end of the day.\n\n*⚠️ Note: 'Good night' is only used to say goodbye when leaving or going to sleep, never as a greeting!* \n\n### 3. Practice Samples\n**Scenario A: Meeting a friend in the morning**\n> **Person 1:** Hi, Sarah! Good morning!\n> **Person 2:** Hello! How are you today?\n\n**Scenario B: At a store in the afternoon**\n> **Shopkeeper:** Good afternoon! How can I help you?\n> **Customer:** Hello! I am looking for a book.\n\n**Scenario C: Meeting a teacher in the evening**\n> **Student:** Good evening, Mr. Smith.\n> **Teacher:** Good evening, David. Are you ready for class?"
     }
   ],
   "exercises": [
@@ -41,6 +41,138 @@
         "https://dummyimage.com/300x300/ccc/000&text=Run"
       ],
       "correctIndex": 0
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_4_5",
+      "prompt": "Type the word you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/goodbye-us.mp3",
+      "correctWord": "Goodbye"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_4_6",
+      "prompt": "Which greeting is informal?",
+      "options": ["Good afternoon", "Hi", "Good evening"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_4_7",
+      "prompt": "Write 'HELLO' in lowercase.",
+      "sourceText": "HELLO",
+      "targetText": "hello"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_4_8",
+      "prompt": "Select the image for 'Good Morning'.",
+      "options": [
+        "https://dummyimage.com/300x300/ccc/000&text=Moon",
+        "https://dummyimage.com/300x300/ccc/000&text=Sun",
+        "https://dummyimage.com/300x300/ccc/000&text=Stars",
+        "https://dummyimage.com/300x300/ccc/000&text=Lamp"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_4_9",
+      "prompt": "Type the word you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hi-us.mp3",
+      "correctWord": "Hi"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_4_10",
+      "prompt": "What do you say when you meet someone?",
+      "options": ["Goodbye", "Hello", "Night"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_4_11",
+      "prompt": "Write the word 'Goodbye'.",
+      "sourceText": "Goodbye",
+      "targetText": "Goodbye"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_4_12",
+      "prompt": "Select the image for 'Good Night'.",
+      "options": [
+        "https://dummyimage.com/300x300/ccc/000&text=Sun",
+        "https://dummyimage.com/300x300/ccc/000&text=Cloud",
+        "https://dummyimage.com/300x300/ccc/000&text=Moon",
+        "https://dummyimage.com/300x300/ccc/000&text=Flower"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_4_13",
+      "prompt": "Type the phrase you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/morning-us.mp3",
+      "correctWord": "Morning"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_4_14",
+      "prompt": "Which is a morning greeting?",
+      "options": ["Good night", "Good evening", "Good morning"],
+      "correctIndex": 2
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_4_15",
+      "prompt": "Write the greeting 'Good morning'.",
+      "sourceText": "Good morning",
+      "targetText": "Good morning"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_4_16",
+      "prompt": "Select the image for 'Handshake'.",
+      "options": [
+        "https://dummyimage.com/300x300/ccc/000&text=Wave",
+        "https://dummyimage.com/300x300/ccc/000&text=Handshake",
+        "https://dummyimage.com/300x300/ccc/000&text=Hug",
+        "https://dummyimage.com/300x300/ccc/000&text=Smile"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_4_17",
+      "prompt": "Type the phrase you hear.",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/evening-us.mp3",
+      "correctWord": "Evening"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_4_18",
+      "prompt": "What comes after 'Good' in the afternoon?",
+      "options": ["Morning", "Afternoon", "Night"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_4_19",
+      "prompt": "Write 'Bye' in uppercase.",
+      "sourceText": "Bye",
+      "targetText": "BYE"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_4_20",
+      "prompt": "Select the image for 'Sleeping'.",
+      "options": [
+        "https://dummyimage.com/300x300/ccc/000&text=Run",
+        "https://dummyimage.com/300x300/ccc/000&text=Walk",
+        "https://dummyimage.com/300x300/ccc/000&text=Sleep",
+        "https://dummyimage.com/300x300/ccc/000&text=Jump"
+      ],
+      "correctIndex": 2
     }
   ]
 }
