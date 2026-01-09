@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gpt_markdown/gpt_markdown.dart';
 
 class ArticlePage extends StatelessWidget {
   final String title;
@@ -17,11 +18,11 @@ class ArticlePage extends StatelessWidget {
             margin: EdgeInsets.zero,
             child: Padding(
               padding: const EdgeInsets.all(24.0),
-              child: Text(
+              child: GptMarkdown(
                 content,
-                style: Theme.of(
-                  context,
-                ).textTheme.bodyLarge?.copyWith(height: 1.8, fontSize: 18),
+                // style: Theme.of(
+                //   context,
+                // ).textTheme.bodyLarge?.copyWith(height: 1.8, fontSize: 18),
               ),
             ),
           ),
