@@ -29,8 +29,8 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
               // ),
               background: Container(
                 color: color,
-                padding: const EdgeInsets.all(32),
-                child: Image.asset(asset, fit: BoxFit.contain),
+                // padding: const EdgeInsets.all(32),
+                child: Image.asset(asset, fit: BoxFit.cover),
               ),
             ),
           ),
