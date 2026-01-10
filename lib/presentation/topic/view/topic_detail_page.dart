@@ -12,7 +12,7 @@ class TopicDetailPage extends GetView<TopicDetailViewModel> {
     return Scaffold(
       appBar: AppBar(
         title: Hero(
-          tag: 'topic_title_${topic.title}',
+          tag: 'topic_${topic.id}',
           flightShuttleBuilder:
               (
                 flightContext,

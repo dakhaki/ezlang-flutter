@@ -12,6 +12,7 @@ class LessonDetailViewModel extends GetxController {
   final UpdateLearningTimeUseCase updateLearningTimeUseCase;
   final AddStickerUseCase addStickerUseCase;
   late EnglishLevel level;
+  final isHeroEnabled = false.obs;
 
   LessonDetailViewModel({
     required this.saveProgressUseCase,
@@ -23,12 +24,18 @@ class LessonDetailViewModel extends GetxController {
   void onInit() {
     super.onInit();
     level = Get.arguments as EnglishLevel;
+    Future.delayed(const Duration(milliseconds: 600), () {
+      isHeroEnabled.value = true;
+    });
   }
 
   Future<void> completeLevel() async {
     await saveProgressUseCase(level.id);
     await updateLearningTimeUseCase(15); // Assume 15 mins per level
     await addStickerUseCase('sticker_${level.id}');
+
+    isHeroEnabled.value = false;
+    await Future.delayed(const Duration(milliseconds: 50));
     Get.back(result: true); // Return true to indicate progress update
 
     Get.dialog(

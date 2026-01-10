@@ -13,10 +13,7 @@ class MaterialsPage extends GetView<MaterialsViewModel> {
   Widget build(BuildContext context) {
     final subTopic = controller.subTopic;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('${subTopic.title} Materials'),
-        centerTitle: false,
-      ),
+      appBar: AppBar(title: Text(subTopic.title), centerTitle: false),
       body: SafeArea(
         child: controller.obx(
           (content) => content!.materials.isEmpty

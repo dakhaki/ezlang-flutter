@@ -45,7 +45,7 @@ class LevelCard extends StatelessWidget {
                         child: Material(
                           type: MaterialType.transparency,
                           child: Text(
-                            '${level.title}',
+                            level.title,
                             style: Theme.of(context).textTheme.headlineMedium
                                 ?.copyWith(
                                   color: Theme.of(context).primaryColor,
@@ -83,11 +83,15 @@ class LevelCard extends StatelessWidget {
                     spacing: 8,
                     children: level.topics
                         .map(
-                          (t) => Chip(
-                            avatar: const Icon(Icons.topic, size: 16),
-                            label: Text(
-                              t.title,
-                              style: const TextStyle(fontSize: 14),
+                          (t) => Hero(
+                            tag: 'topic_${t.id}',
+                            child: ActionChip(
+                              avatar: const Icon(Icons.topic, size: 16),
+                              label: Text(
+                                t.title,
+                                style: const TextStyle(fontSize: 14),
+                              ),
+                              onPressed: () => controller.navigateToTopic(t),
                             ),
                           ),
                         )

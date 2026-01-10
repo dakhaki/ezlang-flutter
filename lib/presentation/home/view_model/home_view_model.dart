@@ -84,6 +84,10 @@ class HomeViewModel extends GetxController with StateMixin<List<EnglishLevel>> {
     }
   }
 
+  void navigateToTopic(Topic topic) {
+    Get.toNamed(PageTo.topicDetail, arguments: topic);
+  }
+
   Future<void> speak(String text) async {
     await audioService.speak(text);
   }
