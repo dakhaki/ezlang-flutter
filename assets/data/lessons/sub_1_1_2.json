@@ -2,16 +2,16 @@
   "id": "sub_1_1_2",
   "materials": [
     {
-      "type": "video",
+      "type": "article",
       "id": "mat_1_1_2_1",
-      "title": "Numbers 1-20 Song",
-      "url": "https://cdn.pixabay.com/video/2023/10/19/185732-876122846_tiny.mp4"
+      "title": "Numbers: From Zero to Trillions",
+      "content": "## The Number System\nNumbers are used for prices, ages, distances, and quantities. English uses a base-10 system.\n\n### Small Numbers (0 - 100)\n*   **0-10:** Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten\n*   **11-19:** Eleven, Twelve, Thirteen, Fourteen, Fifteen, Sixteen, Seventeen, Eighteen, Nineteen\n*   **20-90 (Tens):** Twenty, Thirty, Forty, Fifty, Sixty, Seventy, Eighty, Ninety\n*   **Rule:** For numbers like 25, use a hyphen: **Twenty-five**.\n\n### The Large Scale (Big Numbers)\nAs of 2026, understanding large numbers is vital for global finance, science, and data.\n\n| Number | Name | Example |\n| :--- | :--- | :--- |\n| 100 | **Hundred** | One hundred people |\n| 1,000 | **Thousand** | One thousand kilometers |\n| 1,000,000 | **Million** | One million dollars |\n| 1,000,000,000 | **Billion** | One billion stars |\n| 1,000,000,000,000 | **Trillion** | One trillion cells |\n\n### How to Read Large Numbers\nWe use commas to separate groups of three digits. \n*   **5,432:** Five thousand, four hundred thirty-two.\n*   **2,500,000:** Two million, five hundred thousand.\n\n### 3. Practice Samples\n**Scenario A: Giving a Phone Number**\n> \"My number is five-five-five, zero-one-two-nine.\"\n\n**Scenario B: Talking about Population**\n> \"The city has a population of over **two million** (2,000,000) people.\"\n\n**Scenario C: Financial Data**\n> \"The company is worth **five billion** dollars.\"\n\n---\n\n### Quick Grammar Tip: Singular vs. Plural\nWhen using specific numbers, do **not** add an 's' to the scale word:\n*   ✅ **Correct:** Two **million** people.\n*   ❌ **Incorrect:** Two millions people.\n*(Note: You only add 's' when the number is not specific, e.g., 'Millions of people lived there.')*"
     },
     {
-      "type": "article",
+      "type": "video",
       "id": "mat_1_1_2_2",
-      "title": "Counting to 100",
-      "content": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10..."
+      "title": "Numbers 1-20 Song",
+      "url": "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"
     }
   ],
   "exercises": [

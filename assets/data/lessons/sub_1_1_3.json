@@ -2,10 +2,16 @@
   "id": "sub_1_1_3",
   "materials": [
     {
-      "type": "html",
+      "type": "article",
       "id": "mat_1_1_3_1",
-      "title": "Colors of the Rainbow",
-      "content": "<h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>"
+      "title": "The World of Colors",
+      "content": "## Introduction to Colors\nColors help us describe everything we see. In English, there are two simple ways to use color words:\n1. **Before a noun:** \"I see a **red** apple.\"\n2. **After the verb 'to be':** \"The sky is **blue**.\"\n\n---\n\n### 1. The Primary Colors\nThese are the three main colors used to create all other colors:\n*   🔴 **Red:** The color of strawberries and stop signs.\n*   🔵 **Blue:** The color of the deep ocean and a clear sky.\n*   🟡 **Yellow:** The color of the bright sun and ripe bananas.\n\n### 2. The Secondary Colors\nWe get these colors by mixing the primary colors together:\n*   🟠 **Orange:** (Red + Yellow) The color of carrots and pumpkins.\n*   🟢 **Green:** (Blue + Yellow) The color of fresh grass and leaves.\n*   🟣 **Purple:** (Red + Blue) The color of grapes and magic capes.\n\n### 3. Neutral and Natural Colors\n*   ⚫ **Black:** The color of coal and the night sky.\n*   ⚪ **White:** The color of milk and fluffy clouds.\n*   🔘 **Gray:** The color of stones and elephants.\n*   🟤 **Brown:** The color of chocolate and wood.\n\n---\n\n### 4. Practice Sentences\n| Context | Example Sentence |\n| :--- | :--- |\n| **Describing Objects** | \"I have a **blue** pen in my bag.\" |\n| **Describing Nature** | \"The autumn leaves are **orange** and **red**.\" |\n| **Asking Questions** | \"What is your favorite color?\" |\n| **Answering** | \"My favorite color is **green**.\" |\n\n### 5. Pro Tip: Light vs. Dark\nIf you want to be more specific, you can add **Light** or **Dark** before the color:\n*   \"The water is **light blue**.\"\n*   \"He is wearing a **dark green** jacket.\""
+    },
+    {
+      "type": "article",
+      "id": "mat_1_1_3_2",
+      "title": "Dates & Time in English",
+      "content": "## Introduction to Dates & Time\nLearning how to say and write the date and time is essential for making appointments, celebrating birthdays, and checking schedules. In English, we use months, ordinal numbers, and specific phrases to describe the moment something happens.\n\n---\n\n### 1. Days of the Week\nAlways remember that days of the week start with a **Capital Letter**.\n*   **Monday, Tuesday, Wednesday, Thursday, Friday** (Weekdays)\n*   **Saturday, Sunday** (The Weekend)\n\n### 2. Months of the Year\n*   **January, February, March, April, May, June, July, August, September, October, November, December**\n\n### 3. Ordinal Numbers for Dates\nWhen we talk about the date, we use 'First, Second, Third' instead of 'One, Two, Three.' \n*   **1st** (First) | **2nd** (Second) | **3rd** (Third) | **4th** (Fourth)\n*   **21st** (Twenty-first) | **22nd** (Twenty-second) | **31st** (Thirty-first)\n\n### 4. Telling the Time\nIn English, we usually use the 12-hour clock with **a.m.** (morning) and **p.m.** (afternoon/night).\n\n| Time | How to Say it (Simple) | How to Say it (Classic) |\n| :--- | :--- | :--- |\n| **05:00** | Five o'clock | Five o'clock |\n| **05:15** | Five fifteen | Quarter past five |\n| **05:30** | Five thirty | Half past five |\n| **05:45** | Five forty-five | Quarter to six |\n\n*   **a.m. (Ante Meridiem):** From Midnight to Noon.\n*   **p.m. (Post Meridiem):** From Noon to Midnight.\n\n### 5. Writing and Speaking Formats\nAs of 2026, these are the two global standards for dates:\n\n| Region | Writing Format (Example) | How to Say it |\n| :--- | :--- | :--- |\n| **British (UK)** | 10 January 2026 | \"The tenth of January, twenty twenty-six\" |\n| **American (US)** | January 10, 2026 | \"January tenth, twenty twenty-six\" |\n\n### 6. Conversational Samples\n**Scenario A: Asking for today's date**\n> **Student A:** What is the date today?\n> **Student B:** Today is **Saturday, January 10th, 2026**.\n\n**Scenario B: Asking for the time**\n> **Traveler:** Excuse me, what time is it?\n> **Local:** It is **quarter past three** (3:15 p.m.).\n\n**Scenario C: Making plans**\n> **Manager:** When is the meeting?\n> **Assistant:** The meeting is on **Monday at 10:30 a.m.**\n\n---\n\n### 7. Grammar Tips: 'At', 'On', and 'In'\nTo be accurate, use these prepositions correctly:\n*   **AT** for specific times: *\"The movie starts **at** 8:00 p.m.\"*\n*   **ON** for days and full dates: *\"The party is **on** Saturday\"* or *\"**on** January 10th.\"*\n*   **IN** for months, years, or parts of the day: *\"I exercise **in** the morning,\"* *\"My birthday is **in** July,\"* or *\"I graduated **in** 2024.\"*"
     }
   ],
   "exercises": [
@@ -41,6 +47,138 @@
       "prompt": "Write 'Green' in uppercase.",
       "sourceText": "Green",
       "targetText": "GREEN"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_3_5",
+      "prompt": "Select the Yellow color.",
+      "options": [
+        "https://dummyimage.com/300x300/ff0000/fff&text=Red",
+        "https://dummyimage.com/300x300/0000ff/fff&text=Blue",
+        "https://dummyimage.com/300x300/00ff00/fff&text=Green",
+        "https://dummyimage.com/300x300/ffff00/fff&text=Yellow"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_3_6",
+      "prompt": "Type the word you hear.",
+      "audioUrl": "api.dictionaryapi.dev",
+      "correctWord": "Monday"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_3_7",
+      "prompt": "Which month comes after January?",
+      "options": ["March", "February", "April"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_3_8",
+      "prompt": "Write 'Friday' in lowercase.",
+      "sourceText": "Friday",
+      "targetText": "friday"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_3_9",
+      "prompt": "Select the Green color.",
+      "options": [
+        "https://dummyimage.com/300x300/ff0000/fff&text=Red",
+        "https://dummyimage.com/300x300/0000ff/fff&text=Blue",
+        "https://dummyimage.com/300x300/00ff00/fff&text=Green",
+        "https://dummyimage.com/300x300/ffff00/fff&text=Yellow"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_3_10",
+      "prompt": "Type the month you hear.",
+      "audioUrl": "api.dictionaryapi.dev",
+      "correctWord": "June"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_3_11",
+      "prompt": "What color is the sky on a clear day?",
+      "options": ["Green", "Red", "Blue"],
+      "correctIndex": 2
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_3_12",
+      "prompt": "Write 'October' in uppercase.",
+      "sourceText": "October",
+      "targetText": "OCTOBER"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_3_13",
+      "prompt": "Select the color of a typical orange fruit.",
+      "options": [
+        "https://dummyimage.com/300x300/ff0000/fff&text=Red",
+        "https://dummyimage.com/300x300/fac898/fff&text=Orange",
+        "https://dummyimage.com/300x300/00ff00/fff&text=Green",
+        "https://dummyimage.com/300x300/ffff00/fff&text=Yellow"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_3_14",
+      "prompt": "Type the day you hear.",
+      "audioUrl": "api.dictionaryapi.dev",
+      "correctWord": "Sunday"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_3_15",
+      "prompt": "How many days are in a week?",
+      "options": ["5", "10", "7"],
+      "correctIndex": 2
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_3_16",
+      "prompt": "Write the color 'Purple'.",
+      "sourceText": "Purple",
+      "targetText": "Purple"
+    },
+    {
+      "type": "image_selection",
+      "id": "ex_1_1_3_17",
+      "prompt": "Select the color Black.",
+      "options": [
+        "https://dummyimage.com/300x300/ff0000/fff&text=Red",
+        "https://dummyimage.com/300x300/fac898/fff&text=Orange",
+        "https://dummyimage.com/300x300/00ff00/fff&text=Green",
+        "https://dummyimage.com/300x300/000000/fff&text=Black"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "type": "audio_match",
+      "id": "ex_1_1_3_18",
+      "prompt": "Type the word you hear.",
+      "audioUrl": "api.dictionaryapi.dev",
+      "correctWord": "White"
+    },
+    {
+      "type": "multiple_choice",
+      "id": "ex_1_1_3_19",
+      "prompt": "What is the last month of the year?",
+      "options": ["November", "December", "January"],
+      "correctIndex": 1
+    },
+    {
+      "type": "translate_sentence",
+      "id": "ex_1_1_3_20",
+      "prompt": "Write 'Tuesday'.",
+      "sourceText": "Tuesday",
+      "targetText": "Tuesday"
     }
   ]
 }

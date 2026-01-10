@@ -1,6 +1,13 @@
 {
   "id": "sub_1_4_1",
-  "materials": [],
+  "materials": [
+    {
+      "type": "article",
+      "id": "mat_1_4_1_1",
+      "title": "Personal Introductions (My name is...)",
+      "content": "## Sharing Your Identity\nIn English, introducing yourself is more than just saying your name. It involves sharing your origin, age, and connecting with others using possessive adjectives.\n\n### 1. Key Vocabulary\n*   **Identity:** Name, Surname/Last name, Nickname.\n*   **Origins:** Country, City, Nationality (e.g., Brazilian, Japanese, American).\n*   **Connections:** Friend, Colleague, Boss, Partner.\n\n### 2. Possessive Grammar: My, Your, His, Her\nWe use these to show who people belong to in a social circle:\n*   \"**My** name is Alex.\"\n*   \"What is **your** name?\"\n*   \"This is **my** friend. **Her** name is Sarah.\"\n*   \"**His** last name is Smith.\"\n\n### 3. Expanded Conversations\n**Scenario A: Formal Business Meeting (2026)**\n> **A:** Hello, **my name is** Robert Chen. I am the new manager.\n> **B:** It is a pleasure to meet you, Mr. Chen. **My name is** Alice, and I am **your** assistant.\n> **A:** Nice to meet you. Is this **your** office?\n> **B:** No, this is **our** shared workspace. **Your** private office is down the hall.\n\n**Scenario B: Casual Social Gathering**\n> **A:** Hi! I'm Leo. **What's your name?**\n> **B:** Hey Leo! **My name is** Chloe. I'm **Sarah’s** cousin.\n> **A:** Oh! Sarah is **my** best friend. Is **your** family from this city?\n> **B:** No, **our** family is from France, but we live here now."
+    }
+  ],
   "exercises": [
     {
       "type": "translate_sentence",

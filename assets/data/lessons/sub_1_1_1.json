@@ -2,16 +2,16 @@
   "id": "sub_1_1_1",
   "materials": [
     {
-      "type": "video",
+      "type": "article",
       "id": "mat_1_1_1_1",
-      "title": "Learn the English Alphabet",
-      "url": "https://cdn.pixabay.com/video/2016/06/27/3627-172488393_tiny.mp4"
+      "title": "The English Alphabet & Spelling",
+      "content": "## The English Alphabet\nThe English alphabet has **26 letters**. These are divided into **Vowels** (A, E, I, O, U) and **Consonants** (all other letters).\n\n### Letter Sounds and Pronunciation\n*   **A** [ay] | **B** [bee] | **C** [see] | **D** [dee] | **E** [ee]\n*   **F** [ef] | **G** [jee] | **H** [aitch] | **I** [eye] | **J** [jay]\n*   **K** [kay] | **L** [el] | **M** [em] | **N** [en] | **O** [oh]\n*   **P** [pee] | **Q** [cue] | **R** [ar] | **S** [ess] | **T** [tee]\n*   **U** [you] | **V** [vee] | **W** [double-you] | **X** [eks] | **Y** [why] | **Z** [zee/zed]\n\n### Why Spelling Matters\nIn English, we often ask people to spell their names to ensure they are written correctly.\n*   **Question:** \"How do you spell your name?\"\n*   **Answer:** \"B-O-B. Bob.\"\n*   **Sample:** \"My last name is Smith. That is S-M-I-T-H.\""
     },
     {
-      "type": "article",
+      "type": "video",
       "id": "mat_1_1_1_2",
-      "title": "English Alphabet Basics",
-      "content": "The English alphabet consists of 26 letters: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z."
+      "title": "Learn the English Alphabet",
+      "url": "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4"
     },
     {
       "type": "pdf",

@@ -1,0 +1,110 @@
+{
+  "english_proficiency_framework": [
+    {
+      "level": 1,
+      "title": "Absolute Beginner",
+      "cefr_equivalent": "A0–A1",
+      "focus": "Foundations and basic survival English.",
+      "curriculum": {
+        "vocabulary": [
+          "Letters (A–Z)",
+          "Numbers (1–100)",
+          "Colors",
+          "Days of the week",
+          "Months",
+          "Basic greetings"
+        ],
+        "daily_life": [
+          "Family members",
+          "Common food and drinks",
+          "Household objects",
+          "Body parts",
+          "Simple feelings/emotions"
+        ],
+        "grammar": [
+          "Verb 'to be' (present/past)",
+          "Singular/plural nouns",
+          "Personal pronouns",
+          "Definite/indefinite articles (a, an, the)"
+        ],
+        "key_phrases": [
+          "My name is...",
+          "How much is this?",
+          "Where is the...?"
+        ]
+      }
+    },
+    {
+      "level": 2,
+      "title": "Elementary",
+      "cefr_equivalent": "A2",
+      "focus": "Simple sentences and frequently used expressions.",
+      "curriculum": {
+        "topics": [
+          "Shopping",
+          "Local geography",
+          "Employment/jobs",
+          "Routine leisure activities"
+        ],
+        "grammar": [
+          "Past Simple (regular and irregular verbs)",
+          "Present Continuous (now)",
+          "Basic modal verbs (can, could, should, must)"
+        ],
+        "comparisons": "Using comparatives and superlatives (bigger, the biggest)",
+        "time": "Telling time precisely and using prepositions of time/place (in, on, at)"
+      }
+    },
+    {
+      "level": 3,
+      "title": "Intermediate",
+      "cefr_equivalent": "B1–B2",
+      "focus": "Independent communication and expressing opinions.",
+      "curriculum": {
+        "topics": [
+          "Travel experiences",
+          "Entertainment (movies/music)",
+          "Health and fitness",
+          "Environmental issues"
+        ],
+        "grammar": [
+          "Future tenses (will, going to)",
+          "Present Perfect vs. Past Simple",
+          "Passive Voice"
+        ],
+        "logic": "1st and 2nd Conditionals for hypothetical situations (If I were you...)",
+        "vocabulary": [
+          "Phrasal verbs",
+          "Common idioms",
+          "Connectors for cause and effect (because, so, therefore)"
+        ]
+      }
+    },
+    {
+      "level": 4,
+      "title": "Advanced",
+      "cefr_equivalent": "C1–C2",
+      "focus": "Fluency, nuance, and professional/academic use.",
+      "curriculum": {
+        "topics": [
+          "Business ethics",
+          "Technology’s impact on society",
+          "Complex news events",
+          "Abstract concepts like philosophy or art"
+        ],
+        "grammar": [
+          "Mixed conditionals",
+          "3rd conditional (regrets)",
+          "Advanced inversion for style",
+          "Complex sentence structures"
+        ],
+        "refinement": [
+          "Subtle jokes",
+          "Regional accents/dialects",
+          "Industry-specific vocabulary"
+        ],
+        "professional": ["Writing formal reports", "Resumes", "Academic essays"]
+      }
+    }
+  ]
+}
