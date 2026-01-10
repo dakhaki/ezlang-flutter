@@ -1,10 +1,13 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
 import 'package:ezlang/core/theme/theme_controller.dart';
 import 'package:ezlang/presentation/materials/view/web_view_page.dart';
 import 'package:ezlang/presentation/profile/view_model/profile_view_model.dart';
 import 'package:ezlang/presentation/widgets/sticker_widget.dart';
+import 'package:gpt_markdown/gpt_markdown.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -220,6 +223,95 @@ class ProfilePage extends GetView<ProfileViewModel> {
                 ),
               ),
               const SizedBox(height: 16),
+              _buildOptionTile(
+                context,
+                icon: Icons.info_rounded,
+                title: 'Why CEFR?',
+                color: Colors.teal,
+                onTap: () {
+                  showGeneralDialog(
+                    context: context,
+                    barrierDismissible: true,
+                    barrierLabel: MaterialLocalizations.of(
+                      context,
+                    ).modalBarrierDismissLabel,
+                    barrierColor: Colors.black54,
+                    transitionDuration: const Duration(milliseconds: 500),
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        SafeArea(
+                          child: AlertDialog(
+                            backgroundColor: Theme.of(context).cardColor,
+                            surfaceTintColor: Colors.transparent,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                            insetPadding: const EdgeInsets.all(16),
+                            title: const Text(
+                              'Why CEFR?',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                            content: SizedBox(
+                              width: double.maxFinite,
+                              child: FutureBuilder<String>(
+                                future: rootBundle.loadString(
+                                  'assets/data/misc.json',
+                                ),
+                                builder: (context, snapshot) {
+                                  if (snapshot.hasData) {
+                                    final data = json.decode(snapshot.data!);
+                                    return SingleChildScrollView(
+                                      child: GptMarkdown(
+                                        data['why_cerf'] ?? '',
+                                        // style: Theme.of(
+                                        //   context,
+                                        // ).textTheme.bodyMedium,
+                                      ),
+                                    );
+                                  }
+                                  return const SizedBox(
+                                    height: 100,
+                                    child: Center(
+                                      child: CircularProgressIndicator(),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                            actions: [
+                              SizedBox(
+                                width: double.infinity,
+                                child: ElevatedButton(
+                                  onPressed: () => Get.back(),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.teal,
+                                    foregroundColor: Colors.white,
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 16,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                  ),
+                                  child: const Text('Got it'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                    transitionBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                          return ScaleTransition(
+                            scale: CurvedAnimation(
+                              parent: animation,
+                              curve: Curves.easeOutBack,
+                            ),
+                            child: child,
+                          );
+                        },
+                  );
+                },
+              ),
               _buildOptionTile(
                 context,
                 icon: Icons.privacy_tip_rounded,
