@@ -263,6 +263,7 @@ class ProfilePage extends GetView<ProfileViewModel> {
                                     return SingleChildScrollView(
                                       child: GptMarkdown(
                                         data['why_cerf'] ?? '',
+                                        textScaler: TextScaler.linear(1.0),
                                         // style: Theme.of(
                                         //   context,
                                         // ).textTheme.bodyMedium,

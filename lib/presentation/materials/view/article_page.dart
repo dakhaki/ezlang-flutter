@@ -20,6 +20,7 @@ class ArticlePage extends StatelessWidget {
               padding: const EdgeInsets.all(24.0),
               child: GptMarkdown(
                 content,
+                textScaler: TextScaler.linear(1.0),
                 // style: Theme.of(
                 //   context,
                 // ).textTheme.bodyLarge?.copyWith(height: 1.8, fontSize: 18),
