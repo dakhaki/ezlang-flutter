@@ -47,6 +47,7 @@ class HomePage extends GetView<HomeViewModel> {
             icon: Image.asset('assets/images/logo_small.png', height: 28),
             onPressed: () => Get.toNamed(PageTo.profile),
           ),
+          SizedBox(width: 4),
         ],
       ),
       body: SafeArea(
