@@ -23,8 +23,6 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
           Get.back();
         },
         child: Scaffold(
-          // extendBody: true,
-          // extendBodyBehindAppBar: true,
           body: CustomScrollView(
             slivers: [
               SliverAppBar(
@@ -114,12 +112,18 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                                         : 'lesson_topic_temp_${topic.id}',
                                     child: Material(
                                       color: Colors.transparent,
-                                      child: Text(topic.title),
+                                      child: Text(
+                                        topic.title,
+                                        style: Theme.of(
+                                          context,
+                                        ).textTheme.bodyLarge,
+                                      ),
                                     ),
                                   ),
                                 ),
                                 subtitle: Text(
                                   '${topic.subTopics.length} Lessons',
+                                  style: Theme.of(context).textTheme.bodySmall,
                                 ),
                                 trailing: const Icon(
                                   Icons.arrow_forward_ios,
@@ -136,7 +140,7 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                           child: ElevatedButton.icon(
                             onPressed: controller.completeLevel,
                             icon: const Icon(Icons.check),
-                            label: const Text('Mark as Completed'),
+                            label: Text('Mark as Completed'),
                             style: ElevatedButton.styleFrom(
                               padding: const EdgeInsets.symmetric(vertical: 16),
                             ),

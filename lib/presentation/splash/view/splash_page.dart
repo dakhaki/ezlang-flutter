@@ -19,7 +19,7 @@ class SplashPage extends GetView<SplashViewModel> {
             final bool isLandscape = context.isLandscape;
             // proportional size, clamped to grow on tablets but stay reasonable
             final double raw = maxW * (isLandscape ? 0.35 : 0.6);
-            final double logoSize = raw.clamp(120.0, 420.0).toDouble();
+            final double logoSize = raw.clamp(120.0, 180.0).toDouble();
             // Responsive font size that stays proportional
             final double dynamicFontSize = (logoSize * 0.22).clamp(32.0, 80.0);
 

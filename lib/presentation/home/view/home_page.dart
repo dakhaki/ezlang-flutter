@@ -15,11 +15,7 @@ class HomePage extends GetView<HomeViewModel> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('eZlang'),
-        centerTitle: false,
-        titleTextStyle: Theme.of(context).textTheme.headlineMedium?.copyWith(
-          // color: AppPalette.primary,
-          fontWeight: FontWeight.bold,
-        ),
+
         // bottom: PreferredSize(
         //   preferredSize: const Size.fromHeight(30),
         //   child: Obx(
@@ -63,7 +59,12 @@ class HomePage extends GetView<HomeViewModel> {
                 },
               ),
               onLoading: const Center(child: LoadingIndicator()),
-              onError: (error) => Center(child: Text('Error: $error')),
+              onError: (error) => Center(
+                child: Text(
+                  'Error: $error',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ),
             ),
             Align(
               alignment: Alignment.topCenter,

@@ -66,7 +66,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title), centerTitle: false),
+      appBar: AppBar(title: Text(widget.title)),
       backgroundColor: Colors.black,
       body: _errorMessage != null
           ? ErrorView(

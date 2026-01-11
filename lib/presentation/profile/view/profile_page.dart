@@ -18,18 +18,7 @@ class ProfilePage extends GetView<ProfileViewModel> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      // extendBody: true,
-      // extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: const Text('My Profile'),
-        centerTitle: false,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        titleTextStyle: Theme.of(context).textTheme.headlineSmall?.copyWith(
-          // color: AppPalette.primary,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
+      appBar: AppBar(title: const Text('My Profile')),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
@@ -103,9 +92,9 @@ class ProfilePage extends GetView<ProfileViewModel> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'My Stickers Collection',
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(height: 16),
@@ -160,9 +149,9 @@ class ProfilePage extends GetView<ProfileViewModel> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Settings',
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(height: 16),
@@ -217,9 +206,9 @@ class ProfilePage extends GetView<ProfileViewModel> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'More Info',
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(height: 16),
@@ -264,9 +253,6 @@ class ProfilePage extends GetView<ProfileViewModel> {
                                       child: GptMarkdown(
                                         data['why_cerf'] ?? '',
                                         textScaler: TextScaler.linear(1.0),
-                                        // style: Theme.of(
-                                        //   context,
-                                        // ).textTheme.bodyMedium,
                                       ),
                                     );
                                   }
@@ -377,7 +363,6 @@ class ProfilePage extends GetView<ProfileViewModel> {
                   );
                 },
               ),
-              // const SizedBox(height: 32),
             ],
           ),
         ),

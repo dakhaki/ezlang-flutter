@@ -13,7 +13,7 @@ class MaterialsPage extends GetView<MaterialsViewModel> {
   Widget build(BuildContext context) {
     final subTopic = controller.subTopic;
     return Scaffold(
-      appBar: AppBar(title: Text(subTopic.title), centerTitle: false),
+      appBar: AppBar(title: Text(subTopic.title)),
       body: SafeArea(
         child: controller.obx(
           (content) => content!.materials.isEmpty
@@ -47,12 +47,16 @@ class MaterialsPage extends GetView<MaterialsViewModel> {
                             size: 32,
                             color: Theme.of(context).primaryColor,
                           ),
-                          title: Text(material.title),
+                          title: Text(
+                            material.title,
+                            style: Theme.of(context).textTheme.bodyLarge,
+                          ),
                           subtitle: Text(
                             material.runtimeType.toString().replaceAll(
                               'Material',
                               '',
                             ),
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                           trailing: const Icon(
                             Icons.arrow_forward_ios,

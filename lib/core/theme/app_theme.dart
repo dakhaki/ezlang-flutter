@@ -33,13 +33,7 @@ class AppTheme {
       backgroundColor: AppPalette.background,
       elevation: 0,
       foregroundColor: AppPalette.textPrimary,
-      centerTitle: true,
-      titleTextStyle: TextStyle(
-        fontFamily: 'BubblegumSans',
-        color: AppPalette.textPrimary,
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-      ),
+      centerTitle: false,
     ),
 
     cardTheme: CardThemeData(
@@ -88,13 +82,16 @@ class AppTheme {
           displayLarge: TextStyle(
             color: AppPalette.textPrimary,
             fontWeight: FontWeight.bold,
+            height: 1.2,
           ),
           titleLarge: TextStyle(
             color: AppPalette.textPrimary,
             fontWeight: FontWeight.bold,
+            fontSize: 24,
+            height: 1.2,
           ),
-          bodyLarge: TextStyle(color: AppPalette.textPrimary),
-          bodyMedium: TextStyle(color: AppPalette.textPrimary),
+          bodyLarge: TextStyle(color: AppPalette.textPrimary, height: 1.5),
+          bodyMedium: TextStyle(color: AppPalette.textPrimary, height: 1.5),
         ).apply(
           bodyColor: AppPalette.textPrimary,
           displayColor: AppPalette.textPrimary,
@@ -133,13 +130,7 @@ class AppTheme {
       backgroundColor: Colors.transparent,
       elevation: 0,
       foregroundColor: AppPalette.textPrimaryDark,
-      centerTitle: true,
-      titleTextStyle: TextStyle(
-        fontFamily: 'BubblegumSans',
-        color: AppPalette.textPrimaryDark,
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-      ),
+      centerTitle: false,
     ),
 
     cardTheme: CardThemeData(
@@ -195,18 +186,25 @@ class AppTheme {
           displayLarge: TextStyle(
             color: AppPalette.textPrimaryDark,
             fontWeight: FontWeight.bold,
+            height: 1.2,
           ),
           titleLarge: TextStyle(
             color: AppPalette.textPrimaryDark,
             fontWeight: FontWeight.bold,
+            fontSize: 24,
+            height: 1.2,
           ),
-          titleMedium: TextStyle(color: AppPalette.textSecondaryDark),
+          titleMedium: TextStyle(
+            color: AppPalette.textSecondaryDark,
+            height: 1.5,
+          ),
           headlineSmall: TextStyle(
             color: AppPalette.textPrimaryDark,
             fontWeight: FontWeight.bold,
+            height: 1.2,
           ),
-          bodyLarge: TextStyle(color: AppPalette.textPrimaryDark),
-          bodyMedium: TextStyle(color: AppPalette.textPrimaryDark),
+          bodyLarge: TextStyle(color: AppPalette.textPrimaryDark, height: 1.5),
+          bodyMedium: TextStyle(color: AppPalette.textPrimaryDark, height: 1.5),
         ).apply(
           bodyColor: AppPalette.textPrimaryDark,
           displayColor: AppPalette.textPrimaryDark,

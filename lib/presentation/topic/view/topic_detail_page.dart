@@ -38,7 +38,6 @@ class TopicDetailPage extends GetView<TopicDetailViewModel> {
             ),
           ),
         ),
-        centerTitle: false,
       ),
       body: SafeArea(
         child: ListView.builder(
@@ -123,10 +122,13 @@ class _TopicCardState extends State<_TopicCard>
             ),
             title: Text(
               widget.subTopic.title,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
               '${widget.subTopic.exerciseCount} Exercises • ${widget.subTopic.materialCount} Materials',
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
           Padding(
@@ -143,7 +145,7 @@ class _TopicCardState extends State<_TopicCard>
                     onPressed: () =>
                         widget.controller.openMaterials(widget.subTopic),
                     icon: const Icon(Icons.library_books),
-                    label: const Text('Materials'),
+                    label: Text('Materials'),
                   ),
                 ),
                 const SizedBox(width: 8),

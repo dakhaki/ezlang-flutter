@@ -169,13 +169,9 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
                   children: [
                     _buildStars(),
                     SizedBox(height: isLandscape ? 0 : 24),
-                    const Text(
+                    Text(
                       'Lesson Complete!',
-                      style: TextStyle(
-                        fontFamily: 'BubblegumSans',
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.headlineLarge,
                     ),
                     SizedBox(height: isLandscape ? 12 : 24),
                     Container(
@@ -245,14 +241,7 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
                                 borderRadius: BorderRadius.circular(16),
                               ),
                             ),
-                            child: const Text(
-                              'Continue',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'BubblegumSans',
-                              ),
-                            ),
+                            child: const Text('Continue'),
                           ),
                         ),
                       ],
@@ -302,17 +291,9 @@ class _LessonCompletionDialogState extends State<LessonCompletionDialog>
             fontSize: 20,
             color: Theme.of(context).textTheme.bodyLarge?.color,
             fontWeight: FontWeight.bold,
-            fontFamily: 'BubblegumSans',
           ),
         ),
-        Text(
-          label,
-          style: TextStyle(
-            color: Colors.grey[400],
-            fontSize: 14,
-            fontFamily: 'BubblegumSans',
-          ),
-        ),
+        Text(label, style: TextStyle(color: Colors.grey[400], fontSize: 14)),
       ],
     );
   }

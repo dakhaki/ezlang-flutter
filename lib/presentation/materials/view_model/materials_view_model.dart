@@ -40,16 +40,32 @@ class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
     if (material is ArticleMaterial) {
       Get.to(
         () => ArticlePage(title: material.title, content: material.content),
+        transition: Transition.cupertinoDialog,
+        duration: const Duration(milliseconds: 800),
       );
     } else if (material is VideoMaterial) {
-      Get.to(() => VideoPlayerPage(url: material.url, title: material.title));
+      Get.to(
+        () => VideoPlayerPage(url: material.url, title: material.title),
+        transition: Transition.cupertinoDialog,
+        duration: const Duration(milliseconds: 800),
+      );
     } else if (material is PdfMaterial) {
-      Get.to(() => PdfViewerPage(url: material.url, title: material.title));
+      Get.to(
+        () => PdfViewerPage(url: material.url, title: material.title),
+        transition: Transition.cupertinoDialog,
+        duration: const Duration(milliseconds: 800),
+      );
     } else if (material is AudioMaterial) {
-      Get.to(() => AudioPlayerPage(url: material.url, title: material.title));
+      Get.to(
+        () => AudioPlayerPage(url: material.url, title: material.title),
+        transition: Transition.cupertinoDialog,
+        duration: const Duration(milliseconds: 800),
+      );
     } else if (material is HtmlMaterial) {
       Get.to(
         () => WebViewPage(content: material.content, title: material.title),
+        transition: Transition.cupertinoDialog,
+        duration: const Duration(milliseconds: 800),
       );
     } else {
       Get.snackbar(

@@ -10,7 +10,7 @@ class ArticlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title), centerTitle: false),
+      appBar: AppBar(title: Text(title)),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
@@ -18,13 +18,7 @@ class ArticlePage extends StatelessWidget {
             margin: EdgeInsets.zero,
             child: Padding(
               padding: const EdgeInsets.all(24.0),
-              child: GptMarkdown(
-                content,
-                textScaler: TextScaler.linear(1.0),
-                // style: Theme.of(
-                //   context,
-                // ).textTheme.bodyLarge?.copyWith(height: 1.8, fontSize: 18),
-              ),
+              child: GptMarkdown(content, textScaler: TextScaler.linear(1.0)),
             ),
           ),
         ),

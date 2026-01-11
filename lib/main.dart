@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeController = Get.put(ThemeController());
+
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'eZlang',
@@ -44,6 +45,18 @@ class MyApp extends StatelessWidget {
       themeMode: themeController.theme,
       initialRoute: PageTo.splash,
       getPages: BaseRoute.pages(),
+      builder: (context, child) {
+        final mediaQuery = MediaQuery.of(context);
+        return MediaQuery(
+          data: mediaQuery.copyWith(
+            textScaler: mediaQuery.textScaler.clamp(
+              minScaleFactor: 1.0,
+              maxScaleFactor: 1.2,
+            ),
+          ),
+          child: child!,
+        );
+      },
     );
   }
 }

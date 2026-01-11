@@ -18,7 +18,6 @@ class ExercisePage extends GetView<ExerciseViewModel> {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Container(
           margin: const EdgeInsets.only(left: 16),
@@ -66,7 +65,6 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                         color: Theme.of(context).textTheme.bodyMedium?.color,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'BubblegumSans',
                       ),
                     ),
                   ],
@@ -257,7 +255,6 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                       color: messageColor,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'BubblegumSans',
                     ),
                   ),
                 ],
@@ -278,11 +275,7 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                textStyle: const TextStyle(
-                  fontFamily: 'BubblegumSans',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                textStyle: Theme.of(context).textTheme.headlineSmall,
               ),
               child: Text(isChecked ? 'Continue' : 'Check'),
             ),
@@ -304,28 +297,18 @@ class ExercisePage extends GetView<ExerciseViewModel> {
         surfaceTintColor: Colors.transparent,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
         contentPadding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
-        title: const Column(
+        title: Column(
           children: [
-            // Icon(
-            //   Icons.sentiment_dissatisfied_rounded,
-            //   size: 64,
-            //   color: Colors.orange,
-            // ),
-            // SizedBox(height: 16),
-            const Text(
+            Text(
               'Quit Exercise?',
-              style: TextStyle(
-                fontFamily: 'BubblegumSans',
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.headlineMedium,
               textAlign: TextAlign.center,
             ),
           ],
         ),
-        content: const Text(
+        content: Text(
           'Are you sure you want to stop? You will lose your progress!',
-          style: TextStyle(fontSize: 18, fontFamily: 'BubblegumSans'),
+          style: Theme.of(context).textTheme.bodyLarge,
           textAlign: TextAlign.center,
         ),
         actions: [
@@ -343,14 +326,7 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                child: const Text(
-                  'Keep Playing',
-                  style: TextStyle(
-                    fontFamily: 'BubblegumSans',
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                child: const Text('Keep Playing'),
               ),
               const SizedBox(height: 12),
               TextButton(
@@ -362,14 +338,7 @@ class ExercisePage extends GetView<ExerciseViewModel> {
                   foregroundColor: AppPalette.errorRed,
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
-                child: const Text(
-                  'I want to quit',
-                  style: TextStyle(
-                    fontFamily: 'BubblegumSans',
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                child: Text('I want to quit', style: TextStyle(fontSize: 18)),
               ),
             ],
           ),

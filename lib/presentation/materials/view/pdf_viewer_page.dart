@@ -47,7 +47,7 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title), centerTitle: false),
+      appBar: AppBar(title: Text(widget.title)),
       body: SafeArea(
         child: _isLoading
             ? const Center(child: CircularProgressIndicator())

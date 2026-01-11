@@ -105,7 +105,7 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
     final isPlaying = _playerState == PlayerState.playing;
 
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title), centerTitle: false),
+      appBar: AppBar(title: Text(widget.title)),
       body: SafeArea(
         child: _errorMessage != null
             ? ErrorView(

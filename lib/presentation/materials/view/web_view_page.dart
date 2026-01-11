@@ -51,7 +51,7 @@ class _WebViewPageState extends State<WebViewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title), centerTitle: false),
+      appBar: AppBar(title: Text(widget.title)),
       body: SafeArea(
         child: Stack(
           children: [
