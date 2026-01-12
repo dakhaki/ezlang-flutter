@@ -5,8 +5,13 @@ import 'package:ezlang/presentation/materials/view_model/materials_view_model.da
 class MaterialsBinding extends Bindings {
   @override
   void dependencies() {
+    // Get.lazyPut<MaterialsNavigator>(() => MaterialsNavigator());
+
     Get.lazyPut<MaterialsViewModel>(
-      () => MaterialsViewModel(Get.find<GetLessonContentUseCase>()),
+      () => MaterialsViewModel(
+        Get.find<GetLessonContentUseCase>(),
+        // Get.find<MaterialsNavigator>(),
+      ),
     );
   }
 }

@@ -15,29 +15,6 @@ class HomePage extends GetView<HomeViewModel> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('eZlang'),
-
-        // bottom: PreferredSize(
-        //   preferredSize: const Size.fromHeight(30),
-        //   child: Obx(
-        //     () => Padding(
-        //       padding: const EdgeInsets.only(bottom: 8.0),
-        //       child: Row(
-        //         mainAxisAlignment: MainAxisAlignment.center,
-        //         children: [
-        //           const Icon(
-        //             Icons.local_fire_department,
-        //             color: AppPalette.orangeAccent,
-        //           ),
-        //           const SizedBox(width: 4),
-        //           Text(
-        //             '${controller.streak.value} Day Streak',
-        //             style: const TextStyle(fontWeight: FontWeight.bold),
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-        //   ),
-        // ),
         actions: [
           IconButton(
             icon: Image.asset('assets/images/logo_small.png', height: 28),

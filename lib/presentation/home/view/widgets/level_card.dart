@@ -25,10 +25,10 @@ class LevelCard extends StatelessWidget {
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(12),
               ),
-              child: Container(
+              child: SizedBox(
                 height: 120,
                 width: double.infinity,
-                color: Color(int.parse(level.backgroundColorHex, radix: 16)),
+                // color: Color(int.parse(level.backgroundColorHex, radix: 16)),
                 child: Image.asset(level.imageLocalAsset, fit: BoxFit.cover),
               ),
             ),

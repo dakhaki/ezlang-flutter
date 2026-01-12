@@ -6,7 +6,7 @@
       "cefrCode": "A0–A1",
       "description": "Foundations and basic survival English.",
       "imageUrl": "https://dummyimage.com/600x400/92c952/ffffff",
-      "imageLocalAsset": "assets/images/egg.png",
+      "imageLocalAsset": "assets/images/egg.jpeg",
       "backgroundColorHex": "FF90CAF9",
       "topics": [
         {
@@ -139,7 +139,7 @@
       "cefrCode": "A2",
       "description": "Simple sentences and frequently used expressions.",
       "imageUrl": "https://dummyimage.com/600x400/771796/ffffff",
-      "imageLocalAsset": "assets/images/larva.png",
+      "imageLocalAsset": "assets/images/larva.jpeg",
       "backgroundColorHex": "FFA5D6A7",
       "topics": [
         {
@@ -248,7 +248,7 @@
       "cefrCode": "B1–B2",
       "description": "Independent communication and expressing opinions.",
       "imageUrl": "https://dummyimage.com/600x400/24f355/ffffff",
-      "imageLocalAsset": "assets/images/pupa.png",
+      "imageLocalAsset": "assets/images/pupa.jpeg",
       "backgroundColorHex": "FFFFCC80",
       "topics": [
         {
@@ -343,7 +343,7 @@
       "cefrCode": "C1–C2",
       "description": "Fluency, nuance, and professional/academic use.",
       "imageUrl": "https://dummyimage.com/600x400/d32776/ffffff",
-      "imageLocalAsset": "assets/images/adult.png",
+      "imageLocalAsset": "assets/images/adult.jpeg",
       "backgroundColorHex": "FFCE93D8",
       "topics": [
         {

@@ -3,9 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:ezlang/core/theme/app_palette.dart';
 
 class AppTheme {
+  static const String _fontFamily = 'BubblegumSans';
+
   static final light = ThemeData(
     useMaterial3: true,
-    fontFamily: 'BubblegumSans',
+    fontFamily: _fontFamily,
     scaffoldBackgroundColor: AppPalette.background,
     cardColor: AppPalette.cardColor,
     primaryColor: AppPalette.primary, // Explicitly set for visibility
@@ -49,7 +51,7 @@ class AppTheme {
         backgroundColor: AppPalette.primary,
         foregroundColor: AppPalette.white,
         textStyle: const TextStyle(
-          fontFamily: 'BubblegumSans',
+          fontFamily: _fontFamily,
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
@@ -62,7 +64,7 @@ class AppTheme {
       style: TextButton.styleFrom(
         foregroundColor: AppPalette.primary,
         textStyle: const TextStyle(
-          fontFamily: 'BubblegumSans',
+          fontFamily: _fontFamily,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -71,7 +73,7 @@ class AppTheme {
     chipTheme: ChipThemeData(
       backgroundColor: AppPalette.skyBlue.withOpacity(0.2),
       labelStyle: const TextStyle(
-        fontFamily: 'BubblegumSans',
+        fontFamily: _fontFamily,
         color: AppPalette.textPrimary,
       ),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -95,13 +97,13 @@ class AppTheme {
         ).apply(
           bodyColor: AppPalette.textPrimary,
           displayColor: AppPalette.textPrimary,
-          fontFamily: 'BubblegumSans',
+          fontFamily: _fontFamily,
         ),
   );
 
   static final dark = ThemeData(
     useMaterial3: true,
-    fontFamily: 'BubblegumSans',
+    fontFamily: _fontFamily,
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppPalette.backgroundDark,
     cardColor: AppPalette.cardColorDark,
@@ -146,7 +148,7 @@ class AppTheme {
         backgroundColor: AppPalette.primary,
         foregroundColor: AppPalette.white,
         textStyle: const TextStyle(
-          fontFamily: 'BubblegumSans',
+          fontFamily: _fontFamily,
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
@@ -172,7 +174,7 @@ class AppTheme {
     chipTheme: ChipThemeData(
       backgroundColor: AppPalette.primaryDark.withOpacity(0.1),
       labelStyle: const TextStyle(
-        fontFamily: 'BubblegumSans',
+        fontFamily: _fontFamily,
         color: AppPalette.textPrimaryDark,
       ),
       shape: RoundedRectangleBorder(
@@ -208,7 +210,7 @@ class AppTheme {
         ).apply(
           bodyColor: AppPalette.textPrimaryDark,
           displayColor: AppPalette.textPrimaryDark,
-          fontFamily: 'BubblegumSans',
+          fontFamily: _fontFamily,
         ),
   );
 }

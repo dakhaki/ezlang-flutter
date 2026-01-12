@@ -1,12 +1,8 @@
+import 'package:ezlang/core/routes/routes.dart';
 import 'package:get/get.dart';
 import 'package:ezlang/domain/entities/curriculum_entity.dart';
 import 'package:ezlang/domain/entities/lesson_content_entity.dart';
 import 'package:ezlang/domain/use_cases/get_lesson_content_use_case.dart';
-import 'package:ezlang/presentation/materials/view/article_page.dart';
-import 'package:ezlang/presentation/materials/view/pdf_viewer_page.dart';
-import 'package:ezlang/presentation/materials/view/video_player_page.dart';
-import 'package:ezlang/presentation/materials/view/web_view_page.dart';
-import 'package:ezlang/presentation/materials/view/audio_player_page.dart';
 
 class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
   late SubTopic subTopic;
@@ -37,41 +33,32 @@ class MaterialsViewModel extends GetxController with StateMixin<LessonContent> {
   }
 
   void openMaterial(LearningMaterial material) {
-    if (material is ArticleMaterial) {
-      Get.to(
-        () => ArticlePage(title: material.title, content: material.content),
-        transition: Transition.cupertinoDialog,
-        duration: const Duration(milliseconds: 800),
-      );
-    } else if (material is VideoMaterial) {
-      Get.to(
-        () => VideoPlayerPage(url: material.url, title: material.title),
-        transition: Transition.cupertinoDialog,
-        duration: const Duration(milliseconds: 800),
-      );
-    } else if (material is PdfMaterial) {
-      Get.to(
-        () => PdfViewerPage(url: material.url, title: material.title),
-        transition: Transition.cupertinoDialog,
-        duration: const Duration(milliseconds: 800),
-      );
-    } else if (material is AudioMaterial) {
-      Get.to(
-        () => AudioPlayerPage(url: material.url, title: material.title),
-        transition: Transition.cupertinoDialog,
-        duration: const Duration(milliseconds: 800),
-      );
-    } else if (material is HtmlMaterial) {
-      Get.to(
-        () => WebViewPage(content: material.content, title: material.title),
-        transition: Transition.cupertinoDialog,
-        duration: const Duration(milliseconds: 800),
-      );
-    } else {
-      Get.snackbar(
-        "Material",
-        "Opening ${material.title} - Type not supported",
-      );
+    switch (material) {
+      case ArticleMaterial m:
+        Get.toNamed(
+          PageTo.materialsArticle,
+          arguments: {'title': m.title, 'content': m.content},
+        );
+      case VideoMaterial m:
+        Get.toNamed(
+          PageTo.materialsVideo,
+          arguments: {'title': m.title, 'url': m.url},
+        );
+      case PdfMaterial m:
+        Get.toNamed(
+          PageTo.materialsPdf,
+          arguments: {'title': m.title, 'url': m.url},
+        );
+      case AudioMaterial m:
+        Get.toNamed(
+          PageTo.materialsAudio,
+          arguments: {'title': m.title, 'url': m.url},
+        );
+      case HtmlMaterial m:
+        Get.toNamed(
+          PageTo.materialsHtml,
+          arguments: {'title': m.title, 'content': m.content},
+        );
     }
   }
 }

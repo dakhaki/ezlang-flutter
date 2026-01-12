@@ -2,6 +2,11 @@ import 'package:ezlang/core/di/exercise_binding.dart';
 import 'package:ezlang/core/di/materials_binding.dart';
 import 'package:ezlang/presentation/materials/view/materials_page.dart';
 import 'package:ezlang/presentation/exercise/view/exercise_page.dart';
+import 'package:ezlang/presentation/materials/view/article_page.dart';
+import 'package:ezlang/presentation/materials/view/audio_player_page.dart';
+import 'package:ezlang/presentation/materials/view/pdf_viewer_page.dart';
+import 'package:ezlang/presentation/materials/view/video_player_page.dart';
+import 'package:ezlang/presentation/materials/view/web_view_page.dart';
 import 'package:ezlang/core/di/lesson_detail_binding.dart';
 import 'package:ezlang/core/di/profile_binding.dart';
 import 'package:ezlang/core/di/topic_detail_binding.dart';
@@ -52,6 +57,41 @@ class BaseRoute {
       page: () => const MaterialsPage(),
       binding: MaterialsBinding(),
     ),
+    _getPage(
+      name: PageTo.materialsArticle,
+      page: () => ArticlePage(
+        title: Get.arguments['title'] as String,
+        content: Get.arguments['content'] as String,
+      ),
+    ),
+    _getPage(
+      name: PageTo.materialsVideo,
+      page: () => VideoPlayerPage(
+        title: Get.arguments['title'] as String,
+        url: Get.arguments['url'] as String,
+      ),
+    ),
+    _getPage(
+      name: PageTo.materialsPdf,
+      page: () => PdfViewerPage(
+        title: Get.arguments['title'] as String,
+        url: Get.arguments['url'] as String,
+      ),
+    ),
+    _getPage(
+      name: PageTo.materialsAudio,
+      page: () => AudioPlayerPage(
+        title: Get.arguments['title'] as String,
+        url: Get.arguments['url'] as String,
+      ),
+    ),
+    _getPage(
+      name: PageTo.materialsHtml,
+      page: () => WebViewPage(
+        title: Get.arguments['title'] as String,
+        content: Get.arguments['content'] as String,
+      ),
+    ),
   ];
 
   static GetPage _getPage({
@@ -77,4 +117,9 @@ class PageTo {
   static const topicDetail = '/topic_detail';
   static const exercise = '/exercise';
   static const materials = '/materials';
+  static const materialsArticle = '/materials/article';
+  static const materialsVideo = '/materials/video';
+  static const materialsPdf = '/materials/pdf';
+  static const materialsAudio = '/materials/audio';
+  static const materialsHtml = '/materials/html';
 }
