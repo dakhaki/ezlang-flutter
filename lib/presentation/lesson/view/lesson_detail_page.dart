@@ -30,6 +30,7 @@ class LessonDetailPage extends GetView<LessonDetailViewModel> {
                 pinned: true,
                 backgroundColor: color,
                 leading: const BackButton(color: Colors.black),
+                stretch: true,
                 flexibleSpace: FlexibleSpaceBar(
                   // title: Text(
                   //   level.title,
